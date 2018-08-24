@@ -8,14 +8,21 @@
     
     <url>
         <loc>https://catherineliyuankun.github.io/archive/</loc>
-        <lastmod>2018-08-23T09:08:53.227Z</lastmod>
+        <lastmod>2018-08-24T09:30:33.550Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://catherineliyuankun.github.io/categories/</loc>
-        <lastmod>2018-08-22T14:40:15.775Z</lastmod>
+        <lastmod>2018-08-24T09:23:48.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://catherineliyuankun.github.io/about/</loc>
+        <lastmod>2018-08-24T09:09:10.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -23,13 +30,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/</loc>
         <lastmod>2018-08-22T07:49:38.305Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://catherineliyuankun.github.io/about/</loc>
-        <lastmod>2018-08-22T07:49:38.262Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
