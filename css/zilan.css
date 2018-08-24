@@ -50,6 +50,11 @@
 .sidebar-container .short-about .list-inline > li {
   padding-left: 0px;
 }
+.sidebar-container .wechat .wechatQR {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
 
 body {
   /* Hux learn from
@@ -1010,4 +1015,14 @@ body {
 }
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
+}
+#rewardButton {
+  background-color: #404040;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  outline: none;
+}
+#rewardButton:hover {
+  background-color: #337ab7;
 }
