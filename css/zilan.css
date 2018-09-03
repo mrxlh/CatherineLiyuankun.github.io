@@ -1020,9 +1020,10 @@ body {
   background-color: #404040;
   color: white;
   border-radius: 30px;
+  border-color: transparent;
   padding: 10px;
   outline: none;
 }
 #rewardButton:hover {
-  background-color: #337ab7;
+  background-color: #0085a1;
 }

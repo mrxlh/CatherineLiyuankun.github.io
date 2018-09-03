@@ -38,6 +38,8 @@
 
     <link rel="stylesheet" href="/css/toc.css">
 
+    <link rel="stylesheet" href="/css/share.css">
+
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
@@ -81,7 +83,7 @@
 
     
     #header-cover{
-        background-color: rgba(0,0,0,.4);
+        background-color: rgba(0,0,0,.2);
     }
     
 </style>
@@ -267,6 +269,15 @@ U......
         <div class="post-category">
             <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a>
         </div>
+    
+
+    <!-- Share -->
+    
+        <span id="needsharebutton-postbottom" class="post-share">
+            <span class="btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+        </span>
     
 
 </div>
@@ -630,19 +641,83 @@ U......
 
 
 
+    <!-- Fork me on GitHub -->
+    
+    
+    <!-- Share -->
+      
+    <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+    <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+    
+      <script>
+          var pbOptions = {};
+          var iconStyle = "light";
+          var boxForm = "horizontal";
+          var position = "bottom";
+          var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
+          pbOptions["iconStyle"] = iconStyle;
+          pbOptions["boxForm"] = boxForm;
+          pbOptions["position"] = position;
+          pbOptions["networks"] = networks;
+          
+          new needShareButton('#needsharebutton-postbottom', pbOptions);
+      </script>
+    
+
+    
+      <script>
+          var pbOptions = {};
+          var iconStyle = "light";
+          var boxForm = "horizontal";
+          var position = "middleRight";
+          var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
+          pbOptions["iconStyle"] = iconStyle;
+          pbOptions["boxForm"] = boxForm;
+          pbOptions["position"] = position;
+          pbOptions["networks"] = networks;
+          
+          new needShareButton('#needsharebutton-postbottom', pbOptions);
+      </script>
+    
+
+    
+      <script>
+          var flOptions = {};
+          var iconStyle = "box";
+          var boxForm = "horizontal";
+          var position = "middleRight";
+          var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
+          flOptions["iconStyle"] = iconStyle;
+          flOptions["boxForm"] = boxForm;
+          flOptions["position"] = position;
+          flOptions["networks"] = networks;
+
+          new needShareButton('#needsharebutton-float', flOptions);
+      </script>
+    
+
+
+    <!-- Share float -->
+    
+    <div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt fa-inverse" aria-hidden="true"></i>
+      </span>
+    </div>
+    
 
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Fancybox -->
     
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-        <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.css">
+        <script src="/lib/fancybox/jquery.fancybox.pack.js"></script>
         <script src="/js/wrapImage.js"></script>
     
-<!-- Migrate from head to bottom, no longer block render and still work -->
-
-    <!-- Fork me on GitHub -->
-    
+    <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
 
