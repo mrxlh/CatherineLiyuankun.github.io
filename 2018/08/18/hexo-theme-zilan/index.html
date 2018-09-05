@@ -170,14 +170,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -358,6 +358,26 @@ Peace!</p>
                     </div>
                 
                 <!-- disqus comment end -->
+                <!-- gitment -->
+                
+                    <div class="comments" id="comments">
+                        
+                            <div id="gitment-container"></div>
+                        
+                    </div>
+                    
+                        <span class="post-comments-count">
+                            <span class="post-meta-divider">|</span>
+                            <span class="post-meta-item-icon">
+                            <i class="fa fa-comment-o"></i>
+                            </span>
+                            <a href="/2018/08/18/hexo-theme-zilan/#comments" itemprop="discussionUrl">
+                            <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/18/hexo-theme-zilan/" itemprop="commentsCount"></span>
+                            </a>
+                        </span>
+                    
+
+                
             </div>
             
             <!-- Tabe of Content -->
@@ -682,7 +702,7 @@ Peace!</p>
           var pbOptions = {};
           var iconStyle = "light";
           var boxForm = "horizontal";
-          var position = "bottom";
+          var position = "middleRight";
           var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
           pbOptions["iconStyle"] = iconStyle;
           pbOptions["boxForm"] = boxForm;
@@ -724,6 +744,64 @@ Peace!</p>
           new needShareButton('#needsharebutton-float', flOptions);
       </script>
     
+
+
+    <!-- Git Comment -->
+    
+    
+    <!-- LOCAL: You can save these files to your site and update links -->
+        
+            <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+            <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        
+    <!-- END LOCAL -->
+        
+
+        
+        <script type="text/javascript">
+            var option = {
+                id: window.location.pathname,
+                owner: 'CatherineLiyuankun',
+                repo: 'gitment-comments',
+                oauth: {
+                    client_id: 'f3a0c1c7153576e1ab6c'
+                }
+            };
+            if(true) {
+                option.lang = "null" || navigator.language || navigator.systemLanguage || navigator.userLanguage;
+            }
+            if (true && null) {
+                option.oauth.redirect_protocol = 'null';
+            }
+            if (true && null) {
+                option.oauth.proxy_gateway = 'null';
+            } else {
+                option.oauth.client_secret = 'bedf5010df925fa0e02e8be9399a64caac3d2b4e';
+            }
+
+            function renderGitment(){
+                var gitment;
+                if (true) {
+                    gitment = new Gitmint(option);
+                } else {
+                    gitment = new Gitment(option);
+                }
+                gitment.render('gitment-container');
+            }
+
+            if(!false) {
+                renderGitment();
+            } else {
+                function showGitment(){
+                    document.getElementById("gitment-display-button").style.display = "none";
+                    document.getElementById("gitment-container").style.display = "block";
+                    renderGitment();
+                }
+            }
+        </script>
+        
+    
+
 
 
     <!-- Share float -->
