@@ -40,6 +40,9 @@
 
     <link rel="stylesheet" href="/css/share.css">
 
+    <link rel="stylesheet" href="/css/gitment.css">
+
+
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
@@ -144,13 +147,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -159,6 +155,13 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -493,7 +496,7 @@
           var pbOptions = {};
           var iconStyle = "light";
           var boxForm = "horizontal";
-          var position = "middleRight";
+          var position = "bottom";
           var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
           pbOptions["iconStyle"] = iconStyle;
           pbOptions["boxForm"] = boxForm;
@@ -547,6 +550,11 @@
         
     <!-- END LOCAL -->
         
+        <style>
+            a.gitment-editor-footer-tip { display: none; }
+            .gitment-container.gitment-footer-container { display: none; }
+        </style>
+        
 
         
         <script type="text/javascript">
@@ -580,7 +588,7 @@
                 gitment.render('gitment-container');
             }
 
-            if(!false) {
+            if(!true) {
                 renderGitment();
             } else {
                 function showGitment(){

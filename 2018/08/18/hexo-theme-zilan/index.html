@@ -40,6 +40,9 @@
 
     <link rel="stylesheet" href="/css/share.css">
 
+    <link rel="stylesheet" href="/css/gitment.css">
+
+
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
@@ -104,11 +107,22 @@
                                 <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
                                 
                             </div>
-                            <!-- added by CatherineLiyuankun -->
+                            <!-- category post header -->
                             
                                 <div class="page-header-category">
                                     <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a>
                                 </div>
+                            
+                            
+                                <span class="post-comments-count">
+                                    <span class="post-meta-divider">|</span>
+                                    <a href="/2018/08/18/hexo-theme-zilan/#comments" itemprop="discussionUrl">
+                                        <span class="post-meta-item-icon">
+                                            <i class="fa fa-comment-o"></i>
+                                        </span>
+                                        <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/18/hexo-theme-zilan/" itemprop="commentsCount"></span>
+                                    </a>
+                                </span>
                             
                             <h1>
                                 [Hexo] Theme Zilan
@@ -170,13 +184,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -185,6 +192,13 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -360,23 +374,14 @@ Peace!</p>
                 <!-- disqus comment end -->
                 <!-- gitment -->
                 
+                    <hr>
                     <div class="comments" id="comments">
                         
-                            <div id="gitment-container"></div>
+                            <div onclick="showGitment()" id="gitment-display-button">show git comment</div>
+                            <div id="gitment-container" style="display:none"></div>
                         
                     </div>
-                    
-                        <span class="post-comments-count">
-                            <span class="post-meta-divider">|</span>
-                            <span class="post-meta-item-icon">
-                            <i class="fa fa-comment-o"></i>
-                            </span>
-                            <a href="/2018/08/18/hexo-theme-zilan/#comments" itemprop="discussionUrl">
-                            <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/18/hexo-theme-zilan/" itemprop="commentsCount"></span>
-                            </a>
-                        </span>
-                    
-
+                    <hr>
                 
             </div>
             
@@ -403,32 +408,11 @@ Peace!</p>
 
                 <!-- Featured Tags -->
                 
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                       
-                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                        
-                          <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
-                        
-                    </div>
-                </section>
-                
 
                 <!-- Categories -->
                 
                                 
                 <!-- Friends Blog -->
-                
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-
-                    
-                        <li><a href="https://blog.csdn.net/muzilanlan" target="_blank">CSDN</a></li>
-                    
-                </ul>
                 
             </div>
         </div>
@@ -702,7 +686,7 @@ Peace!</p>
           var pbOptions = {};
           var iconStyle = "light";
           var boxForm = "horizontal";
-          var position = "middleRight";
+          var position = "bottom";
           var networks = "Wechat,Weibo,Douban,Twitter,Facebook,Reddit,Linkedin,Evernote";
           pbOptions["iconStyle"] = iconStyle;
           pbOptions["boxForm"] = boxForm;
@@ -756,6 +740,11 @@ Peace!</p>
         
     <!-- END LOCAL -->
         
+        <style>
+            a.gitment-editor-footer-tip { display: none; }
+            .gitment-container.gitment-footer-container { display: none; }
+        </style>
+        
 
         
         <script type="text/javascript">
@@ -789,7 +778,7 @@ Peace!</p>
                 gitment.render('gitment-container');
             }
 
-            if(!false) {
+            if(!true) {
                 renderGitment();
             } else {
                 function showGitment(){
