@@ -74,7 +74,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('mysql-header.png')
             /*post*/
         
     }
@@ -102,7 +102,7 @@
                         <div class="post-heading">
                             <div class="tags">
                                 
-                                <a class="tag" href="/tags/#Database" title="Database">Database</a>
+                                <a class="tag" href="/tags/#MySQL" title="MySQL">MySQL</a>
                                 
                             </div>
                             <!-- category post header -->
@@ -182,6 +182,13 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/categories/">Categories</a>
                         </li>
                         
@@ -190,13 +197,6 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -304,17 +304,17 @@ Then you can use the password you set previously to login MySQl：</p>
 <h1 id="verify-mysql-is-running-by-sequel-pro">Verify MySQL is running by Sequel Pro</h1>
 <p>I use <a href="https://www.sequelpro.com/" target="_blank" rel="noopener">Sequel Pro</a> to manage MySQL because it has a pretty great UI. In case you are wondering, I am not actually affiliated with it in anyway.<br>
 <a href="https://sequelpro.com/download#auto-start" target="_blank" rel="noopener">Download and install Sequel Pro</a> and open it. The database to connect to is on localhost so set “host” to “127.0.0.1”. Username is “root” and password the same as chosen in the previous step, for me that’s “administrator”.</p>
-<p><img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-setting.png" alt="Setting"></p>
+<p><img src="SequelPro-setting.png" alt="Setting"></p>
 <p>If the connection does not work, make sure you modified your password correctly in the previous step and that the mysql service is still running.</p>
 <h2 id="error-1">Error 1</h2>
 <p>If you meet this error:<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-connectionerror2.png" alt="connection error"></p>
+<img src="SequelPro-connectionerror2.png" alt="connection error"></p>
 <p>Find out which port MySQL is running on, run the following in MySql client:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SHOW GLOBAL VARIABLES LIKE <span class="string">'PORT'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| port          | 3306  |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.05 sec)</span><br></pre></td></tr></table></figure>
 <p>Make sure that you input the correct port number (3306 or 3307).</p>
 <h2 id="error-2">Error 2</h2>
 <p>If you meet this error:<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-connectionerror.png" alt="connection error"></p>
+<img src="SequelPro-connectionerror.png" alt="connection error"></p>
 <h3 id="error-2-set-use-legacy-password">Error 2 - set ‘Use legacy password’</h3>
 <p>For MAC OS</p>
 <ol>
@@ -323,17 +323,17 @@ Then you can use the password you set previously to login MySQl：</p>
 <li>Choose ‘Use legacy password’</li>
 <li>Start the Server again.</li>
 <li>Now connect the MySQL Workbench<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/SystemPreferences-MySQL.png" alt="System Preferences MySQL"></li>
+<img src="SystemPreferences-MySQL.png" alt="System Preferences MySQL"></li>
 </ol>
 <h3 id="error-2-install-mysql-in-system-preferences">Error 2 - install MySQL in System Preferences</h3>
 <p>If you don’t have MySQL in System Preferences,<br>
 you can set up MySQL in your System Preferences by following this: <a href="dev.mysql.com/doc/refman/5.7/en/osx-installation-prefpane.html">dev.mysql.com/doc/refman/5.7/en/osx-installation-prefpane.html</a><br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane2.png" alt="install-MySQL-Preference-Pane"></p>
+<img src="install-MySQL-Preference-Pane2.png" alt="install-MySQL-Preference-Pane"></p>
 <p>We can not install the MySQL Server again, because we already install it by brew. But you have to config the MySQL Preference Pane.<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
+<img src="install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
 <hr>
 <p>If we install the MySQL Server again, the MySQL Preference Pane config:<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/installed-mysql.png" alt="installed-mysql config"><br>
+<img src="installed-mysql.png" alt="installed-mysql config"><br>
 modify .bash_profile</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$&#123;PATH&#125;:/usr/local/mysql/bin</span><br></pre></td></tr></table></figure>
 <p>Press “esc” and input “:wq” to save and quite.</p>
@@ -341,7 +341,7 @@ modify .bash_profile</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
 <hr>
 <p>Remeber to choose ‘Use legacy password’:<br>
-<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
+<img src="install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
 <p>But i still do not solve it yet.</p>
 <p>Connect and you will be presented with an empty MySQL.<br>
 At this point, you might want to add your first database. After successfully connecting, click Database &gt; Add Database and name it, I chose the name “node_shoppingcart” (the MySQL naming convention is snake_case).</p>
