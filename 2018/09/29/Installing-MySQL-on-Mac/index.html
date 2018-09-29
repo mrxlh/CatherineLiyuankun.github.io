@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          [Hexo] Theme Zilan - Yuankun | 源坤
+          Installing MySQL on Mac - Yuankun | 源坤
         
     </title>
 
-    <link rel="canonical" href="https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/">
+    <link rel="canonical" href="https://catherineliyuankun.github.io/2018/09/29/Installing-MySQL-on-Mac/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -74,7 +74,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('http://pe3ol7tjk.bkt.clouddn.com/hexo-cover.png')
+            background-image: url('null')
             /*post*/
         
     }
@@ -102,30 +102,28 @@
                         <div class="post-heading">
                             <div class="tags">
                                 
-                                <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                                
-                                <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
+                                <a class="tag" href="/tags/#Database" title="Database">Database</a>
                                 
                             </div>
                             <!-- category post header -->
                             
                                 <div class="page-header-category">
-                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a>
+                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Database/">Database</a>
                                 </div>
                             
                             
                                 <span class="post-comments-count">
                                     <span class="post-meta-divider">|</span>
-                                    <a href="/2018/08/18/hexo-theme-zilan/#comments" itemprop="discussionUrl">
+                                    <a href="/2018/09/29/Installing-MySQL-on-Mac/#comments" itemprop="discussionUrl">
                                         <span class="post-meta-item-icon">
                                             <i class="fa fa-comment-o"></i>
                                         </span>
-                                        <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/18/hexo-theme-zilan/" itemprop="commentsCount"></span>
+                                        <span class="post-comments-count gitment-comments-count" data-xid="/2018/09/29/Installing-MySQL-on-Mac/" itemprop="commentsCount"></span>
                                     </a>
                                 </span>
                             
                             <h1>
-                                [Hexo] Theme Zilan
+                                Installing MySQL on Mac
                                 <!-- Share -->
                                 
                                     <span id="needsharebutton-postbottom" class="header-share">
@@ -135,10 +133,10 @@
                                     </span>
                                 
                             </h1>
-                            <h2 class="subheading">This is hexo theme Demo.</h2>
+                            <h2 class="subheading">zsh: command not found</h2>
                             <span class="meta">
                                 Posted by Yuankun Li on
-                                2018-08-18
+                                2018-09-29
                             </span>
                         </div>
                     
@@ -259,73 +257,111 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>Ported Theme of <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">Hux Blog</a>, Thank <a href="https://github.com/Huxpro" target="_blank" rel="noopener">Huxpro</a> for designing such a flawless theme.</p>
-<p>This Zilan theme created by <a href="https://catherineliyuankun.github.io/">YuankunLi</a> modified from the original Porter <a href="http://kaijun.rocks/hexo-theme-huxblog/" target="_blank" rel="noopener">Kaijun</a> and <a href="http://beantech.org/" target="_blank" rel="noopener">YuHsuan</a></p>
-</blockquote>
-<h1 id="demo-live-demo">Demo <a href="https://catherineliyuankun.github.io/">Live Demo</a></h1>
+                <p>This short tutorial shows how to install MySQL on a Mac using Homebrew and how to verify it is running using Sequel Pro.</p>
+<h1 id="install-homebrew">Install Homebrew</h1>
+<p><a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> is a package manager for Mac and serves a similar purpose to apt-get in Linux.</p>
+<p>If you already have Homebrew, you can skip this section. If you are not sure, run the following command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> brew</span><br></pre></td></tr></table></figure>
+<p>If you have Homebrew it will print something similar to /usr/local/bin/brew. If you do not have Homebrew it will print nothing.</p>
+<p>Run the following command in a terminal window to install Homebrew.</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h1 id="install-mysql">Install MySQL</h1>
+<p>Update Homebrew to ensure you get the latest packages</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
+<p>Run this command to install MySQL</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br><span class="line"></span><br><span class="line">/usr/<span class="built_in">local</span>/Cellar/mysql/8.0.12/bin/mysqld --initialize-insecure --user=liyuankun --based</span><br><span class="line">==&gt; Caveats</span><br><span class="line">We<span class="string">'ve installed your MySQL database without a root password. To secure it run:</span></span><br><span class="line"><span class="string">    mysql_secure_installation</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">MySQL is configured to only allow connections from localhost by default</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To connect run:</span></span><br><span class="line"><span class="string">    mysql -uroot</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To have launchd start mysql now and restart at login:</span></span><br><span class="line"><span class="string">  brew services start mysql</span></span><br><span class="line"><span class="string">Or, if you don'</span>t want/need a background service you can just run:</span><br><span class="line">  mysql.server start</span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/<span class="built_in">local</span>/Cellar/mysql/8.0.12: 255 files, 233.0MB</span><br><span class="line">==&gt; Caveats</span><br><span class="line">==&gt; openssl</span><br><span class="line">A CA file has been bootstrapped using certificates from the SystemRoots</span><br><span class="line">keychain. To add additional certificates (e.g. the certificates added <span class="keyword">in</span></span><br><span class="line">the System keychain), place .pem files <span class="keyword">in</span></span><br><span class="line">  /usr/<span class="built_in">local</span>/etc/openssl/certs</span><br><span class="line"></span><br><span class="line">and run</span><br><span class="line">  /usr/<span class="built_in">local</span>/opt/openssl/bin/c_rehash</span><br><span class="line"></span><br><span class="line">openssl is keg-only, <span class="built_in">which</span> means it was not symlinked into /usr/<span class="built_in">local</span>,</span><br><span class="line">because Apple has deprecated use of OpenSSL <span class="keyword">in</span> favor of its own TLS and crypto libraries.</span><br><span class="line"></span><br><span class="line">If you need to have openssl first <span class="keyword">in</span> your PATH run:</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">'export PATH="/usr/local/opt/openssl/bin:$PATH"'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line">For compilers to find openssl you may need to <span class="built_in">set</span>:</span><br><span class="line">  <span class="built_in">export</span> LDFLAGS=<span class="string">"-L/usr/local/opt/openssl/lib"</span></span><br><span class="line">  <span class="built_in">export</span> CPPFLAGS=<span class="string">"-I/usr/local/opt/openssl/include"</span></span><br><span class="line"></span><br><span class="line">For pkg-config to find openssl you may need to <span class="built_in">set</span>:</span><br><span class="line">  <span class="built_in">export</span> PKG_CONFIG_PATH=<span class="string">"/usr/local/opt/openssl/lib/pkgconfig"</span></span><br><span class="line"></span><br><span class="line">==&gt; mysql</span><br><span class="line">We<span class="string">'ve installed your MySQL database without a root password. To secure it run:</span></span><br><span class="line"><span class="string">    mysql_secure_installation</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">MySQL is configured to only allow connections from localhost by default</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To connect run:</span></span><br><span class="line"><span class="string">    mysql -uroot</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To have launchd start mysql now and restart at login:</span></span><br><span class="line"><span class="string">  brew services start mysql</span></span><br><span class="line"><span class="string">Or, if you don'</span>t want/need a background service you can just run:</span><br><span class="line">  mysql.server start</span><br></pre></td></tr></table></figure>
+<h1 id="config-mysql">Config MySQL</h1>
+<h2 id="command-not-found">command not found</h2>
+<p>Type “mysql” command, you will meet the error:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br><span class="line">zsh: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">sudo vim .bash_profile</span><br></pre></td></tr></table></figure>
+<p>Insert for .bash_profile</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$&#123;PATH&#125;:/usr/local/Cellar/mysql/<span class="number">8.0</span>.<span class="number">12</span>/bin</span><br></pre></td></tr></table></figure>
+<p>Press “esc” and input “:wq” to save and quite.</p>
+<p>Then</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>Then config zsh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>接着我执行 vim ~/.zshrc</p>
+<p>and insert <em>source ~/.bash_profile</em></p>
+<p>并在其中插入 <em>source ~/.bash_profile</em></p>
+<p>(纠结，我是一行英文一行中文的写呢？还是中英文分开成两篇呢？)</p>
+<h2 id="error-2002-hy000">ERROR 2002 (HY000):</h2>
+<p>Type “mysql” command, you will meet the error:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br><span class="line">ERROR 2002 (HY000): Can<span class="string">'t connect to local MySQL server through socket '</span>/tmp/mysql.sock<span class="string">' (2)</span></span><br></pre></td></tr></table></figure>
+<p>The reason is that you’ll need to start MySQL before you can use the mysql command on your terminal.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew services start mysql</span><br><span class="line">==&gt; Successfully started `mysql` (label: homebrew.mxcl.mysql)</span><br></pre></td></tr></table></figure>
+<p>Then mysql work</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br><span class="line">mysql  Ver 8.0.12 <span class="keyword">for</span> osx10.13 on x86_64 (Homebrew)</span><br></pre></td></tr></table></figure>
+<h2 id="set-password">Set password</h2>
+<p>Set a rudimentary password for MySQL locally, there is no need to worry about security because it will only be accessible from your machine (I used “administrator”).</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root password <span class="string">'administrator'</span></span><br></pre></td></tr></table></figure>
+<p>Once installed and running, MySQL is accessible to any app running locally on your machine.<br>
+Then you can use the password you set previously to login MySQl：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">  //input the password you <span class="built_in">set</span> previously <span class="string">'administrator'</span></span><br></pre></td></tr></table></figure>
+<p>You can use the command to show the databases.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SHOW DATABASES;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.03 sec)</span><br></pre></td></tr></table></figure>
+<h1 id="verify-mysql-is-running-by-sequel-pro">Verify MySQL is running by Sequel Pro</h1>
+<p>I use <a href="https://www.sequelpro.com/" target="_blank" rel="noopener">Sequel Pro</a> to manage MySQL because it has a pretty great UI. In case you are wondering, I am not actually affiliated with it in anyway.<br>
+<a href="https://sequelpro.com/download#auto-start" target="_blank" rel="noopener">Download and install Sequel Pro</a> and open it. The database to connect to is on localhost so set “host” to “127.0.0.1”. Username is “root” and password the same as chosen in the previous step, for me that’s “administrator”.</p>
+<p><img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-setting.png" alt="Setting"></p>
+<p>If the connection does not work, make sure you modified your password correctly in the previous step and that the mysql service is still running.</p>
+<h2 id="error-1">Error 1</h2>
+<p>If you meet this error:<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-connectionerror2.png" alt="connection error"></p>
+<p>Find out which port MySQL is running on, run the following in MySql client:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SHOW GLOBAL VARIABLES LIKE <span class="string">'PORT'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| port          | 3306  |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.05 sec)</span><br></pre></td></tr></table></figure>
+<p>Make sure that you input the correct port number (3306 or 3307).</p>
+<h2 id="error-2">Error 2</h2>
+<p>If you meet this error:<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/SequelPro-connectionerror.png" alt="connection error"></p>
+<h3 id="error-2-set-use-legacy-password">Error 2 - set ‘Use legacy password’</h3>
+<p>For MAC OS</p>
+<ol>
+<li>Open MySQL from System Preferences &gt; MySQL &gt; Initialize Database &gt;</li>
+<li>Type your new password.</li>
+<li>Choose ‘Use legacy password’</li>
+<li>Start the Server again.</li>
+<li>Now connect the MySQL Workbench<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/SystemPreferences-MySQL.png" alt="System Preferences MySQL"></li>
+</ol>
+<h3 id="error-2-install-mysql-in-system-preferences">Error 2 - install MySQL in System Preferences</h3>
+<p>If you don’t have MySQL in System Preferences,<br>
+you can set up MySQL in your System Preferences by following this: <a href="dev.mysql.com/doc/refman/5.7/en/osx-installation-prefpane.html">dev.mysql.com/doc/refman/5.7/en/osx-installation-prefpane.html</a><br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane2.png" alt="install-MySQL-Preference-Pane"></p>
+<p>We can not install the MySQL Server again, because we already install it by brew. But you have to config the MySQL Preference Pane.<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
 <hr>
-<p><a href="https://catherineliyuankun.github.io/">Zilan Blog</a></p>
-<h1 id="usage">Usage</h1>
+<p>If we install the MySQL Server again, the MySQL Preference Pane config:<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/installed-mysql.png" alt="installed-mysql config"><br>
+modify .bash_profile</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$&#123;PATH&#125;:/usr/local/mysql/bin</span><br></pre></td></tr></table></figure>
+<p>Press “esc” and input “:wq” to save and quite.</p>
+<p>Then</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
 <hr>
-<p>I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!</p>
-<p>Let’s begin!!!</p>
-<h2 id="init">Init</h2>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/catherineliyuankun/hexo-theme-zilan.git ./hexo-zilan</span><br><span class="line"><span class="built_in">cd</span> hexo-zilan</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h2 id="modify">Modify</h2>
-<hr>
-<p>Modify <code>_config.yml</code> file with your own info.<br>
-Especially the section:</p>
-<h3 id="deployment">Deployment</h3>
-<p>Replace to your own repo!</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&lt;yourAccount&gt;/&lt;repo&gt;</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">&lt;your-branch&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="sidebar-settings">Sidebar settings</h3>
-<p>Copy your avatar image to <code>&lt;root&gt;/img/</code> and modify the <code>_config.yml</code>:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span> <span class="literal">true</span>    <span class="comment"># whether or not using Sidebar.</span></span><br><span class="line"><span class="attr">sidebar-about-description:</span> <span class="string">"&lt;your description&gt;"</span></span><br><span class="line"><span class="attr">sidebar-avatar:</span> <span class="string">img/&lt;your</span> <span class="string">avatar</span> <span class="string">path&gt;</span></span><br></pre></td></tr></table></figure>
-<p>and activate your personal widget you like</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widgets:</span>         <span class="comment"># here are widget you can use, you can comment out</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">featured-tags</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">short-about</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">recent-posts</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">friends-blog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">archive</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">category</span></span><br></pre></td></tr></table></figure>
-<p>if you want to add sidebar widget, please add at <code>layout/_widget</code>.</p>
-<h3 id="signature-setup">Signature Setup</h3>
-<p>Copy your signature image to <code>&lt;root&gt;/img/signature</code> and modify the <code>_config.yml</code>:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">signature:</span> <span class="literal">true</span>   <span class="comment"># show signature</span></span><br><span class="line"><span class="attr">signature-img:</span> <span class="string">img/signature/&lt;your-signature-ID&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="go-to-top-icon-setup">Go to top icon Setup</h3>
-<p>My icon is using iron man, you can change to your own icon at <code>css/image</code>.</p>
-<h3 id="post-tag-and-category">Post tag and category</h3>
-<p>You can decide to show post tags and categories or not.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_posts_tag:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">home_posts_category:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://pe3ol7tjk.bkt.clouddn.com/home_posts_tag-true.png?imageView2/0/q/90%7Cwatermark/1/image/aHR0cDovL3BlM29sN3Rqay5ia3QuY2xvdWRkbi5jb20vc2lnbmF0dXJlLXdoaXRlLnBuZw==/dissolve/50/gravity/SouthEast/dx/10/dy/5" alt="home_posts_tag-true"></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_posts_tag:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">home_posts_category:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://pe3ol7tjk.bkt.clouddn.com/home_posts_tag-false.png" alt="home_posts_tag-false"></p>
-<h3 id="page-header-category">Page Header category</h3>
-<p>You can decide to show page_header categories or not.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">page_header_category:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://pe3ol7tjk.bkt.clouddn.com/page_header_category-true.png" alt="page_header_category-true"></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">page_header_category:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://pe3ol7tjk.bkt.clouddn.com/page_header_category-false.png" alt="page_header_category-false"></p>
-<h3 id="forkme">forkme</h3>
-<p>forkme: false # Fork me on GitHub<br>
-forkme-url: <a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan" target="_blank" rel="noopener">https://github.com/CatherineLiyuankun/Hexo-theme-zilan</a> # GitHub url</p>
-<h3 id="donate">donate</h3>
-<p>donate: true<br>
-donate-alipay: <a href="http://pe3ol7tjk.bkt.clouddn.com/alipay.png" target="_blank" rel="noopener">http://pe3ol7tjk.bkt.clouddn.com/alipay.png</a><br>
-donate-wechat: <a href="http://pe3ol7tjk.bkt.clouddn.com/wechatpay.png" target="_blank" rel="noopener">http://pe3ol7tjk.bkt.clouddn.com/wechatpay.png</a></p>
-<h3 id="markdown-render">Markdown render</h3>
-<p>My markdown render engine plugin is <a href="https://github.com/celsomiranda/hexo-renderer-markdown-it" target="_blank" rel="noopener">hexo-renderer-markdown-it</a>.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    typographer:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    quotes:</span> <span class="string">'“”‘’'</span></span><br></pre></td></tr></table></figure>
-<p>and if you want to change the header anchor ‘ℒ’, you can go to <code>layout/post.ejs</code> to change it.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span>(<span class="string">"https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        anchors.options = &#123;</span><br><span class="line">          visible: <span class="string">'hover'</span>,</span><br><span class="line">          placement: <span class="string">'left'</span>,</span><br><span class="line">          icon: ℒ <span class="comment">// this is the header anchor "unicode" icon</span></span><br><span class="line">        &#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="hexo-basics">Hexo Basics</h2>
-<hr>
-<p>Some hexo command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">"&lt;post name&gt;"</span> <span class="comment"># you can change post to another layout if you want</span></span><br><span class="line">hexo clean &amp;&amp; hexo generate <span class="comment"># generate the static file</span></span><br><span class="line">hexo server <span class="comment"># run hexo in local environment</span></span><br><span class="line">hexo deploy <span class="comment"># hexo will push the static files automatically into the specific branch(gh-pages) of your repo!</span></span><br></pre></td></tr></table></figure>
-<h1 id="start-your-own-blog">Start your own blog!</h1>
-<hr>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Place this tag where you want the button to render. -->
-<p>Please <a class="github-button" href="https://github.com/catherineliyuankun/hexo-theme-zilan.git" data-icon="octicon-star" aria-label="Star Li,Yuankun/hexo-theme-zilan on GitHub" target="_blank" rel="noopener">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/CatherineLiyuankun" aria-label="Follow @CatherineLiyuankun on GitHub" target="_blank" rel="noopener">Follow</a> would also be appreciated!<br>
-Peace!</p>
+<p>Remeber to choose ‘Use legacy password’:<br>
+<img src="./source/_posts/Installing-MySQL-on-Mac/install-MySQL-Preference-Pane1.png" alt="install-MySQL-Preference-Pane"></p>
+<p>But i still do not solve it yet.</p>
+<p>Connect and you will be presented with an empty MySQL.<br>
+At this point, you might want to add your first database. After successfully connecting, click Database &gt; Add Database and name it, I chose the name “node_shoppingcart” (the MySQL naming convention is snake_case).</p>
+<p>MySQL is ready to go!<br>
+If you are interested in using MySQL with Node.js, check out the setting up Node.js with a mysql tutorial.</p>
+<p>Reference links:</p>
+<ul>
+<li>
+<p><a href="https://stackoverflow.com/questions/15450091/for-a-newbie-error-2002-hy000-cant-connect-to-local-mysql-server-through-so" target="_blank" rel="noopener">For a newbie: ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/49194719/authentication-plugin-caching-sha2-password-cannot-be-loaded" target="_blank" rel="noopener">Authentication plugin ‘caching_sha2_password’ cannot be loaded</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/26344795/cannot-connect-to-mysql-workbench-on-mac-cant-connect-to-mysql-server-on-127" target="_blank" rel="noopener">Cannot connect to MySQL Workbench on mac. Can’t connect to MySQL server on ‘127.0.0.1’ (61)	Mac Macintosh</a></p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/setting-up-node-js-with-a-database-part-1-3f2461bdd77f" target="_blank" rel="noopener">Tutorial: Setting up Node.js with a database</a></p>
+</li>
+</ul>
 
                 
                 <!-- Donate -->
@@ -354,10 +390,10 @@ Peace!</p>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2018/09/29/Installing-MySQL-on-Mac/" data-toggle="tooltip" data-placement="top" title="Installing MySQL on Mac">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2018/08/18/hexo-theme-zilan/" data-toggle="tooltip" data-placement="top" title="[Hexo] Theme Zilan">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -397,7 +433,7 @@ Peace!</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#demo-live-demo"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Demo Live Demo</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#usage"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Usage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#init"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Modify</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#deployment"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">Deployment</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sidebar-settings"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">Sidebar settings</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#signature-setup"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">Signature Setup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#go-to-top-icon-setup"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">Go to top icon Setup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#post-tag-and-category"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">Post tag and category</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#page-header-category"><span class="toc-nav-number">2.2.6.</span> <span class="toc-nav-text">Page Header category</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#forkme"><span class="toc-nav-number">2.2.7.</span> <span class="toc-nav-text">forkme</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#donate"><span class="toc-nav-number">2.2.8.</span> <span class="toc-nav-text">donate</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#markdown-render"><span class="toc-nav-number">2.2.9.</span> <span class="toc-nav-text">Markdown render</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-basics"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Hexo Basics</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#start-your-own-blog"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Start your own blog!</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#install-homebrew"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Install Homebrew</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#install-mysql"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Install MySQL</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#config-mysql"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Config MySQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#command-not-found"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">command not found</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#error-2002-hy000"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ERROR 2002 (HY000):</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#set-password"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Set password</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#verify-mysql-is-running-by-sequel-pro"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Verify MySQL is running by Sequel Pro</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#error-1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Error 1</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#error-2"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">Error 2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#error-2-set-use-legacy-password"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">Error 2 - set ‘Use legacy password’</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#error-2-install-mysql-in-system-preferences"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">Error 2 - install MySQL in System Preferences</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -430,8 +466,8 @@ Peace!</p>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "lyk-1";
-    var disqus_identifier = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
-    var disqus_url = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
+    var disqus_identifier = "https://catherineliyuankun.github.io/2018/09/29/Installing-MySQL-on-Mac/";
+    var disqus_url = "https://catherineliyuankun.github.io/2018/09/29/Installing-MySQL-on-Mac/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -7,15 +7,22 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2018-09-03T12:31:36.512Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
+        <lastmod>2018-09-29T08:31:20.254Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
-        <lastmod>2018-09-03T12:31:36.512Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2018-09-29T10:58:55.986Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Database/</loc>
+        <lastmod>2018-09-29T10:58:55.986Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
