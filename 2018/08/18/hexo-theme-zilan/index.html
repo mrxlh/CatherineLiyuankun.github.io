@@ -116,7 +116,7 @@
                             
                                 <span class="post-comments-count">
                                     <span class="post-meta-divider">|</span>
-                                    <a href="/2018/08/18/hexo-theme-zilan/#comments" itemprop="discussionUrl">
+                                    <a href="/2018/08/18/hexo-theme-zilan/#git_comment" itemprop="discussionUrl">
                                         <span class="post-meta-item-icon">
                                             <i class="fa fa-comment-o"></i>
                                         </span>
@@ -184,7 +184,7 @@
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -198,7 +198,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
@@ -369,24 +369,26 @@ Peace!</p>
                 
                 <!-- 多说评论框 end -->
 
-                <!-- disqus comment start -->
-                
-                    <div class="comment">
-                        <div id="disqus_thread" class="disqus-thread"></div>
-                    </div>
-                
-                <!-- disqus comment end -->
+                <!-- Disqus Comment -->
+                <!-- disqus comment -->
+
+    <div class="disqus_comment">
+        <div id="disqus_thread" class="disqus-thread"></div>
+    </div>
+
+
+                <!-- Git Comment -->
                 <!-- gitment -->
-                
-                    <hr>
-                    <div class="comments" id="comments">
-                        
-                            <div onclick="showGitment()" id="gitment-display-button">show git comment</div>
-                            <div id="gitment-container" style="display:none"></div>
-                        
-                    </div>
-                    <hr>
-                
+
+    <hr>
+    <div class="git_comment" id="git_comment">
+        
+            <div onclick="showGitment()" id="gitment-display-button">show git comment</div>
+            <div id="gitment-container" style="display:none"></div>
+        
+    </div>
+    <hr>
+
             </div>
             
             <!-- Tabe of Content -->
@@ -404,42 +406,100 @@ Peace!</p>
     
 
                 
-            <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
+            <!-- Sidebar Container Below-->
+            <!-- Sidebar Container Below when config.sidebar == false -->
+<div class="
+    col-lg-8 col-lg-offset-2
+    col-md-10 col-md-offset-1
+    sidebar-container">
+    
+        
+            <!-- Featured Tags -->
 
-                <!-- Featured Tags -->
-                
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
+            
+        
+            
+            <a href="/tags/#Blog" title="Blog" rel="1">Blog</a>
+            
+        
+            
+            <a href="/tags/#MySQL" title="MySQL" rel="1">MySQL</a>
+            
+        
+    </div>
+</section>
 
-                <!-- Categories -->
-                
-                                
-                <!-- Friends Blog -->
-                
-            </div>
+          
+        <hr>
+    
+        
+        <hr>
+    
+        
+            
+  <h5>RECENT POSTS</h5>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/2018/10/09/Git-Pages-Jekyll-Hexo-Build-your-own-blog/">Git Pages + Jekyll/Hexo Build your own blog</a>
+        </li>
+      
+        <li>
+          <a href="/2018/09/29/Installing-MySQL-on-Mac/">Installing MySQL on Mac</a>
+        </li>
+      
+        <li>
+          <a href="/2018/08/18/hexo-theme-zilan/">[Hexo] Theme Zilan</a>
+        </li>
+      
+    </ul>
+  </div>
+
+          
+        <hr>
+    
+        
+            <!-- Categories -->
+
+    <section>
+        <!-- no hr -->
+        <h5><a href="/categories/">CATEGORORY</a></h5>
+            
+                <div class="article-category" id="categories">
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/">TECH</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
+                </div>
+            
+    </section>
+
+          
+        <hr>
+    
+        
+            <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="https://blog.csdn.net/muzilanlan" target="_blank">CSDN</a></li>
+    
+</ul>
+
+          
+        <hr>
+    
+</div>
         </div>
     </div>
 </article>
-
-
-
-
-<!-- disqus embedded js code start (one page only need to embed once) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "lyk-1";
-    var disqus_identifier = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
-    var disqus_url = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus embedded js code start end -->
 
 
 
@@ -796,6 +856,28 @@ Peace!</p>
     
 
 
+
+    <!-- Disqus Comment -->
+    
+    <!-- disqus embedded js code start (one page only need to embed once) -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = "lyk-1";
+        var disqus_identifier = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
+        var disqus_url = "https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/";
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+    </script>
+    <!-- disqus embedded js code start end -->
+
+    
+    <!-- Duoshuo Comment -->
+    
 
     <!-- Share float -->
     
