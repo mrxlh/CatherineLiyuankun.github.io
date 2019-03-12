@@ -14,15 +14,22 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
         <lastmod>2019-01-31T08:47:47.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
-        <lastmod>2019-01-31T08:47:47.725Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2019-03-12T02:41:02.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Accessibility/</loc>
+        <lastmod>2019-03-12T02:41:02.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
