@@ -148,13 +148,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -162,14 +155,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/categories/">Categories</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/categories/">Categories</a>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -224,20 +224,42 @@
     <!-- 标签云 -->
     <div id='tag_cloud' class="tags">
         
+            <a href="#Learning Notes" title="Learning Notes" rel="1">Learning Notes</a>
+        
             <a href="#MySQL" title="MySQL" rel="1">MySQL</a>
+        
+            <a href="#Voice over" title="Voice over" rel="1">Voice over</a>
         
             <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
         
             <a href="#Blog" title="Blog" rel="1">Blog</a>
         
-            <a href="#Learning Notes" title="Learning Notes" rel="1">Learning Notes</a>
-        
-            <a href="#Voice over" title="Voice over" rel="1">Voice over</a>
-        
     </div>
 
     <!-- 标签列表 -->
 
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Learning Notes">
+            <span class="tag-text">Learning Notes</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2018/11/01/A11ycasts-Learning-Notes/">
+                <h2 class="post-title">
+                    A11ycasts Learning Notes
+                </h2>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
     
     <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="MySQL">
@@ -257,6 +279,28 @@
                     <h3 class="post-subtitle">
                         zsh: command not found
                     </h3>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Voice over">
+            <span class="tag-text">Voice over</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">
+                <h2 class="post-title">
+                    Voice over for OSX Keyboard Shortcuts
+                </h2>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -309,50 +353,6 @@
                     <h3 class="post-subtitle">
                         This is hexo theme Demo.
                     </h3>
-                
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-    </div>
-    
-    <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Learning Notes">
-            <span class="tag-text">Learning Notes</span>
-        </span>
-        
-            <!-- <li class="listing-item">
-            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            </li> -->
-            <div class="post-preview">
-                <a href="/2018/11/01/A11ycasts-Learning-Notes/">
-                <h2 class="post-title">
-                    A11ycasts Learning Notes
-                </h2>
-                
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-    </div>
-    
-    <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Voice over">
-            <span class="tag-text">Voice over</span>
-        </span>
-        
-            <!-- <li class="listing-item">
-            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            </li> -->
-            <div class="post-preview">
-                <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">
-                <h2 class="post-title">
-                    Voice over for OSX Keyboard Shortcuts
-                </h2>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
