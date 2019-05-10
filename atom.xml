@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catherineliyuankun.github.io/"/>
-  <updated>2019-03-12T06:53:19.247Z</updated>
+  <updated>2019-05-10T06:12:52.329Z</updated>
   <id>https://catherineliyuankun.github.io/</id>
   
   <author>
@@ -15,6 +15,128 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从微信语音or笔记爬取音频</title>
+    <link href="https://catherineliyuankun.github.io/2019/04/25/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E8%AF%AD%E9%9F%B3or%E7%AC%94%E8%AE%B0%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/"/>
+    <id>https://catherineliyuankun.github.io/2019/04/25/从微信语音or笔记爬取音频/</id>
+    <published>2019-04-25T02:42:46.000Z</published>
+    <updated>2019-05-10T06:12:52.329Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="方法">方法</h1><p><a href="https://www.zhihu.com/question/30112442/answer/561089000" target="_blank" rel="noopener">Leon 的回答</a>比较符合我的需求, 转化下就是:</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">If</span> (MacOS)</span><br><span class="line">    <span class="selector-tag">If</span> (语音 in 电脑微信窗口记录)</span><br><span class="line">        在聊天窗口找个图片;</span><br><span class="line">        右键打开文件夹;</span><br><span class="line">        里面看到的<span class="selector-tag">silk</span>文件就是聊天的语音;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">If</span> (语音 not in 电脑微信窗口记录)</span><br><span class="line">        收藏(语音);</span><br><span class="line">        播放(语音);</span><br><span class="line">        去到(<span class="string">"/Users/&#123;用户名&#125;/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/"</span>);</span><br><span class="line">        搜索(Favorites目录);</span><br><span class="line">        然后<span class="selector-tag">data</span>下面就有<span class="selector-tag">silk</span>文件 </span><br><span class="line">        使用<span class="selector-attr">[kn007/silk-v3-decoder]</span>(<span class="attribute">https</span>:<span class="comment">//github.com/kn007/silk-v3-decoder)</span></span><br><span class="line">            &gt; brew install lame</span><br><span class="line">            &gt; brew install ffmpeg  --enable-libmp3lame</span><br><span class="line"></span><br><span class="line">        将silk文件转为wav</span><br><span class="line">            &gt; silk-v3-decoder/converter.sh ab.silk wav</span><br></pre></td></tr></table></figure><h1 id="参考链接">参考链接</h1><p><a href="https://www.zhihu.com/question/30112442" target="_blank" rel="noopener">知乎: 如何导出微信【收藏】中的语音文件？</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;方法&quot;&gt;方法&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/30112442/answer/561089000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leon 的回答&lt;/a&gt;比较符合我的需
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="FrontEnd" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/"/>
+    
+    
+      <category term="Weixin" scheme="https://catherineliyuankun.github.io/tags/Weixin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从微信链接爬取音频</title>
+    <link href="https://catherineliyuankun.github.io/2019/04/24/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/"/>
+    <id>https://catherineliyuankun.github.io/2019/04/24/从微信链接-mpvoice-爬取音频/</id>
+    <published>2019-04-24T09:04:14.000Z</published>
+    <updated>2019-04-25T02:35:49.086Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="故事是这样的">故事是这样的</h1><p>报名了某英语课程, 进群后老师会发微信课程链接, 链接里有音频视频等. 我就想做笔记把这个文字和音频视频内容保存下来.</p><h1 id="看代码去">看代码去</h1><p>微信链接在浏览器打开, 视频的很好找 <code>&lt;video origin_src=&quot;里面的就是视频的链接&quot;&gt;</code> , 把链接直接粘贴到浏览器里就好了,右键save as 就可以保存下来了.<br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/%E8%A7%86%E9%A2%91.png" alt="视频"></p><p>有的音频的资源source也很好找, <code>&lt;audio src=&quot;里面的就是视频的链接&quot;&gt;</code>, 把链接直接粘贴到浏览器里就好了,右键save as 就可以保存下来了.<br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/%E9%9F%B3%E9%A2%911.png" alt="音频1"></p><p>但是后来遇到了个看不出直接source的<code>&lt;mpvoice&gt;</code>, 应该是微信的自定义html标签. 随便在网上一搜, 就看到了跟我一样目的童鞋, 哈哈.<br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/%E9%9F%B3%E9%A2%912.png" alt="音频2"></p><p>按照他的方法试了, 果然可以. Network中有获取media的请求 (开发者工具 --&gt; Network —&gt; “media” tab). 而且<code>&lt;mpvoice&gt;</code>标签上voice_encode_fileid属性的值就是mediaid的值。同样的粘贴链接&quot;<a href="https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NDMxNTIxNF8xMDAwMDIxNjg=" target="_blank" rel="noopener">https://res.wx.qq.com/voice/getvoice?mediaid=MzI1NDMxNTIxNF8xMDAwMDIxNjg=</a>&quot;到浏览器里就好了,右键save as 就可以保存下来了.<br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/request.png" alt="request"></p><h1 id="todo-写个脚本自动爬">Todo 写个脚本自动爬</h1><h1 id="参考文章">参考文章</h1><p><a href="http://haijd.tech/golang/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E8%8B%B1%E8%AF%AD%E9%9F%B3%E9%A2%91%E5%B0%8F%E7%88%AC%E8%99%AB/" target="_blank" rel="noopener">一个简单的逻辑英语音频小爬虫</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;故事是这样的&quot;&gt;故事是这样的&lt;/h1&gt;
+&lt;p&gt;报名了某英语课程, 进群后老师会发微信课程链接, 链接里有音频视频等. 我就想做笔记把这个文字和音频视频内容保存下来.&lt;/p&gt;
+&lt;h1 id=&quot;看代码去&quot;&gt;看代码去&lt;/h1&gt;
+&lt;p&gt;微信链接在浏览器打开, 视频的很好找
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="FrontEnd" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/"/>
+    
+    
+      <category term="Weixin" scheme="https://catherineliyuankun.github.io/tags/Weixin/"/>
+    
+      <category term="&lt;mpvoice&gt;" scheme="https://catherineliyuankun.github.io/tags/mpvoice/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Max size for HTTP POST servlet parameter content?</title>
+    <link href="https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/"/>
+    <id>https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/</id>
+    <published>2019-04-24T08:57:59.000Z</published>
+    <updated>2019-05-10T06:12:52.307Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="problem">Problem</h1><p>Recently i meet a issue that when user import large file to send request by HTTP POST and servlet. The page redirect to welcome page.<br>Then i debug it and find that web server do not get the right parameter from servlet.</p><h1 id="the-root-reason">The root reason:</h1><p>Web client send the request by HTTP POST and Servlet to web server.<br>When the size of imported file (as parameter of request) is larger than the max size of Servlet parameter content, web server can not get the right parameter of the request. So it return to default welcome page.<br>So the root reason is max size of Servlet parameter limit the request. We should reset the servlet setting in tomcat.</p><h1 id="the-workaround">The workaround:</h1><h2 id="1-for-asp-and-iis-environment">1 For ASP and IIS environment</h2><p>In order to accept larger files you have to change two sets of setting in you’re web.config.<br>C:\Program Files (x86)\MicroStrategy\Web ASPx\web.config or Your ASP Folder\web.config</p><p>###1 .1 IIS Setting: Request Limits<br>The following sets the max POST buffer size to 500 megs. The value is specified in bytes.</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestLimits</span> <span class="attr">maxAllowedContentLength</span>=<span class="string">"500000000"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="1-2-asp-net-setting-httpruntime-maxrequestlength">1.2 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Setting: httpRuntime maxRequestLength</h3><p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> uses the httpRuntime element to control a number of runtime related features including teh allowed inbound request length. Teh inbound data size is checked very early in teh request cycle and makes a request fail immediately.</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">httpRuntime</span> <span class="attr">maxRequestLength</span>=<span class="string">"500000000"</span>  <span class="attr">executionTimeout</span>=<span class="string">"120"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><p>###1.3 What about Web Connection?<br>Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recommend you leave dis value at 0 and let IIS handle dis setting via the Request Limits. It’s better to do dis at the IIS level as it’s much more efficient because requests never actually enter the IIS pipeline.</p><h2 id="2-for-jsp-and-tomcat-environment">2 For JSP and Tomcat environment</h2><table><thead><tr><th>Tomcat Version</th><th>Attribute</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://tomcat.apache.org/tomcat-5.5-doc/config/http.html" target="_blank" rel="noopener">Before 7.0.63</a></td><td>maxPostSize</td><td>Teh maximum size in bytes of teh POST which will be handled by teh container FORM URL parameter parsing. Teh limit can be disabled by setting dis attribute to a value <em><strong>less than or equal to 0</strong></em>. If not specified, dis attribute is set to 2097152 (2 megabytes).</td></tr><tr><td><a href="https://tomcat.apache.org/tomcat-7.0-doc/config/http.html" target="_blank" rel="noopener">After and including 7.0.63</a></td><td>maxPostSize</td><td>Teh maximum size in bytes of teh POST which will be handled by teh container FORM URL parameter parsing. Teh limit can be disabled by setting this attribute to <em><strong>a value less than zero</strong></em>. If not specified, this attribute is set to 2097152 (2 megabytes). Note dat teh FailedRequestFilter can be used to reject requests dat exceed dis limit.</td></tr></tbody></table><p>You can also set maxPostSize=&quot;-1&quot; or value less than zero, it means that no limit for all versions of Tomcat.</p><p>Edit Tomcat’s server.xml which location is <strong><em>…/Your tomcat folder/conf/server.xml</em></strong>.<br>In the <em>&lt;Connector</em> element, add an attribute <em>maxPostSize</em> and set a larger value (in bytes) to increase the limit.<br>For example:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"10000000"</span> /&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"-1"</span> /&gt;</span></span><br></pre></td></tr></table></figure><h1 id="reference-links">Reference Links:</h1><p><a href="https://stackoverflow.com/questions/2943477/is-there-a-max-size-for-post-parameter-content" target="_blank" rel="noopener">Is there a max size for POST parameter content?</a></p><p><a href="https://webconnection.west-wind.com/docs/_4lp0zgm9d.htm#aspnet-setting-httpruntime-maxrequestlength" target="_blank" rel="noopener">Setting IIS and ASP.NET POST Size Request Limits</a></p><p><a href="https://blog.csdn.net/erlian1992/article/details/80209947" target="_blank" rel="noopener">关于Tomcat的maxPostSize属性的配置需要注意的问题</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;problem&quot;&gt;Problem&lt;/h1&gt;
+&lt;p&gt;Recently i meet a issue that when user import large file to send request by HTTP POST and servlet. The page
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="FrontEnd" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/"/>
+    
+      <category term="Servlet/HTTP" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/Servlet-HTTP/"/>
+    
+    
+      <category term="Servlet" scheme="https://catherineliyuankun.github.io/tags/Servlet/"/>
+    
+      <category term="maxPostSize" scheme="https://catherineliyuankun.github.io/tags/maxPostSize/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Force IE rerender</title>
+    <link href="https://catherineliyuankun.github.io/2019/04/24/Force-IE-rerender/"/>
+    <id>https://catherineliyuankun.github.io/2019/04/24/Force-IE-rerender/</id>
+    <published>2019-04-24T08:09:43.000Z</published>
+    <updated>2019-04-24T08:53:12.974Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="the-height-of-same-row-is-different-of-grid">The height of same row is different of grid</h1><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Force-IE-rerender/compare.png" alt="compare"><br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Force-IE-rerender/mark.png" alt="mark"><br><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Force-IE-rerender/html.png" alt="html"></p><h1 id="fix-by-javascript-code">Fix by javascript code</h1><p>迫使IE重新render</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (ISIE) &#123; <span class="comment">//judge whether it is IE</span></span><br><span class="line">    <span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        el.style.zoom = el.style.zoom == <span class="string">'1'</span> ? <span class="string">'100%'</span> : <span class="string">'1'</span>;</span><br><span class="line">    &#125;, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;the-height-of-same-row-is-different-of-grid&quot;&gt;The height of same row is different of grid&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Cather
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="FrontEnd" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/"/>
+    
+      <category term="IE issues" scheme="https://catherineliyuankun.github.io/categories/TECH/FrontEnd/IE-issues/"/>
+    
+    
+      <category term="IE" scheme="https://catherineliyuankun.github.io/tags/IE/"/>
+    
+  </entry>
   
   <entry>
     <title>Voice over for OSX Keyboard Shortcuts</title>

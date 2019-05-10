@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Voice over for OSX Keyboard Shortcuts - Yuankun | 源坤
+          Max size for HTTP POST servlet parameter content? - Yuankun | 源坤
         
     </title>
 
-    <link rel="canonical" href="https://catherineliyuankun.github.io/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">
+    <link rel="canonical" href="https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,7 +75,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Voice-over-for-OSX-Keyboard-Shortcuts/header-VoiceOver.png');
+            background-image: url('https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Max-size-for-HTTP-POST-servlet-parameter-content/header-server_xml.jpg');
             /*post*/
         
     }
@@ -103,28 +103,30 @@
                         <div class="post-heading">
                             <div class="tags">
                                 
-                                <a class="tag" href="/tags/#Voice over" title="Voice over">Voice over</a>
+                                <a class="tag" href="/tags/#Servlet" title="Servlet">Servlet</a>
+                                
+                                <a class="tag" href="/tags/#maxPostSize" title="maxPostSize">maxPostSize</a>
                                 
                             </div>
                             <!-- category post header -->
                             
                                 <div class="page-header-category">
-                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Accessibility/">Accessibility</a>
+                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
                                 </div>
                             
                             
                                 <span class="post-comments-count">
                                     <span class="post-meta-divider">|</span>
-                                    <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/#git_comment" itemprop="discussionUrl">
+                                    <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/#git_comment" itemprop="discussionUrl">
                                         <span class="post-meta-item-icon">
                                             <i class="fa fa-comment-o"></i>
                                         </span>
-                                        <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/" itemprop="commentsCount"></span>
+                                        <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/" itemprop="commentsCount"></span>
                                     </a>
                                 </span>
                             
                             <h1>
-                                Voice over for OSX Keyboard Shortcuts
+                                Max size for HTTP POST servlet parameter content?
                                 <!-- Share -->
                                 
                                     <span id="needsharebutton-postbottom" class="header-share">
@@ -134,10 +136,10 @@
                                     </span>
                                 
                             </h1>
-                            <h2 class="subheading"></h2>
+                            <h2 class="subheading">&lt;Connector maxPostSize=&quot;&quot;&gt; of server.xml</h2>
                             <span class="meta">
                                 Posted by Yuankun Li on
-                                2019-01-21
+                                2019-04-24
                             </span>
                         </div>
                     
@@ -258,394 +260,58 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="basic">Basic</h1>
+                <h1 id="problem">Problem</h1>
+<p>Recently i meet a issue that when user import large file to send request by HTTP POST and servlet. The page redirect to welcome page.<br>
+Then i debug it and find that web server do not get the right parameter from servlet.</p>
+<h1 id="the-root-reason">The root reason:</h1>
+<p>Web client send the request by HTTP POST and Servlet to web server.<br>
+When the size of imported file (as parameter of request) is larger than the max size of Servlet parameter content, web server can not get the right parameter of the request. So it return to default welcome page.<br>
+So the root reason is max size of Servlet parameter limit the request. We should reset the servlet setting in tomcat.</p>
+<h1 id="the-workaround">The workaround:</h1>
+<h2 id="1-for-asp-and-iis-environment">1 For ASP and IIS environment</h2>
+<p>In order to accept larger files you have to change two sets of setting in you’re web.config.<br>
+C:\Program Files (x86)\MicroStrategy\Web ASPx\web.config or Your ASP Folder\web.config</p>
+<p>###1 .1 IIS Setting: Request Limits<br>
+The following sets the max POST buffer size to 500 megs. The value is specified in bytes.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestLimits</span> <span class="attr">maxAllowedContentLength</span>=<span class="string">"500000000"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-2-asp-net-setting-httpruntime-maxrequestlength">1.2 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Setting: httpRuntime maxRequestLength</h3>
+<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> uses the httpRuntime element to control a number of runtime related features including teh allowed inbound request length. Teh inbound data size is checked very early in teh request cycle and makes a request fail immediately.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">httpRuntime</span> <span class="attr">maxRequestLength</span>=<span class="string">"500000000"</span>  <span class="attr">executionTimeout</span>=<span class="string">"120"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>###1.3 What about Web Connection?<br>
+Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>
+Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recommend you leave dis value at 0 and let IIS handle dis setting via the Request Limits. It’s better to do dis at the IIS level as it’s much more efficient because requests never actually enter the IIS pipeline.</p>
+<h2 id="2-for-jsp-and-tomcat-environment">2 For JSP and Tomcat environment</h2>
 <table>
 <thead>
 <tr>
-<th>Task</th>
-<th>Command</th>
-<th></th>
+<th>Tomcat Version</th>
+<th>Attribute</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>VO</td>
-<td>Control 键 + Option 键</td>
-<td></td>
+<td><a href="https://tomcat.apache.org/tomcat-5.5-doc/config/http.html" target="_blank" rel="noopener">Before 7.0.63</a></td>
+<td>maxPostSize</td>
+<td>Teh maximum size in bytes of teh POST which will be handled by teh container FORM URL parameter parsing. Teh limit can be disabled by setting dis attribute to a value <em><strong>less than or equal to 0</strong></em>. If not specified, dis attribute is set to 2097152 (2 megabytes).</td>
 </tr>
 <tr>
-<td>turn VoiceOver on or off</td>
-<td>Command-F5 or Fn-Command-F5</td>
-<td></td>
-</tr>
-<tr>
-<td>or hold Command and triple-press Touch ID on supported models1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>教程</td>
-<td>VO-Command-F8</td>
-<td></td>
-</tr>
-<tr>
-<td>Keyboard Help</td>
-<td>VO-K</td>
-<td></td>
-</tr>
-<tr>
-<td>Activate Link</td>
-<td>Enter</td>
-<td></td>
-</tr>
-<tr>
-<td>Activate button</td>
-<td>Enter or Space Bar</td>
-<td></td>
-</tr>
-<tr>
-<td>Read next/previous item</td>
-<td>VO + Right/Left Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Go to next heading</td>
-<td>VO + Command + H</td>
-<td></td>
-</tr>
-<tr>
-<td>Go to next table</td>
-<td>VO + command + T</td>
-<td></td>
-</tr>
-<tr>
-<td>Go to previous (heading, table, etc.)</td>
-<td>VO + Command + [H, T, etc.]</td>
-<td></td>
-</tr>
-<tr>
-<td>Interact with (go into/out of) objects(like iframes, menus, application regions, etc.)</td>
-<td>VO + Shift + Down/Up Arrows</td>
-<td></td>
-</tr>
-<tr>
-<td>Dock</td>
-<td>VO-D</td>
-<td>To move between icons in the Dock, press VO-Left Arrow or VO-Right Arrow</td>
-</tr>
-<tr>
-<td>mac menu bar</td>
-<td>VO-M</td>
-<td>navigate to the status menus, press VO-M-M.</td>
-</tr>
-<tr>
-<td>Lock (or unlock) VO keys</td>
-<td>VO +</td>
-<td></td>
-</tr>
-<tr>
-<td>Adjust the Voice</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>VO-Command-Shift-Right Arrow several times</td>
-<td>start setting</td>
-</tr>
-<tr>
-<td></td>
-<td>VO-Command-Shift-Up/Down Arrow</td>
-<td>increase/decrease the setting’s value</td>
+<td><a href="https://tomcat.apache.org/tomcat-7.0-doc/config/http.html" target="_blank" rel="noopener">After and including 7.0.63</a></td>
+<td>maxPostSize</td>
+<td>Teh maximum size in bytes of teh POST which will be handled by teh container FORM URL parameter parsing. Teh limit can be disabled by setting this attribute to <em><strong>a value less than zero</strong></em>. If not specified, this attribute is set to 2097152 (2 megabytes). Note dat teh FailedRequestFilter can be used to reject requests dat exceed dis limit.</td>
 </tr>
 </tbody>
 </table>
-<h1 id="navigation">Navigation</h1>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Command</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Go to next/previous focusable item</td>
-<td>Tab / Shift + Tab</td>
-<td>(link, button, input, etc.)</td>
-</tr>
-<tr>
-<td>Move to the next control when a text field is selected</td>
-<td>Control-Tab</td>
-<td></td>
-</tr>
-<tr>
-<td>Move the focus to the previous grouping of controls</td>
-<td>Control-Shift-Tab</td>
-<td></td>
-</tr>
-<tr>
-<td>Move to the adjacent item in a list, tab group, or menu；Move sliders and adjusters (Up Arrow to increase values, Down Arrow to decrease values)</td>
-<td>Arrow keys</td>
-<td></td>
-</tr>
-<tr>
-<td>move the VoiceOver cursor</td>
-<td>VO-Up/Down/Left/Right Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Move to a control adjacent to the text field</td>
-<td>Control–Arrow keys</td>
-<td></td>
-</tr>
-<tr>
-<td>Click the default button or perform the default action</td>
-<td>Return or Enter</td>
-<td></td>
-</tr>
-<tr>
-<td>Click the Cancel button or close a menu without choosing an item</td>
-<td>Esc</td>
-<td></td>
-</tr>
-<tr>
-<td>Navigate Webpages</td>
-<td>VO + U</td>
-<td>Open rotor (see explanation below)</td>
-</tr>
-<tr>
-<td>auto web spot</td>
-<td>VO-Command-N / VO-Command-Shift-N</td>
-<td>To jump to the next or previous auto web spot</td>
-</tr>
-<tr>
-<td>VO-Right/Left Arrow</td>
-<td>To move to the item before or after an auto web spot</td>
-<td></td>
-</tr>
-<tr>
-<td>select controls</td>
-<td>VO-Space</td>
-<td>interact with checkboxes, radio buttons, pop-up menus, and other onscreen controls</td>
-</tr>
-<tr>
-<td>start/stop Interact with Elements</td>
-<td>VO-Shift-Down/Up Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Next link</td>
-<td>VO + command + L</td>
-<td></td>
-</tr>
-<tr>
-<td>Next visited link</td>
-<td>VO + command + V</td>
-<td></td>
-</tr>
-<tr>
-<td>Next form control</td>
-<td>VO + command + J</td>
-<td></td>
-</tr>
-<tr>
-<td>Next list</td>
-<td>VO + command + X</td>
-<td></td>
-</tr>
-<tr>
-<td>Next graphic</td>
-<td>VO + command + G</td>
-<td></td>
-</tr>
-<tr>
-<td>Move the focus to the previous panel</td>
-<td>Control-Shift-F6</td>
-<td></td>
-</tr>
-<tr>
-<td>Move to the status menu in the menu bar</td>
-<td>Control-F8</td>
-<td></td>
-</tr>
-<tr>
-<td>Activate the next open window in the front app</td>
-<td>Command-Accent (`)</td>
-<td></td>
-</tr>
-<tr>
-<td>Activate the previous open window in the front app</td>
-<td>Shift-Command-Accent (`)</td>
-<td></td>
-</tr>
-<tr>
-<td>Move the focus to the window drawer</td>
-<td>Option-Command-Accent (`)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="data-tables">Data Tables</h1>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Command</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Go to next table</td>
-<td>VO + command + T</td>
-<td></td>
-</tr>
-<tr>
-<td>Read column header</td>
-<td>VO + C</td>
-<td></td>
-</tr>
-<tr>
-<td>Read row header</td>
-<td>VO + R</td>
-<td>/row from VO cursor location to end of row</td>
-</tr>
-<tr>
-<td>read a table column</td>
-<td>VO-C-C</td>
-<td></td>
-</tr>
-<tr>
-<td>read a row</td>
-<td>VO-R-R</td>
-<td></td>
-</tr>
-<tr>
-<td>Read column from VO cursor location to bottom of column</td>
-<td>VO + R + C</td>
-<td></td>
-</tr>
-<tr>
-<td>Navigate table cells</td>
-<td>O + Arrow Keys (<img src="evernotecid://42B76B16-D58D-4F3C-B807-6F2A8086E7B7/appyinxiangcom/7963496/ENResource/p14465" alt="cdd13b4aaa32b8cfc4863a60d3882054.png"> or <img src="evernotecid://42B76B16-D58D-4F3C-B807-6F2A8086E7B7/appyinxiangcom/7963496/ENResource/p14466" alt="fd5faf1d96d8e526b6097b376d46b409.png"> or <img src="evernotecid://42B76B16-D58D-4F3C-B807-6F2A8086E7B7/appyinxiangcom/7963496/ENResource/p14467" alt="ab12b66bf3cd78a3e111fda1cef5e9fb.png"> or <img src="evernotecid://42B76B16-D58D-4F3C-B807-6F2A8086E7B7/appyinxiangcom/7963496/ENResource/p14468" alt="3cf03e7a94843864c6ed88c74c8247a1.png"> )</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="reading">Reading</h1>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Command</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Start reading</td>
-<td>VO + A</td>
-<td></td>
-</tr>
-<tr>
-<td>Stop reading</td>
-<td>Control</td>
-<td></td>
-</tr>
-<tr>
-<td>Read next item	VO + Right Arrow</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Read previous item	VO + Left Arrow</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Read paragraph	VO + P</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Read sentence	VO + S</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Read word (press W multiple times to spell words alphabetically and phonetically)</td>
-<td>VO + W</td>
-<td></td>
-</tr>
-<tr>
-<td>Read from top to current location</td>
-<td>VO + B</td>
-<td></td>
-</tr>
-<tr>
-<td>Jump to top of page (on desktop keyboard)</td>
-<td>VO + Home</td>
-<td></td>
-</tr>
-<tr>
-<td>Jump to top of page (on laptop keyboards)</td>
-<td>VO + fn + Left Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Jump to bottom of page (on desktop keyboard)</td>
-<td>VO + End</td>
-<td></td>
-</tr>
-<tr>
-<td>Jump to bottom of page (on laptop keyboards)</td>
-<td>VO + fn + Right Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Select speech setting option (speaking rate, voice, pitch, etc.)</td>
-<td>VO + command + Right Arrow / Left Arrow</td>
-<td></td>
-</tr>
-<tr>
-<td>Modify the selected speech setting</td>
-<td>VO + command + Up Arrow / Down Arrow</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="multi-touch-trackpad">Multi-Touch Trackpad</h1>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>enable/disable the Trackpad Commander</td>
-<td>VO + rotate two fingers clockwise/counter clockwise on the trackpad</td>
-</tr>
-<tr>
-<td>move to the next or previous item</td>
-<td>flick right or left</td>
-</tr>
-<tr>
-<td>start or stop interacting with the current item</td>
-<td>flick two fingers right or left</td>
-</tr>
-<tr>
-<td>select the current item</td>
-<td>double tap</td>
-</tr>
-</tbody>
-</table>
-<h1 id="reference-links">Reference links</h1>
-<p><a href="https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts" target="_blank" rel="noopener">https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts</a></p>
-<p><a href="https://support.apple.com/en-gb/HT204434" target="_blank" rel="noopener">https://support.apple.com/en-gb/HT204434</a></p>
+<p>You can also set maxPostSize=&quot;-1&quot; or value less than zero, it means that no limit for all versions of Tomcat.</p>
+<p>Edit Tomcat’s server.xml which location is <strong><em>…/Your tomcat folder/conf/server.xml</em></strong>.<br>
+In the <em>&lt;Connector</em> element, add an attribute <em>maxPostSize</em> and set a larger value (in bytes) to increase the limit.<br>
+For example:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"10000000"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"-1"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="reference-links">Reference Links:</h1>
+<p><a href="https://stackoverflow.com/questions/2943477/is-there-a-max-size-for-post-parameter-content" target="_blank" rel="noopener">Is there a max size for POST parameter content?</a></p>
+<p><a href="https://webconnection.west-wind.com/docs/_4lp0zgm9d.htm#aspnet-setting-httpruntime-maxrequestlength" target="_blank" rel="noopener">Setting IIS and ASP.NET POST Size Request Limits</a></p>
+<p><a href="https://blog.csdn.net/erlian1992/article/details/80209947" target="_blank" rel="noopener">关于Tomcat的maxPostSize属性的配置需要注意的问题</a></p>
 
 
                 <!-- Donate -->
@@ -672,8 +338,8 @@
 
                 <! -- 添加版权信息 -->
 <div class="article-footer-copyright">
-  <div><b>本文标题: </b><a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/" target="_blank" title="Voice over for OSX Keyboard Shortcuts">Voice over for OSX Keyboard Shortcuts</a></div>
-  <div><b>本文链接: </b><a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/" target="_blank" title="Voice over for OSX Keyboard Shortcuts">https://catherineliyuankun.github.io/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/</a>.</div>
+  <div><b>本文标题: </b><a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/" target="_blank" title="Max size for HTTP POST servlet parameter content?">Max size for HTTP POST servlet parameter content?</a></div>
+  <div><b>本文链接: </b><a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/" target="_blank" title="Max size for HTTP POST servlet parameter content?">https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/</a>.</div>
   <div>本文由<a href="/index.html" target="_blank" title="Yuankun Li">Yuankun Li</a>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可,转载请注明作者及出处。</div>
 </div>
 
@@ -683,12 +349,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/04/24/Force-IE-rerender/" data-toggle="tooltip" data-placement="top" title="Force IE rerender">&larr; Previous Post</a>
+                            <a href="/2019/04/24/从微信链接-mpvoice-爬取音频/" data-toggle="tooltip" data-placement="top" title="从微信链接爬取音频">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2018/11/01/A11ycasts-Learning-Notes/" data-toggle="tooltip" data-placement="top" title="A11ycasts Learning Notes">Next Post &rarr;</a>
+                            <a href="/2019/04/24/Force-IE-rerender/" data-toggle="tooltip" data-placement="top" title="Force IE rerender">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -729,7 +395,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#basic"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Basic</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#navigation"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Navigation</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#data-tables"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Data Tables</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reading"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reading</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#multi-touch-trackpad"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Multi-Touch Trackpad</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Reference links</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-root-reason"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The root reason:</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-workaround"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">The workaround:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-for-asp-and-iis-environment"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1 For ASP and IIS environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-asp-net-setting-httpruntime-maxrequestlength"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1.2 ASP.NET Setting: httpRuntime maxRequestLength</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-for-jsp-and-tomcat-environment"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2 For JSP and Tomcat environment</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reference Links:</span></a></li></ol>
         
         </div>
       </aside>
@@ -1159,8 +825,8 @@
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
         var disqus_shortname = "lyk-1";
-        var disqus_identifier = "https://catherineliyuankun.github.io/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/";
-        var disqus_url = "https://catherineliyuankun.github.io/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/";
+        var disqus_identifier = "https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/";
+        var disqus_url = "https://catherineliyuankun.github.io/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/";
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
