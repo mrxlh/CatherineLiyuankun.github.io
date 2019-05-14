@@ -2,22 +2,8 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/Hexo/</loc>
-        <lastmod>2018-10-08T13:39:08.105Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/Blog/</loc>
-        <lastmod>2018-10-08T13:39:08.105Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/tags/MySQL/</loc>
-        <lastmod>2018-10-09T03:25:55.799Z</lastmod>
+        <lastmod>2018-10-09T03:25:55.798Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -31,14 +17,14 @@
 
     <url>
         <loc>https://catherineliyuankun.github.io/tags/Voice-over/</loc>
-        <lastmod>2019-03-12T06:53:19.247Z</lastmod>
+        <lastmod>2019-03-12T06:53:19.246Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/tags/IE/</loc>
-        <lastmod>2019-04-24T08:53:12.974Z</lastmod>
+        <lastmod>2019-04-24T08:53:12.973Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -51,22 +37,36 @@
     </url>
 
     <url>
+        <loc>https://catherineliyuankun.github.io/tags/Weixin/</loc>
+        <lastmod>2019-05-13T02:28:10.509Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/tags/Servlet/</loc>
-        <lastmod>2019-05-10T06:12:52.307Z</lastmod>
+        <lastmod>2019-05-13T06:19:04.896Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/tags/maxPostSize/</loc>
-        <lastmod>2019-05-10T06:12:52.307Z</lastmod>
+        <lastmod>2019-05-13T06:19:04.896Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/Weixin/</loc>
-        <lastmod>2019-05-10T06:12:52.329Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/tags/Hexo/</loc>
+        <lastmod>2019-05-14T02:40:38.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/Blog/</loc>
+        <lastmod>2019-05-14T02:40:38.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -2,13 +2,13 @@
 <html lang="en">
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
+    <meta name="description" content>
+    <meta name="keyword" content>
     <link rel="shortcut icon" href="/img/cat-icon-512.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -92,7 +92,7 @@
     
 </style>
 
-<header class="intro-header" >
+<header class="intro-header">
     <div id="header-cover">
         <!-- Signature -->
         <div id="signature">
@@ -185,14 +185,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -277,10 +277,11 @@ The following sets the max POST buffer size to 500 megs. The value is specified 
 <h3 id="1-2-asp-net-setting-httpruntime-maxrequestlength">1.2 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Setting: httpRuntime maxRequestLength</h3>
 <p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> uses the httpRuntime element to control a number of runtime related features including teh allowed inbound request length. Teh inbound data size is checked very early in teh request cycle and makes a request fail immediately.</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">httpRuntime</span> <span class="attr">maxRequestLength</span>=<span class="string">"500000000"</span>  <span class="attr">executionTimeout</span>=<span class="string">"120"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>###1.3 What about Web Connection?<br>
-Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>
+<h3 id="1-3-what-about-web-connection">1.3 What about Web Connection?</h3>
+<p>Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>
 Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recommend you leave dis value at 0 and let IIS handle dis setting via the Request Limits. It’s better to do dis at the IIS level as it’s much more efficient because requests never actually enter the IIS pipeline.</p>
 <h2 id="2-for-jsp-and-tomcat-environment">2 For JSP and Tomcat environment</h2>
+<h3 id="2-1-maxpostsize">2.1 maxPostSize</h3>
 <table>
 <thead>
 <tr>
@@ -303,15 +304,25 @@ Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recomm
 </tbody>
 </table>
 <p>You can also set maxPostSize=&quot;-1&quot; or value less than zero, it means that no limit for all versions of Tomcat.</p>
+<h3 id="2-2-modify-maxpostsize-of-server-xml">2.2 Modify maxPostSize of server.xml</h3>
 <p>Edit Tomcat’s server.xml which location is <strong><em>…/Your tomcat folder/conf/server.xml</em></strong>.<br>
 In the <em>&lt;Connector</em> element, add an attribute <em>maxPostSize</em> and set a larger value (in bytes) to increase the limit.<br>
 For example:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"10000000"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"-1"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3-modify-max-file-size-and-max-request-size-of-web-xml-in-linux">2.3 Modify max-file-size and max-request-size of web.xml in Linux</h3>
+<p>On Amazon EC2 Linux instances, the only file that needs to be modified from the default installation of Tomcat (sudo yum install tomcat) is:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/tomcat7/webapps/manager/WEB-INF/web.xml</span><br></pre></td></tr></table></figure>
+<p>their are only two values that need to be modified (max-file-size and max-request-size):</p>
+<p>By default, the maximum upload size is exactly 50MB:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">multipart-config</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 50MB max --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">max-file-size</span>&gt;</span>52428800<span class="tag">&lt;/<span class="name">max-file-size</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">max-request-size</span>&gt;</span>52428800<span class="tag">&lt;/<span class="name">max-request-size</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">file-size-threshold</span>&gt;</span>0<span class="tag">&lt;/<span class="name">file-size-threshold</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">multipart-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Their are only two values that need to be modified (max-file-size and max-request-size):</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">multipart-config</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 100MB max --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">max-file-size</span>&gt;</span>104857600<span class="tag">&lt;/<span class="name">max-file-size</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">max-request-size</span>&gt;</span>104857600<span class="tag">&lt;/<span class="name">max-request-size</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">file-size-threshold</span>&gt;</span>0<span class="tag">&lt;/<span class="name">file-size-threshold</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">multipart-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="reference-links">Reference Links:</h1>
 <p><a href="https://stackoverflow.com/questions/2943477/is-there-a-max-size-for-post-parameter-content" target="_blank" rel="noopener">Is there a max size for POST parameter content?</a></p>
 <p><a href="https://webconnection.west-wind.com/docs/_4lp0zgm9d.htm#aspnet-setting-httpruntime-maxrequestlength" target="_blank" rel="noopener">Setting IIS and ASP.NET POST Size Request Limits</a></p>
 <p><a href="https://blog.csdn.net/erlian1992/article/details/80209947" target="_blank" rel="noopener">关于Tomcat的maxPostSize属性的配置需要注意的问题</a></p>
+<p><a href="https://stackoverflow.com/questions/2947683/httprequest-maximum-allowable-size-in-tomcat" target="_blank" rel="noopener">HttpRequest maximum allowable size in tomcat?</a></p>
 
 
                 <!-- Donate -->
@@ -395,7 +406,7 @@ For example:</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-root-reason"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The root reason:</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-workaround"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">The workaround:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-for-asp-and-iis-environment"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1 For ASP and IIS environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-asp-net-setting-httpruntime-maxrequestlength"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1.2 ASP.NET Setting: httpRuntime maxRequestLength</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-for-jsp-and-tomcat-environment"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2 For JSP and Tomcat environment</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reference Links:</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-root-reason"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The root reason:</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-workaround"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">The workaround:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-for-asp-and-iis-environment"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1 For ASP and IIS environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-asp-net-setting-httpruntime-maxrequestlength"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1.2 ASP.NET Setting: httpRuntime maxRequestLength</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-what-about-web-connection"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">1.3 What about Web Connection?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-for-jsp-and-tomcat-environment"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2 For JSP and Tomcat environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-maxpostsize"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 maxPostSize</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-modify-maxpostsize-of-server-xml"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 Modify maxPostSize of server.xml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-modify-max-file-size-and-max-request-size-of-web-xml-in-linux"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 Modify max-file-size and max-request-size of web.xml in Linux</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reference Links:</span></a></li></ol>
         
         </div>
       </aside>
@@ -421,6 +432,10 @@ For example:</p>
     <ul>
       
         <li>
+          <a href="/2019/05/13/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated/">&quot;Hexo fs.SyncWriteStream is deprecated&quot;</a>
+        </li>
+      
+        <li>
           <a href="/2019/04/25/从微信语音or笔记爬取音频/">从微信语音or笔记爬取音频</a>
         </li>
       
@@ -434,10 +449,6 @@ For example:</p>
       
         <li>
           <a href="/2019/04/24/Force-IE-rerender/">Force IE rerender</a>
-        </li>
-      
-        <li>
-          <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">Voice over for OSX Keyboard Shortcuts</a>
         </li>
       
     </ul>
@@ -522,7 +533,7 @@ For example:</p>
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/catherineliyuankun">
+                        <a target="_blank" href="https://github.com/catherineliyuankun">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -533,7 +544,7 @@ For example:</p>
 
                 
                     <li>
-                        <a target="_blank"  href="https://www.linkedin.com/in/liyuankun">
+                        <a target="_blank" href="https://www.linkedin.com/in/liyuankun">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -597,10 +608,7 @@ For example:</p>
                         <i class="fa fa-heart"></i>
                     </span> 
                     re-Ported by <a href="https://github.com/CatherineLiyuankun">Li, Yuankun</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=catherineliyuankun&repo=hexo-theme-zilan&type=star&count=true" >
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=catherineliyuankun&repo=hexo-theme-zilan&type=star&count=true">
                     </iframe>
                 </p>
             </div>
