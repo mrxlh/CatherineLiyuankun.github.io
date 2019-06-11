@@ -103,6 +103,8 @@
                         <div class="post-heading">
                             <div class="tags">
                                 
+                                <a class="tag" href="/tags/#Tomcat" title="Tomcat">Tomcat</a>
+                                
                                 <a class="tag" href="/tags/#Servlet" title="Servlet">Servlet</a>
                                 
                                 <a class="tag" href="/tags/#maxPostSize" title="maxPostSize">maxPostSize</a>
@@ -111,7 +113,7 @@
                             <!-- category post header -->
                             
                                 <div class="page-header-category">
-                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
+                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Network/">Network</a>
                                 </div>
                             
                             
@@ -185,14 +187,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -268,20 +270,8 @@ Then i debug it and find that web server do not get the right parameter from ser
 When the size of imported file (as parameter of request) is larger than the max size of Servlet parameter content, web server can not get the right parameter of the request. So it return to default welcome page.<br>
 So the root reason is max size of Servlet parameter limit the request. We should reset the servlet setting in tomcat.</p>
 <h1 id="the-workaround">The workaround:</h1>
-<h2 id="1-for-asp-and-iis-environment">1 For ASP and IIS environment</h2>
-<p>In order to accept larger files you have to change two sets of setting in you’re web.config.<br>
-C:\Program Files (x86)\MicroStrategy\Web ASPx\web.config or Your ASP Folder\web.config</p>
-<p>###1 .1 IIS Setting: Request Limits<br>
-The following sets the max POST buffer size to 500 megs. The value is specified in bytes.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestLimits</span> <span class="attr">maxAllowedContentLength</span>=<span class="string">"500000000"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-2-asp-net-setting-httpruntime-maxrequestlength">1.2 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Setting: httpRuntime maxRequestLength</h3>
-<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> uses the httpRuntime element to control a number of runtime related features including teh allowed inbound request length. Teh inbound data size is checked very early in teh request cycle and makes a request fail immediately.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">httpRuntime</span> <span class="attr">maxRequestLength</span>=<span class="string">"500000000"</span>  <span class="attr">executionTimeout</span>=<span class="string">"120"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-3-what-about-web-connection">1.3 What about Web Connection?</h3>
-<p>Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>
-Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recommend you leave dis value at 0 and let IIS handle dis setting via the Request Limits. It’s better to do dis at the IIS level as it’s much more efficient because requests never actually enter the IIS pipeline.</p>
-<h2 id="2-for-jsp-and-tomcat-environment">2 For JSP and Tomcat environment</h2>
-<h3 id="2-1-maxpostsize">2.1 maxPostSize</h3>
+<h2 id="1-for-jsp-and-tomcat-environment">1 For JSP and Tomcat environment</h2>
+<h3 id="1-1-maxpostsize">1.1 maxPostSize</h3>
 <table>
 <thead>
 <tr>
@@ -304,13 +294,32 @@ Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recomm
 </tbody>
 </table>
 <p>You can also set maxPostSize=&quot;-1&quot; or value less than zero, it means that no limit for all versions of Tomcat.</p>
-<h3 id="2-2-modify-maxpostsize-of-server-xml">2.2 Modify maxPostSize of server.xml</h3>
+<h3 id="1-2-modify-maxpostsize-of-server-xml">1.2 Modify maxPostSize of server.xml</h3>
 <p>Edit Tomcat’s server.xml which location is <strong><em>…/Your tomcat folder/conf/server.xml</em></strong>.<br>
 In the <em>&lt;Connector</em> element, add an attribute <em>maxPostSize</em> and set a larger value (in bytes) to increase the limit.<br>
+If there is timeout error, you should also add or increase the value of connectionTimeout.</p>
+<h4 id="1-2-1-for-http">1.2.1 For http:</h4>
+<p>We modify connector for port=“8080” in /Your tomcat folder/conf/server.xml<br>
 For example:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"10000000"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"-1"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-3-modify-max-file-size-and-max-request-size-of-web-xml-in-linux">2.3 Modify max-file-size and max-request-size of web.xml in Linux</h3>
+<h4 id="1-2-2-for-https">1.2.2 For https:</h4>
+<p>We should also modify connector for port=“8443” /Your tomcat folder/conf/server.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8443"</span> <span class="attr">protocol</span>=<span class="string">"org.apache.coyote.http11.Http11NioProtocol"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">maxPostSize</span>=<span class="string">"-1"</span> <span class="attr">maxThreads</span>=<span class="string">"150"</span> <span class="attr">SSLEnabled</span>=<span class="string">"true"</span> <span class="attr">scheme</span>=<span class="string">"https"</span> <span class="attr">secure</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">clientAuth</span>=<span class="string">"false"</span> <span class="attr">sslProtocol</span>=<span class="string">"TLS"</span> <span class="attr">keystoreFile</span>=<span class="string">"/opt/apache/tomcat/apache-tomcat-9.0.12/keystore"</span> <span class="attr">keystorePass</span>=<span class="string">"opsworkstomcat"</span> <span class="attr">server</span>=<span class="string">"Mxxxx"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>If you wonder why use port 8443 rather than 443, you can see my another blog: <a href="e">Difference between HTTPS Port 443 and Port 8443</a></p>
+<h2 id="2-for-asp-and-iis-environment">2 For ASP and IIS environment</h2>
+<p>In order to accept larger files you have to change two sets of setting in you’re web.config.<br>
+C:\Program Files (x86)\MicroStrategy\Web ASPx\web.config or Your ASP Folder\web.config</p>
+<h3 id="2-1-iis-setting-request-limits">2.1 IIS Setting: Request Limits</h3>
+<p>The following sets the max POST buffer size to 500 megs. The value is specified in bytes.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">security</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">requestLimits</span> <span class="attr">maxAllowedContentLength</span>=<span class="string">"500000000"</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">requestFiltering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">security</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2-asp-net-setting-httpruntime-maxrequestlength">2.2 <a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> Setting: httpRuntime maxRequestLength</h3>
+<p><a href="http://ASP.NET" target="_blank" rel="noopener">ASP.NET</a> uses the httpRuntime element to control a number of runtime related features including teh allowed inbound request length. Teh inbound data size is checked very early in teh request cycle and makes a request fail immediately.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">httpRuntime</span> <span class="attr">maxRequestLength</span>=<span class="string">"500000000"</span>  <span class="attr">executionTimeout</span>=<span class="string">"120"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3-what-about-web-connection">2.3 What about Web Connection?</h3>
+<p>Starting with Web Connection 6.0 teh .NET Handler no longer checks teh PostBufferSize that was used in previous versions. This value is now deferred in favor of the values above.<br>
+Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recommend you leave dis value at 0 and let IIS handle dis setting via the Request Limits. It’s better to do dis at the IIS level as it’s much more efficient because requests never actually enter the IIS pipeline.</p>
+<h2 id="3-other-：modify-max-file-size-and-max-request-size-of-web-xml-in-linux">3 Other ：Modify max-file-size and max-request-size of web.xml in Linux</h2>
 <p>On Amazon EC2 Linux instances, the only file that needs to be modified from the default installation of Tomcat (sudo yum install tomcat) is:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/tomcat7/webapps/manager/WEB-INF/web.xml</span><br></pre></td></tr></table></figure>
 <p>their are only two values that need to be modified (max-file-size and max-request-size):</p>
@@ -406,7 +415,7 @@ For example:</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-root-reason"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The root reason:</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-workaround"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">The workaround:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-for-asp-and-iis-environment"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1 For ASP and IIS environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-asp-net-setting-httpruntime-maxrequestlength"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1.2 ASP.NET Setting: httpRuntime maxRequestLength</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-what-about-web-connection"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">1.3 What about Web Connection?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-for-jsp-and-tomcat-environment"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2 For JSP and Tomcat environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-maxpostsize"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 maxPostSize</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-modify-maxpostsize-of-server-xml"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 Modify maxPostSize of server.xml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-modify-max-file-size-and-max-request-size-of-web-xml-in-linux"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 Modify max-file-size and max-request-size of web.xml in Linux</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reference Links:</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-root-reason"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The root reason:</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-workaround"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">The workaround:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-for-jsp-and-tomcat-environment"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1 For JSP and Tomcat environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-maxpostsize"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1.1 maxPostSize</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-modify-maxpostsize-of-server-xml"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">1.2 Modify maxPostSize of server.xml</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-1-for-http"><span class="toc-nav-number">3.1.2.1.</span> <span class="toc-nav-text">1.2.1 For http:</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-2-2-for-https"><span class="toc-nav-number">3.1.2.2.</span> <span class="toc-nav-text">1.2.2 For https:</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-for-asp-and-iis-environment"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2 For ASP and IIS environment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-iis-setting-request-limits"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">2.1 IIS Setting: Request Limits</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-asp-net-setting-httpruntime-maxrequestlength"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">2.2 ASP.NET Setting: httpRuntime maxRequestLength</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-what-about-web-connection"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">2.3 What about Web Connection?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-other-：modify-max-file-size-and-max-request-size-of-web-xml-in-linux"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3 Other ：Modify max-file-size and max-request-size of web.xml in Linux</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference-links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Reference Links:</span></a></li></ol>
         
         </div>
       </aside>
@@ -432,23 +441,23 @@ For example:</p>
     <ul>
       
         <li>
+          <a href="/2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing SSL port from 8443 to 443</a>
+        </li>
+      
+        <li>
+          <a href="/2019/06/11/Difference-between-HTTPS-Port-443-and-Port-8443/">Difference between HTTPS Port 443 and Port 8443</a>
+        </li>
+      
+        <li>
+          <a href="/2019/05/14/ComponentDidUpdate-setState-and-Maximum-update-depth-exceeded/">ComponentDidUpdate setState and Maximum update depth exceeded</a>
+        </li>
+      
+        <li>
+          <a href="/2019/05/14/Can-not-find-the-tag-library-descriptor-for-jsp/">Can not find the tag library descriptor for .tld</a>
+        </li>
+      
+        <li>
           <a href="/2019/05/13/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated/">&quot;Hexo fs.SyncWriteStream is deprecated&quot;</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/25/从微信语音or笔记爬取音频/">从微信语音or笔记爬取音频</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/从微信链接-mpvoice-爬取音频/">从微信链接爬取音频</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">Max size for HTTP POST servlet parameter content?</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/Force-IE-rerender/">Force IE rerender</a>
         </li>
       
     </ul>

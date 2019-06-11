@@ -185,14 +185,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -262,6 +262,7 @@
 
                 <h1 id="problem">Problem</h1>
 <p>NodeJs V8 使用hexo时报错：</p>
+<p>(node:28561) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ hexo g</span><br><span class="line">(node:28561) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.</span><br><span class="line">INFO  Start processing</span><br><span class="line">FATAL Something<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">TypeError: Cannot set property '</span>lastIndex<span class="string">' of undefined</span></span><br><span class="line"><span class="string">    at highlight (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/highlight.js/lib/highlight.js:511:35)</span></span><br><span class="line"><span class="string">    at /Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/highlight.js/lib/highlight.js:561:21</span></span><br><span class="line"><span class="string">    at Array.forEach (&lt;anonymous&gt;)</span></span><br><span class="line"><span class="string">    at Object.highlightAuto (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/highlight.js/lib/highlight.js:560:40)</span></span><br><span class="line"><span class="string">    at /Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo-util/lib/highlight.js:117:25</span></span><br><span class="line"><span class="string">    at highlight (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo-util/lib/highlight.js:120:7)</span></span><br><span class="line"><span class="string">    at highlightUtil (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo-util/lib/highlight.js:22:14)</span></span><br><span class="line"><span class="string">    at /Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo/lib/plugins/filter/before_post_render/backtick_code_block.js:62:15</span></span><br><span class="line"><span class="string">    at String.replace (&lt;anonymous&gt;)</span></span><br><span class="line"><span class="string">    at Hexo.backtickCodeBlock (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo/lib/plugins/filter/before_post_render/backtick_code_block.js:14:31)</span></span><br><span class="line"><span class="string">    at Hexo.tryCatcher (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/util.js:16:23)</span></span><br><span class="line"><span class="string">    at Hexo.&lt;anonymous&gt; (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/method.js:15:34)</span></span><br><span class="line"><span class="string">    at Promise.each.filter (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo/lib/extend/filter.js:63:65)</span></span><br><span class="line"><span class="string">    at tryCatcher (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/util.js:16:23)</span></span><br><span class="line"><span class="string">    at Object.gotValue (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/reduce.js:155:18)</span></span><br><span class="line"><span class="string">    at Object.gotAccum (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/reduce.js:144:25)</span></span><br><span class="line"><span class="string">    at Object.tryCatcher (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/util.js:16:23)</span></span><br><span class="line"><span class="string">    at Promise._settlePromiseFromHandler (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/promise.js:512:31)</span></span><br><span class="line"><span class="string">    at Promise._settlePromise (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/promise.js:569:18)</span></span><br><span class="line"><span class="string">    at Promise._settlePromiseCtx (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/promise.js:606:10)</span></span><br><span class="line"><span class="string">    at Async._drainQueue (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/async.js:138:12)</span></span><br><span class="line"><span class="string">    at Async._drainQueues (/Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/bluebird/js/release/async.js:143:10)</span></span><br></pre></td></tr></table></figure>
 <h2 id="root-cause">Root cause</h2>
 <p>hexo-fs 老版本里有一行：</p>
@@ -273,9 +274,9 @@
 重新npm install hexo-cli -g 就好了</p>
  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">➜  <span class="selector-tag">Hexo-theme-zilan</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">nvm</span> <span class="selector-tag">list</span></span><br><span class="line">        <span class="selector-tag">v7</span><span class="selector-class">.4</span><span class="selector-class">.0</span></span><br><span class="line"><span class="selector-tag">-</span>&gt;       <span class="selector-tag">v8</span><span class="selector-class">.9</span><span class="selector-class">.1</span></span><br><span class="line">        <span class="selector-tag">v9</span><span class="selector-class">.3</span><span class="selector-class">.0</span></span><br><span class="line">➜  <span class="selector-tag">Hexo-theme-zilan</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">nvm</span> <span class="selector-tag">use</span> <span class="selector-tag">v7</span><span class="selector-class">.4</span><span class="selector-class">.0</span></span><br><span class="line"><span class="selector-tag">Now</span> <span class="selector-tag">using</span> <span class="selector-tag">node</span> <span class="selector-tag">v7</span><span class="selector-class">.4</span><span class="selector-class">.0</span> (<span class="selector-tag">npm</span> <span class="selector-tag">v4</span><span class="selector-class">.0</span><span class="selector-class">.5</span>)</span><br><span class="line">➜  <span class="selector-tag">Hexo-theme-zilan</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">npm</span> <span class="selector-tag">install</span></span><br><span class="line">➜  <span class="selector-tag">Hexo-theme-zilan</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">hexo</span> <span class="selector-tag">g</span></span><br><span class="line"><span class="selector-tag">zsh</span>: <span class="selector-tag">command</span> <span class="selector-tag">not</span> <span class="selector-tag">found</span>: <span class="selector-tag">hexo</span></span><br><span class="line"></span><br><span class="line">➜  <span class="selector-tag">Hexo-theme-zilan</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">npm</span> <span class="selector-tag">install</span> <span class="selector-tag">hexo-cli</span> <span class="selector-tag">-g</span></span><br></pre></td></tr></table></figure>
 <h2 id="fix-2-install-hexo-fs">Fix 2 install hexo-fs</h2>
+<p>如果还想使用nodejs &gt; v8, 可以更新hexo-fs</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ npm <span class="keyword">install</span> hexo-fs –<span class="keyword">save</span></span><br></pre></td></tr></table></figure>
-<pre><code>试了下还是没解决。。。 Try again, still has the error...
-</code></pre>
+<p>试了下还是没解决。。。 Try again, still has the error…</p>
 <h2 id="fix-2-hexo-debug">Fix 2 hexo --debug</h2>
 <p>会发现hexo-deployer-git 里使用了旧版本的hexo-fs，所以造成问题</p>
   <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ hexo --debug</span><br><span class="line">    07:05:51.382 <span class="builtin-name">DEBUG</span> Hexo version: 3.7.1</span><br><span class="line">    07:05:51.385 <span class="builtin-name">DEBUG</span> Working directory: ~/MyOwnGit/Hexo-theme-zilan/</span><br><span class="line">    07:05:51.513 <span class="builtin-name">DEBUG</span><span class="built_in"> Config </span>loaded: ~/MyOwnGit/Hexo-theme-zilan/_config.yml</span><br><span class="line">    07:05:51.579 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-deployer-git</span><br><span class="line">    (node:29976) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.</span><br><span class="line">    07:05:51.728 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-fs</span><br><span class="line">    07:05:51.731 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-archive</span><br><span class="line">    07:05:51.733 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-category</span><br><span class="line">    07:05:51.737 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-feed</span><br><span class="line">    07:05:51.738 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-index</span><br><span class="line">    07:05:51.783 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-seo-friendly-sitemap</span><br><span class="line">    07:05:51.784 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-generator-tag</span><br><span class="line">    07:05:51.788 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-renderer-ejs</span><br><span class="line">    07:05:52.277 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-renderer-jade</span><br><span class="line">    07:05:52.278 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-renderer-markdown-it</span><br><span class="line">    07:05:52.280 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-renderer-stylus</span><br><span class="line">    07:05:52.360 <span class="builtin-name">DEBUG</span> Plugin loaded: hexo-server</span><br><span class="line">    07:05:52.364 <span class="builtin-name">DEBUG</span><span class="built_in"> Script </span>loaded: themes/zilan/scripts/fancybox.js</span><br></pre></td></tr></table></figure>
@@ -283,12 +284,10 @@
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ npm <span class="keyword">install</span> hexo-deployer-git hexo-serve <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <p>试了下还是没解决。。。 Try again, still has the error…<br>
 看了下hexo-deployer-git并没什么更新，只能自己手动改了</p>
-<pre><code>注释掉 /Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo-deployer-git/node_modules/hexo-fs/lib/fs.js 中的
+<p>注释掉 /Users/liyuankun/MyOwnGit/Hexo-theme-zilan/node_modules/hexo-deployer-git/node_modules/hexo-fs/lib/fs.js 中的</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//exports.SyncWriteStream = fs.SyncWriteStream;</span></span><br></pre></td></tr></table></figure>
-</code></pre>
 <h1 id="reference-links">Reference Links</h1>
-<pre><code>[fs.SyncWriteStream is deprecated [Nodejs v8.0]](https://github.com/xovel/xovel.github.io/issues/28)
-https://www.leiyawu.com/2018/02/28/hexo-fs-SyncWriteStream-is-deprecated/</code></pre>
+<p><a href="https://github.com/hexojs/hexo/issues/2598" target="_blank" rel="noopener">fs.SyncWriteStream is deprecated [Nodejs v8.0]</a></p>
 
 
                 <!-- Donate -->
@@ -324,6 +323,10 @@ https://www.leiyawu.com/2018/02/28/hexo-fs-SyncWriteStream-is-deprecated/</code>
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/05/14/Can-not-find-the-tag-library-descriptor-for-jsp/" data-toggle="tooltip" data-placement="top" title="Can not find the tag library descriptor for .tld">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -394,23 +397,23 @@ https://www.leiyawu.com/2018/02/28/hexo-fs-SyncWriteStream-is-deprecated/</code>
     <ul>
       
         <li>
+          <a href="/2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing SSL port from 8443 to 443</a>
+        </li>
+      
+        <li>
+          <a href="/2019/06/11/Difference-between-HTTPS-Port-443-and-Port-8443/">Difference between HTTPS Port 443 and Port 8443</a>
+        </li>
+      
+        <li>
+          <a href="/2019/05/14/ComponentDidUpdate-setState-and-Maximum-update-depth-exceeded/">ComponentDidUpdate setState and Maximum update depth exceeded</a>
+        </li>
+      
+        <li>
+          <a href="/2019/05/14/Can-not-find-the-tag-library-descriptor-for-jsp/">Can not find the tag library descriptor for .tld</a>
+        </li>
+      
+        <li>
           <a href="/2019/05/13/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated/">&quot;Hexo fs.SyncWriteStream is deprecated&quot;</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/25/从微信语音or笔记爬取音频/">从微信语音or笔记爬取音频</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/从微信链接-mpvoice-爬取音频/">从微信链接爬取音频</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">Max size for HTTP POST servlet parameter content?</a>
-        </li>
-      
-        <li>
-          <a href="/2019/04/24/Force-IE-rerender/">Force IE rerender</a>
         </li>
       
     </ul>
