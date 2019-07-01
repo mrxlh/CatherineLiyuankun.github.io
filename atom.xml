@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catherineliyuankun.github.io/"/>
-  <updated>2019-06-11T08:12:28.775Z</updated>
+  <updated>2019-07-01T07:52:34.618Z</updated>
   <id>https://catherineliyuankun.github.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Server Tomcat v8.0 Server at localhost was unable to start within 180 seconds in Eclipse</title>
+    <link href="https://catherineliyuankun.github.io/2019/07/01/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/"/>
+    <id>https://catherineliyuankun.github.io/2019/07/01/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/</id>
+    <published>2019-07-01T07:28:27.000Z</published>
+    <updated>2019-07-01T07:52:34.618Z</updated>
+    
+    <content type="html"><![CDATA[<p>When I run the project in Eclipse, the error shows as:</p><blockquote><p>Server Tomcat v8.0 Server at localhost was unable to start within 180 seconds. If the server requires more time, try increasing the timeout in the server editor.</p></blockquote><p>In servers view，Double click the server you want to set，open the setting window of server，“Timeouts” in the top right corner，modify it:</p><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/eclipse.png" alt="server setting"></p><h1 id="the-reference-link">The reference link</h1><p><a href="https://blog.csdn.net/cnham/article/details/6317396" target="_blank" rel="noopener">Eclipse中server启动超时的解决方法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;When I run the project in Eclipse, the error shows as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Server Tomcat v8.0 Server at localhost was unable to start wit
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="Tools" scheme="https://catherineliyuankun.github.io/categories/TECH/Tools/"/>
+    
+    
+      <category term="eclipse" scheme="https://catherineliyuankun.github.io/tags/eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS</title>
+    <link href="https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/"/>
+    <id>https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/</id>
+    <published>2019-07-01T06:48:47.000Z</published>
+    <updated>2019-07-01T07:22:09.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>I installed VirtualBox on Macbook Pro to run a new imported VM. Here is what I got when trying to start one:</p><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error1.png" alt="Error1"></p><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error2.png" alt="Error2"></p><p>The error message is quite vague. It says On Linux, open returned ENOENT. What about on macOS? It turns out that I have to explicitly allow VirtualBox in the macOS system preference.</p><p>Go to System Preferences / Security &amp; Privacy.</p><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Scurity.png" alt="Scurity"></p><p>Click “Allow” in the window below.</p><p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Allow.jpeg" alt="Scurity Allow"></p><p>Now VirtualBox no longer complains about kernel driver.</p><p>Update: some people don’t see this button. According to a comment from Albert Wolszon:</p><blockquote><p>This Allow button section shows up only after first 30 minutes after the installation of VirtualBox. If you have this error and don’t see the button, uninstall VirtualBox, remove its belongings (there are usually some files left) and install it once again, then check this button again.<br>Thanks for the comments!</p></blockquote><p>#The reference Links:<br><a href="https://medium.com/@Aenon/mac-virtualbox-kernel-driver-error-df39e7e10cd8" target="_blank" rel="noopener">Solving VirtualBox “kernel driver not installed (rc=-1908)” Error on macOS</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I installed VirtualBox on Macbook Pro to run a new imported VM. Here is what I got when trying to start one:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://git
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="Tools" scheme="https://catherineliyuankun.github.io/categories/TECH/Tools/"/>
+    
+    
+      <category term="VirtualBox" scheme="https://catherineliyuankun.github.io/tags/VirtualBox/"/>
+    
+  </entry>
   
   <entry>
     <title>Changing SSL port from 8443 to 443</title>

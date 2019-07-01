@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://catherineliyuankun.github.io/2019/07/01/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/</loc>
+        <lastmod>2019-07-01T07:52:34.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/</loc>
+        <lastmod>2019-07-01T07:22:09.631Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/2019/06/11/Changing-SSL-port-from-8443-to-443/</loc>
         <lastmod>2019-06-11T08:12:28.775Z</lastmod>
         <changefreq>weekly</changefreq>

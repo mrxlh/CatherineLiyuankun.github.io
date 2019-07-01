@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          About - Yuankun | 源坤
+          VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS - Yuankun | 源坤
         
     </title>
 
-    <link rel="canonical" href="https://catherineliyuankun.github.io/about/">
+    <link rel="canonical" href="https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,8 +75,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/about-bg.jpg');
-            /*page*/
+            background-image: url('null');
+            /*post*/
         
     }
     
@@ -100,10 +100,45 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
-                        <div class="site-heading">
-                            <h1>About</h1>
-                            <!--<hr class="small">-->
-                            <span class="subheading">Wish for the Best, Prepare for the Worst</span>
+                        <div class="post-heading">
+                            <div class="tags">
+                                
+                                <a class="tag" href="/tags/#VirtualBox" title="VirtualBox">VirtualBox</a>
+                                
+                            </div>
+                            <!-- category post header -->
+                            
+                                <div class="page-header-category">
+                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Tools/">Tools</a>
+                                </div>
+                            
+                            
+                                <span class="post-comments-count">
+                                    <span class="post-meta-divider">|</span>
+                                    <a href="/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/#git_comment" itemprop="discussionUrl">
+                                        <span class="post-meta-item-icon">
+                                            <i class="fa fa-comment-o"></i>
+                                        </span>
+                                        <span class="post-comments-count gitment-comments-count" data-xid="/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/" itemprop="commentsCount"></span>
+                                    </a>
+                                </span>
+                            
+                            <h1>
+                                VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS
+                                <!-- Share -->
+                                
+                                    <span id="needsharebutton-postbottom" class="header-share">
+                                        <span class="btn">
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                
+                            </h1>
+                            <h2 class="subheading"></h2>
+                            <span class="meta">
+                                Posted by Yuankun Li on
+                                2019-07-01
+                            </span>
                         </div>
                     
                     </div>
@@ -212,40 +247,96 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-<!-- USE SIDEBAR Aside-->
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <blockquote>
-<p>Begin with a full stack soft engineer, then a machine learning engineer, now a frontend engineer!<br>
-A girl still have colorful dream.</p>
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>I installed VirtualBox on Macbook Pro to run a new imported VM. Here is what I got when trying to start one:</p>
+<p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error1.png" alt="Error1"></p>
+<p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error2.png" alt="Error2"></p>
+<p>The error message is quite vague. It says On Linux, open returned ENOENT. What about on macOS? It turns out that I have to explicitly allow VirtualBox in the macOS system preference.</p>
+<p>Go to System Preferences / Security &amp; Privacy.</p>
+<p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Scurity.png" alt="Scurity"></p>
+<p>Click “Allow” in the window below.</p>
+<p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Allow.jpeg" alt="Scurity Allow"></p>
+<p>Now VirtualBox no longer complains about kernel driver.</p>
+<p>Update: some people don’t see this button. According to a comment from Albert Wolszon:</p>
+<blockquote>
+<p>This Allow button section shows up only after first 30 minutes after the installation of VirtualBox. If you have this error and don’t see the button, uninstall VirtualBox, remove its belongings (there are usually some files left) and install it once again, then check this button again.<br>
+Thanks for the comments!</p>
 </blockquote>
+<p>#The reference Links:<br>
+<a href="https://medium.com/@Aenon/mac-virtualbox-kernel-driver-error-df39e7e10cd8" target="_blank" rel="noopener">Solving VirtualBox “kernel driver not installed (rc=-1908)” Error on macOS</a></p>
 
 
-                <!-- 如果开启评论功能 -->
+                <!-- Donate -->
+
+<div>
+    <div class="donate-container" style="padding: 10px 0; margin: auto auto; width: 90%; text-align: center;">
+        <div></div>
+        <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <span>Donate</span>
+        </button>
+        <div id="QR" style="display: none;">
+            <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/base/wechatpay.png" alt="WeChat Pay" style="width: 200px; height: 200px; text-align: center;">
+            <!-- <p>Wechat</p> -->
+            </div>
+            <div id="alipay" style="display: inline-block">
+                <img id="alipay_qr" src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/base/alipay.png" alt="Alipay" style="width: 200px; height: 200px; text-align: center;">
+            <!-- <p>Alipay</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+  <div><b>本文标题: </b><a href="/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/" target="_blank" title="VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS">VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS</a></div>
+  <div><b>本文链接: </b><a href="/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/" target="_blank" title="VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS">https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/</a>.</div>
+  <div>本文由<a href="/index.html" target="_blank" title="Yuankun Li">Yuankun Li</a>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可,转载请注明作者及出处。</div>
+</div>
+
                 
-                    <hr>
-                    <!-- Disqus Comment -->
-                    <!-- disqus comment -->
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/07/01/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/" data-toggle="tooltip" data-placement="top" title="Server Tomcat v8.0 Server at localhost was unable to start within 180 seconds in Eclipse">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/06/11/Changing-SSL-port-from-8443-to-443/" data-toggle="tooltip" data-placement="top" title="Changing SSL port from 8443 to 443">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- Duoshuo Comment Share -->
+                
+
+                <!-- Duoshuo Comment -->
+                
+
+                <!-- Disqus Comment -->
+                <!-- disqus comment -->
 
     <div class="disqus_comment">
         <div id="disqus_thread" class="disqus-thread"></div>
     </div>
 
 
-                    <!-- Git Comment -->
-                    <!-- gitment -->
+                <!-- Git Comment -->
+                <!-- gitment -->
 
     <hr>
     <div class="git_comment" id="git_comment">
@@ -256,175 +347,37 @@ A girl still have colorful dream.</p>
     </div>
     <hr>
 
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-                    <!-- Duoshuo Comment -->
-                    
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
 
                 
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#Hexo" title="Hexo" rel="2">Hexo</a>
-            
-        
-            
-            <a href="/tags/#Blog" title="Blog" rel="2">Blog</a>
-            
-        
-            
-            <a href="/tags/#eclipse" title="eclipse" rel="2">eclipse</a>
-            
-        
-            
-            <a href="/tags/#Tomcat" title="Tomcat" rel="3">Tomcat</a>
-            
-        
-            
-            <a href="/tags/#IE" title="IE" rel="1">IE</a>
-            
-        
-            
-            <a href="/tags/#life cycle" title="life cycle" rel="1">life cycle</a>
-            
-        
-            
-            <a href="/tags/#Servlet" title="Servlet" rel="1">Servlet</a>
-            
-        
-            
-            <a href="/tags/#maxPostSize" title="maxPostSize" rel="1">maxPostSize</a>
-            
-        
-            
-            <a href="/tags/#Voice over" title="Voice over" rel="1">Voice over</a>
-            
-        
-            
-            <a href="/tags/#VirtualBox" title="VirtualBox" rel="1">VirtualBox</a>
-            
-        
-            
-            <a href="/tags/#Weixin" title="Weixin" rel="2">Weixin</a>
-            
-        
-            
-            <a href="/tags/#&lt;mpvoice&gt;" title="&lt;mpvoice&gt;" rel="1">&lt;mpvoice&gt;</a>
-            
-        
-            
-            <a href="/tags/#MySQL" title="MySQL" rel="1">MySQL</a>
-            
-        
-            
-            <a href="/tags/#Learning Notes" title="Learning Notes" rel="1">Learning Notes</a>
-            
-        
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Categories -->
-
-    <section>
-        <!-- no hr -->
-        <h5><a href="/categories/">CATEGORORY</a></h5>
-            
-                <div class="article-category" id="categories">
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/">TECH</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Accessibility/">Accessibility</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/IE-issues/">IE issues</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/React/">React</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Network/">Network</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Network/Servlet-HTTP/">Servlet/HTTP</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Tools/">Tools</a><span class="category-list-count">3</span></li></ul></li></ul>
-                </div>
-            
-    </section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id="avatar_pic" src="/img/chatHead.jpg">
-        
-
-        
-            <p>Li,Yuankun a lazy soft engineer</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-                <li>
-                    <a href="/atom.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://github.com/catherineliyuankun">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/liyuankun">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-         
-            
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/muzilan">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-        </ul>
-    </div>
-</section>
-        <hr>
+            <!-- Sidebar Container Below-->
+            <div class="
+    col-lg-8 col-lg-offset-2
+    col-md-10 col-md-offset-1
+    sidebar-container">
     
         
+    
+        
+    
+        
+    
+        
+            
   <h5>RECENT POSTS</h5>
   <div class="widget">
     <ul>
@@ -452,9 +405,11 @@ A girl still have colorful dream.</p>
     </ul>
   </div>
 
-        <hr>
+            <hr>
+        
     
-        <!-- Friends Blog -->
+        
+            <!-- Friends Blog -->
 
 <h5>FRIENDS</h5>
 <ul class="list-inline">
@@ -464,13 +419,49 @@ A girl still have colorful dream.</p>
     
 </ul>
 
-        <hr>
+            <hr>
+        
     
 </div>
-
-        
+        </div>
     </div>
-</div>
+</article>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℒ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -793,8 +784,8 @@ A girl still have colorful dream.</p>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
         var disqus_shortname = "lyk-1";
-        var disqus_identifier = "https://catherineliyuankun.github.io/about/index.html";
-        var disqus_url = "https://catherineliyuankun.github.io/about/index.html";
+        var disqus_identifier = "https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/";
+        var disqus_url = "https://catherineliyuankun.github.io/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/";
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
