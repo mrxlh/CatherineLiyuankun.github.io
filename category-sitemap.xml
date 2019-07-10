@@ -28,13 +28,6 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
-        <lastmod>2019-05-15T07:19:25.808Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/</loc>
         <lastmod>2019-05-15T07:21:13.602Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -50,28 +43,35 @@
 
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/Network/</loc>
-        <lastmod>2019-06-11T08:12:28.775Z</lastmod>
+        <lastmod>2019-07-10T09:04:29.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/Network/Servlet-HTTP/</loc>
-        <lastmod>2019-06-11T08:12:28.775Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2019-07-01T07:52:34.618Z</lastmod>
+        <lastmod>2019-07-10T09:04:29.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/</loc>
-        <lastmod>2019-07-01T07:52:34.618Z</lastmod>
+        <lastmod>2019-07-10T09:09:04.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2019-07-10T09:31:40.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
+        <lastmod>2019-07-10T09:31:40.472Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
