@@ -86,13 +86,6 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/IntelliJ/</loc>
-        <lastmod>2019-07-10T09:09:04.064Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/tags/Hexo/</loc>
         <lastmod>2019-07-10T09:31:40.472Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -102,6 +95,13 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/Blog/</loc>
         <lastmod>2019-07-10T09:31:40.472Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/IntelliJ/</loc>
+        <lastmod>2019-07-10T10:23:16.940Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
