@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catherineliyuankun.github.io/"/>
-  <updated>2019-07-10T09:31:40.472Z</updated>
+  <updated>2019-07-11T03:11:06.440Z</updated>
   <id>https://catherineliyuankun.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title> Mac 上优化储存空间</title>
+    <link href="https://catherineliyuankun.github.io/2019/07/11/Mac-%E4%B8%8A%E4%BC%98%E5%8C%96%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4/"/>
+    <id>https://catherineliyuankun.github.io/2019/07/11/Mac-上优化储存空间/</id>
+    <published>2019-07-11T03:08:39.000Z</published>
+    <updated>2019-07-11T03:11:06.440Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><a href="https://support.apple.com/zh-cn/guide/system-information/sysp4ee93ca4/mac" target="_blank" rel="noopener">在 Mac 上优化储存空间</a></li></ol><ol start="2"><li><a href="https://support.apple.com/zh-cn/HT206996" target="_blank" rel="noopener">如何释放 Mac 上的储存空间</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.apple.com/zh-cn/guide/system-information/sysp4ee93ca4/mac&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;在 Mac 上优化储存空间&lt;/a
+      
+    
+    </summary>
+    
+      <category term="TECH" scheme="https://catherineliyuankun.github.io/categories/TECH/"/>
+    
+      <category term="Tools" scheme="https://catherineliyuankun.github.io/categories/TECH/Tools/"/>
+    
+    
+      <category term="Mac" scheme="https://catherineliyuankun.github.io/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-reference path for link to another blog post</title>
