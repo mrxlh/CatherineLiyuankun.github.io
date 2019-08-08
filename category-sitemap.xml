@@ -63,15 +63,22 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2019-07-11T03:11:06.440Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/</loc>
+        <lastmod>2019-07-11T03:20:33.212Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/</loc>
-        <lastmod>2019-07-11T03:11:06.440Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2019-08-08T12:53:47.788Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/SE-life/</loc>
+        <lastmod>2019-08-08T12:53:47.788Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
