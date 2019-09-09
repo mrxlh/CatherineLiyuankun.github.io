@@ -183,14 +183,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -327,8 +327,8 @@
 <p>当然，这只是一个小小的缺陷，大部分场景下事件不传过来也没什么大问题。</p>
 <p>在v16中，通过Portal渲染出去的DOM，事件是会冒泡从传送门的入口端冒出来的，上面的onDialogClick也就会被调用到了。</p>
 <h3 id="why事件冒泡可以到react-parent-liyuankun-增加">why事件冒泡可以到react parent 【liyuankun 增加】</h3>
+<p>可以看这个例子：<a href="https://codepen.io/catherineliyuankun/pen/oNvpxKv" target="_blank" rel="noopener">Dialog 嵌套 Dialog demo</a></p>
 <p>从真实的DOM结构上来看，Dialog组件中的onClick事件不应该被在<figure class="highlight plain"><figcaption><span>class</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">但从虚拟DOM的结构上来看，Dialog却是&quot;container&quot;组件的子节点，事件冒泡是遵循虚拟DOM的.</span><br><span class="line"></span><br><span class="line">真实的DOM结构:</span><br><span class="line">![真实的DOM结构1](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/React-16-Portal/Real%20Dom%201.png)</span><br><span class="line">![真实的DOM结构2](https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/React-16-Portal/Real%20Dom%202.png)</span><br><span class="line"></span><br><span class="line">虚拟DOM的结构:</span><br><span class="line">``` JavaScript</span><br><span class="line">    &lt;div onClick=&#123;onDialogClick&#125;&gt;</span><br><span class="line">      &lt;div className=&quot;container&quot;&gt;</span><br><span class="line">        Here contain Dialog:</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;Dialog onClick=&#123;onDialog1Click&#125;&gt;</span><br><span class="line">         &lt;div&gt;Dialog 1&lt;/div&gt;</span><br><span class="line">          &lt;Dialog onClick=&#123;onDialog2Click&#125;&gt;</span><br><span class="line">            &lt;div&gt;Dialog 2 Inside Dialog 1 &lt;/div&gt;    </span><br><span class="line">          &lt;/Dialog&gt;</span><br><span class="line">      &lt;/Dialog&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://codepen.io/catherineliyuankun/pen/oNvpxKv" target="_blank" rel="noopener">Dialog 嵌套 Dialog demo</a></p>
 <h2 id="总结">总结</h2>
 <p>React v16直接支持Portal，是因为Portal这个功能真的是必不可少，不然对话框这样的场景都没法应付。</p>
 <h2 id="reference-links">Reference Links</h2>
