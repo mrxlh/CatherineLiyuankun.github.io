@@ -183,7 +183,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -197,7 +197,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -258,7 +258,8 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>似乎所有说React Portal都直接用Portal这个单词，没听过这词的朋友可能觉得不知所云，其实，Portal可以有一个很形象的翻译——“传送门”。</p>
+                <p>转<a href="https://zhuanlan.zhihu.com/p/29880992" target="_blank" rel="noopener">传送门：React Portal</a>， 在这个基础上做了小的修改。</p>
+<p>似乎所有说React Portal都直接用Portal这个单词，没听过这词的朋友可能觉得不知所云，其实，Portal可以有一个很形象的翻译——“传送门”。</p>
 <h2 id="什么是传送门？">什么是传送门？</h2>
 <p>曾经有一款游戏就叫做Portal，玩家手上一杆很厉害很科幻的枪，朝墙上开一枪，就可以开出两个“传送门”，人钻进这个传送门，可以从另一个传送门里走出来，也就是说，两个不同位置的传送门之间形成了对接。</p>
 <p><img src="https://pic4.zhimg.com/80/v2-a650d2d42e0ed880c4413340ec961a27_hd.jpg" alt="传送门"></p>
@@ -320,6 +321,7 @@
 <p>在Dialog画出的内容上点击，onDialogClick是不会被触发的。</p>
 <p>当然，这只是一个小小的缺陷，大部分场景下事件不传过来也没什么大问题。</p>
 <p>在v16中，通过Portal渲染出去的DOM，事件是会冒泡从传送门的入口端冒出来的，上面的onDialogClick也就会被调用到了。</p>
+<p><a href="https://codepen.io/catherineliyuankun/pen/oNvpxKv" target="_blank" rel="noopener">Dialog 嵌套 Dialog demo</a></p>
 <h2 id="总结">总结</h2>
 <p>React v16直接支持Portal，是因为Portal这个功能真的是必不可少，不然对话框这样的场景都没法应付。</p>
 <h2 id="reference-links">Reference Links</h2>
