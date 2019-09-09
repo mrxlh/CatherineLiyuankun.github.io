@@ -8,7 +8,15 @@
 
     <url>
         <loc>https://catherineliyuankun.github.io/2019/09/03/React-16-Portal/</loc>
-        <lastmod>2019-09-06T07:26:08.412Z</lastmod>
+        <lastmod>2019-09-09T07:48:31.175Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/09/09/React-all-articles/</loc>
+        <lastmod>2019-09-09T03:45:51.186Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
