@@ -28,20 +28,6 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Network/</loc>
-        <lastmod>2019-07-10T09:04:29.083Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Network/Servlet-HTTP/</loc>
-        <lastmod>2019-07-10T09:04:29.083Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
         <lastmod>2019-07-10T09:31:40.472Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -63,22 +49,36 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2019-09-09T07:59:48.469Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/</loc>
-        <lastmod>2019-09-09T07:59:48.469Z</lastmod>
+        <lastmod>2019-09-16T03:54:36.452Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/React/</loc>
-        <lastmod>2019-09-09T07:59:48.469Z</lastmod>
+        <lastmod>2019-09-16T03:54:36.452Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2019-10-12T15:59:13.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Network/</loc>
+        <lastmod>2019-10-12T15:59:13.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Network/Servlet-HTTP/</loc>
+        <lastmod>2019-10-12T15:59:13.555Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
