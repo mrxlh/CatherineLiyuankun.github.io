@@ -121,13 +121,6 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/git/</loc>
-        <lastmod>2019-08-08T12:53:47.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/tags/Links/</loc>
         <lastmod>2019-09-09T07:59:48.469Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -144,6 +137,27 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/HTTP/</loc>
         <lastmod>2019-10-12T15:59:13.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/ES6/</loc>
+        <lastmod>2019-10-15T14:55:36.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/Flexbox/</loc>
+        <lastmod>2019-10-15T14:55:36.385Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/git/</loc>
+        <lastmod>2019-10-15T14:55:53.523Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

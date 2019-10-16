@@ -148,13 +148,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -163,6 +156,13 @@
                         
                         <li>
                             <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -238,23 +238,25 @@
         
             <a href="#IntelliJ" title="IntelliJ" rel="2">IntelliJ</a>
         
+            <a href="#HTTP" title="HTTP" rel="1">HTTP</a>
+        
             <a href="#Mac" title="Mac" rel="1">Mac</a>
+        
+            <a href="#React 16" title="React 16" rel="4">React 16</a>
         
             <a href="#Servlet" title="Servlet" rel="1">Servlet</a>
         
             <a href="#maxPostSize" title="maxPostSize" rel="1">maxPostSize</a>
         
-            <a href="#React 16" title="React 16" rel="4">React 16</a>
-        
             <a href="#Links" title="Links" rel="1">Links</a>
         
             <a href="#VirtualBox" title="VirtualBox" rel="1">VirtualBox</a>
         
+            <a href="#Voice over" title="Voice over" rel="1">Voice over</a>
+        
             <a href="#abbr" title="abbr" rel="1">abbr</a>
         
-            <a href="#git" title="git" rel="1">git</a>
-        
-            <a href="#Voice over" title="Voice over" rel="1">Voice over</a>
+            <a href="#git" title="git" rel="2">git</a>
         
             <a href="#Weixin" title="Weixin" rel="2">Weixin</a>
         
@@ -264,7 +266,9 @@
         
             <a href="#Learning Notes" title="Learning Notes" rel="1">Learning Notes</a>
         
-            <a href="#HTTP" title="HTTP" rel="1">HTTP</a>
+            <a href="#ES6" title="ES6" rel="1">ES6</a>
+        
+            <a href="#Flexbox" title="Flexbox" rel="1">Flexbox</a>
         
     </div>
 
@@ -546,9 +550,9 @@
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li> -->
             <div class="post-preview">
-                <a href="/2019/07/10/IntelliJ-IDEA-Unregistered-VCS-root-detected/">
+                <a href="/2019/07/10/IntelliJ-IDEA-Set-git/">
                 <h2 class="post-title">
-                    IntelliJ IDEA:Unregistered VCS root detected
+                    IntelliJ IDEA:Set git
                 </h2>
                 
             </a>
@@ -561,10 +565,36 @@
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li> -->
             <div class="post-preview">
-                <a href="/2019/07/10/IntelliJ-IDEA-Set-git/">
+                <a href="/2019/07/10/IntelliJ-IDEA-Unregistered-VCS-root-detected/">
                 <h2 class="post-title">
-                    IntelliJ IDEA:Set git
+                    IntelliJ IDEA:Unregistered VCS root detected
                 </h2>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="HTTP">
+            <span class="tag-text">HTTP</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/10/12/HTTP-CORS/">
+                <h2 class="post-title">
+                    HTTP CORS
+                </h2>
+                
+                    <h3 class="post-subtitle">
+                        跨域资源共享（Cross-origin resource sharing）
+                    </h3>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -587,58 +617,6 @@
                 <h2 class="post-title">
                      Mac 上优化储存空间
                 </h2>
-                
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-    </div>
-    
-    <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Servlet">
-            <span class="tag-text">Servlet</span>
-        </span>
-        
-            <!-- <li class="listing-item">
-            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            </li> -->
-            <div class="post-preview">
-                <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">
-                <h2 class="post-title">
-                    Max size for HTTP POST servlet parameter content?
-                </h2>
-                
-                    <h3 class="post-subtitle">
-                        <connector maxpostsize> of server.xml
-                    </connector></h3>
-                
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-    </div>
-    
-    <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="maxPostSize">
-            <span class="tag-text">maxPostSize</span>
-        </span>
-        
-            <!-- <li class="listing-item">
-            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            </li> -->
-            <div class="post-preview">
-                <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">
-                <h2 class="post-title">
-                    Max size for HTTP POST servlet parameter content?
-                </h2>
-                
-                    <h3 class="post-subtitle">
-                        <connector maxpostsize> of server.xml
-                    </connector></h3>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -715,6 +693,58 @@
     </div>
     
     <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Servlet">
+            <span class="tag-text">Servlet</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">
+                <h2 class="post-title">
+                    Max size for HTTP POST servlet parameter content?
+                </h2>
+                
+                    <h3 class="post-subtitle">
+                        <connector maxpostsize> of server.xml
+                    </connector></h3>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="maxPostSize">
+            <span class="tag-text">maxPostSize</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/">
+                <h2 class="post-title">
+                    Max size for HTTP POST servlet parameter content?
+                </h2>
+                
+                    <h3 class="post-subtitle">
+                        <connector maxpostsize> of server.xml
+                    </connector></h3>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="Links">
             <span class="tag-text">Links</span>
         </span>
@@ -749,6 +779,28 @@
                 <a href="/2019/07/01/VirtualBox-Error-“kernel-driver-not-installed-rc-1908-”-on-macOS/">
                 <h2 class="post-title">
                     VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS
+                </h2>
+                
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Voice over">
+            <span class="tag-text">Voice over</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">
+                <h2 class="post-title">
+                    Voice over for OSX Keyboard Shortcuts
                 </h2>
                 
             </a>
@@ -808,22 +860,19 @@
         </div>
         <hr>
         
-    </div>
-    
-    <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Voice over">
-            <span class="tag-text">Voice over</span>
-        </span>
-        
             <!-- <li class="listing-item">
             <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li> -->
             <div class="post-preview">
-                <a href="/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/">
+                <a href="/2019/10/15/Github-All-You-should-know/">
                 <h2 class="post-title">
-                    Voice over for OSX Keyboard Shortcuts
+                    Github All You should know
                 </h2>
+                
+                    <h3 class="post-subtitle">
+                        Assignees
+                    </h3>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -952,8 +1001,8 @@
     </div>
     
     <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="HTTP">
-            <span class="tag-text">HTTP</span>
+        <span class="fa fa-tag listing-seperator" id="ES6">
+            <span class="tag-text">ES6</span>
         </span>
         
             <!-- <li class="listing-item">
@@ -961,14 +1010,32 @@
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li> -->
             <div class="post-preview">
-                <a href="/2019/10/12/HTTP-CORS/">
+                <a href="/2019/10/13/ES6-Promise/">
                 <h2 class="post-title">
-                    HTTP CORS
+                    ES6-Promise
                 </h2>
                 
-                    <h3 class="post-subtitle">
-                        跨域资源共享（Cross-origin resource sharing）
-                    </h3>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+    </div>
+    
+    <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Flexbox">
+            <span class="tag-text">Flexbox</span>
+        </span>
+        
+            <!-- <li class="listing-item">
+            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li> -->
+            <div class="post-preview">
+                <a href="/2019/10/15/Responsive-web-Flexbox/">
+                <h2 class="post-title">
+                    Responsive web - Flexbox
+                </h2>
                 
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
