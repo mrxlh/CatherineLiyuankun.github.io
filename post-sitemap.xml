@@ -7,8 +7,16 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/2019/10/15/Github-All-You-should-know/</loc>
-        <lastmod>2019-10-15T14:55:53.523Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/2019/10/28/IndexedDB-delete-whole-database-by-javaScript/</loc>
+        <lastmod>2019-10-28T15:43:45.069Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/28/Browser-Caching/</loc>
+        <lastmod>2019-10-28T15:43:16.795Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,63 @@
 
     <url>
         <loc>https://catherineliyuankun.github.io/2019/10/13/ES6-Promise/</loc>
-        <lastmod>2019-10-15T14:55:36.385Z</lastmod>
+        <lastmod>2019-10-28T15:28:43.208Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/</loc>
+        <lastmod>2019-10-28T15:28:31.661Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/21/React-16-Hooks/</loc>
+        <lastmod>2019-10-28T10:14:16.108Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/24/Z-index/</loc>
+        <lastmod>2019-10-28T10:11:01.759Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/12/HTTP-CORS/</loc>
+        <lastmod>2019-10-22T08:33:35.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/09/09/React-all-articles/</loc>
+        <lastmod>2019-10-22T08:33:35.032Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/21/HTTP-CORS-disable/</loc>
+        <lastmod>2019-10-21T09:12:42.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/2019/10/15/Github-All-You-should-know/</loc>
+        <lastmod>2019-10-15T14:55:53.523Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -31,24 +95,8 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/2019/10/12/HTTP-CORS/</loc>
-        <lastmod>2019-10-12T15:59:13.555Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/2019/09/03/React-16-New-feature-Summary-Links/</loc>
         <lastmod>2019-09-16T03:54:36.452Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/2019/09/09/React-all-articles/</loc>
-        <lastmod>2019-09-09T07:59:48.469Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -193,14 +241,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/2019/05/13/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated/</loc>
         <lastmod>2019-05-15T07:19:25.808Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/2018/08/18/hexo-theme-zilan/</loc>
-        <lastmod>2019-05-15T07:05:00.860Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
