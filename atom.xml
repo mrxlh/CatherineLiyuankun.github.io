@@ -18,8 +18,8 @@
   
   <entry>
     <title>英文标点符号+运算符号</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/30/%E8%8B%B1%E6%96%87%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/30/英文标点符号-运算符号/</id>
+    <link href="https://catherineliyuankun.github.io/%E8%8B%B1%E6%96%87%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7.html"/>
+    <id>https://catherineliyuankun.github.io/英文标点符号-运算符号.html</id>
     <published>2019-10-30T08:45:20.000Z</published>
     <updated>2019-10-31T16:12:38.334Z</updated>
     
@@ -55,8 +55,8 @@
   
   <entry>
     <title>Promise Vs setTimeout</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/29/Promise-Vs-setTimeout/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/29/Promise-Vs-setTimeout/</id>
+    <link href="https://catherineliyuankun.github.io/Promise-Vs-setTimeout.html"/>
+    <id>https://catherineliyuankun.github.io/Promise-Vs-setTimeout.html</id>
     <published>2019-10-29T13:17:43.000Z</published>
     <updated>2019-10-29T15:56:12.269Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>Browser Caching</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/28/Browser-Caching/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/28/Browser-Caching/</id>
+    <link href="https://catherineliyuankun.github.io/Browser-Caching.html"/>
+    <id>https://catherineliyuankun.github.io/Browser-Caching.html</id>
     <published>2019-10-28T15:29:53.000Z</published>
     <updated>2019-10-30T08:57:06.803Z</updated>
     
@@ -118,8 +118,8 @@
   
   <entry>
     <title>IndexedDB-delete whole database by javaScript</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/28/IndexedDB-delete-whole-database-by-javaScript/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/28/IndexedDB-delete-whole-database-by-javaScript/</id>
+    <link href="https://catherineliyuankun.github.io/IndexedDB-delete-whole-database-by-javaScript.html"/>
+    <id>https://catherineliyuankun.github.io/IndexedDB-delete-whole-database-by-javaScript.html</id>
     <published>2019-10-28T13:24:15.000Z</published>
     <updated>2019-10-28T16:10:34.647Z</updated>
     
@@ -149,8 +149,8 @@
   
   <entry>
     <title>Z-index</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/24/Z-index/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/24/Z-index/</id>
+    <link href="https://catherineliyuankun.github.io/Z-index.html"/>
+    <id>https://catherineliyuankun.github.io/Z-index.html</id>
     <published>2019-10-24T11:48:32.000Z</published>
     <updated>2019-10-29T12:24:43.149Z</updated>
     
@@ -180,22 +180,21 @@
   
   <entry>
     <title>HTTP CORS disable for chrome</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/21/HTTP-CORS-disable/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/21/HTTP-CORS-disable/</id>
+    <link href="https://catherineliyuankun.github.io/HTTP-CORS-disable.html"/>
+    <id>https://catherineliyuankun.github.io/HTTP-CORS-disable.html</id>
     <published>2019-10-21T13:51:01.000Z</published>
-    <updated>2019-10-21T09:12:42.222Z</updated>
+    <updated>2019-11-04T17:04:37.707Z</updated>
     
-    <content type="html"><![CDATA[<p>CORS的基本原理请看上一篇：<br>[CORS的基本原理](…/…/…/…/2019/10/21/HTTP CORS disable)</p><p>简单关闭Chrome的CORS方法:</p><h1 id="macos">MacOS</h1><p>命令行里, 会另外打开一个Chrome窗口：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜   ✗ open -n -a <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span> --args --user-data-dir=<span class="string">"/tmp/chrome_dev_test"</span> --<span class="built_in">disable</span>-web-security</span><br></pre></td></tr></table></figure><blockquote><p>–user-data-dir 参数需要 Chrome 版本 49+ on OSX</p></blockquote><p>如果想访问本地文件（开发目的来使用 AJAX 或 JSON），可以使用flag：</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-–allow-<span class="built_in">file</span>-access-<span class="built_in">from</span>-<span class="built_in">files</span></span><br></pre></td></tr></table></figure><h1 id="windows">Windows</h1><p>进入command prompt，进入到Chrome.exe文件夹，执行命令：</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome<span class="selector-class">.exe</span> --disable-web-security</span><br></pre></td></tr></table></figure><p>这个命令会禁掉CORS，而且可以访问本地文件。</p><h1 id="reference-links">Reference Links:</h1><p><a href="https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome" target="_blank" rel="noopener">Disable same origin policy in Chrome</a></p>]]></content>
+    <content type="html"><![CDATA[<p>CORS的基本原理请看上一篇：</p><!-- [CORS的基本原理](../../../../2019/10/21/HTTP CORS disable) --><p><a href="../HTTP-CORS.html">CORS的基本原理</a></p><p>简单关闭Chrome的CORS方法:</p><h1 id="macos">MacOS</h1><p>命令行里, 会另外打开一个Chrome窗口：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜   ✗ open -n -a <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span> --args --user-data-dir=<span class="string">"/tmp/chrome_dev_test"</span> --<span class="built_in">disable</span>-web-security</span><br></pre></td></tr></table></figure><blockquote><p>–user-data-dir 参数需要 Chrome 版本 49+ on OSX</p></blockquote><p>如果想访问本地文件（开发目的来使用 AJAX 或 JSON），可以使用flag：</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-–allow-<span class="built_in">file</span>-access-<span class="built_in">from</span>-<span class="built_in">files</span></span><br></pre></td></tr></table></figure><h1 id="windows">Windows</h1><p>进入command prompt，进入到Chrome.exe文件夹，执行命令：</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome<span class="selector-class">.exe</span> --disable-web-security</span><br></pre></td></tr></table></figure><p>这个命令会禁掉CORS，而且可以访问本地文件。</p><h1 id="reference-links">Reference Links:</h1><p><a href="https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome" target="_blank" rel="noopener">Disable same origin policy in Chrome</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;CORS的基本原理请看上一篇：&lt;br&gt;
-[CORS的基本原理](…/…/…/…/2019/10/21/HTTP CORS disable)&lt;/p&gt;
-&lt;p&gt;简单关闭Chrome的CORS方法:&lt;/p&gt;
-&lt;h1 id=&quot;macos&quot;&gt;MacOS&lt;/h1&gt;
-&lt;p&gt;命令行里, 会另
+        &lt;p&gt;CORS的基本原理请看上一篇：&lt;/p&gt;
+&lt;!-- [CORS的基本原理](../../../../2019/10/21/HTTP CORS disable) --&gt;
+&lt;p&gt;&lt;a href=&quot;../HTTP-CORS.html&quot;&gt;CORS的基本原理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单
       
     
     </summary>
@@ -213,8 +212,8 @@
   
   <entry>
     <title>React 16 - Hooks</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/21/React-16-Hooks/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/21/React-16-Hooks/</id>
+    <link href="https://catherineliyuankun.github.io/React-16-Hooks.html"/>
+    <id>https://catherineliyuankun.github.io/React-16-Hooks.html</id>
     <published>2019-10-21T09:45:22.000Z</published>
     <updated>2019-10-29T12:28:26.919Z</updated>
     
@@ -243,8 +242,8 @@
   
   <entry>
     <title>Github All You should know</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/15/Github-All-You-should-know/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/15/Github-All-You-should-know/</id>
+    <link href="https://catherineliyuankun.github.io/Github-All-You-should-know.html"/>
+    <id>https://catherineliyuankun.github.io/Github-All-You-should-know.html</id>
     <published>2019-10-15T13:33:20.000Z</published>
     <updated>2019-10-15T14:55:53.523Z</updated>
     
@@ -271,8 +270,8 @@
   
   <entry>
     <title>Responsive web - Flexbox</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/15/Responsive-web-Flexbox/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/15/Responsive-web-Flexbox/</id>
+    <link href="https://catherineliyuankun.github.io/Responsive-web-Flexbox.html"/>
+    <id>https://catherineliyuankun.github.io/Responsive-web-Flexbox.html</id>
     <published>2019-10-15T11:18:56.000Z</published>
     <updated>2019-10-15T14:55:36.385Z</updated>
     
@@ -304,8 +303,8 @@
   
   <entry>
     <title>ES6-Promise</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/13/ES6-Promise/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/13/ES6-Promise/</id>
+    <link href="https://catherineliyuankun.github.io/ES6-Promise.html"/>
+    <id>https://catherineliyuankun.github.io/ES6-Promise.html</id>
     <published>2019-10-13T12:05:41.000Z</published>
     <updated>2019-10-29T12:45:12.657Z</updated>
     
@@ -334,8 +333,8 @@
   
   <entry>
     <title>HTTP CORS</title>
-    <link href="https://catherineliyuankun.github.io/2019/10/12/HTTP-CORS/"/>
-    <id>https://catherineliyuankun.github.io/2019/10/12/HTTP-CORS/</id>
+    <link href="https://catherineliyuankun.github.io/HTTP-CORS.html"/>
+    <id>https://catherineliyuankun.github.io/HTTP-CORS.html</id>
     <published>2019-10-12T13:51:01.000Z</published>
     <updated>2019-10-22T08:33:35.042Z</updated>
     
@@ -366,19 +365,19 @@
   
   <entry>
     <title>React all articles</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/09/React-all-articles/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/09/React-all-articles/</id>
+    <link href="https://catherineliyuankun.github.io/React-all-articles.html"/>
+    <id>https://catherineliyuankun.github.io/React-all-articles.html</id>
     <published>2019-09-09T09:44:38.000Z</published>
-    <updated>2019-10-22T08:33:35.032Z</updated>
+    <updated>2019-11-04T17:06:57.538Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="../../03/React-16-New-feature-Summary-Links/">React 16 new feature</a><br><a href="https://juejin.im/post/5c7df2e7f265da2d8a55d49d" target="_blank" rel="noopener">【React深入】React事件机制</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="../React-16-New-feature-Summary-Links.html">React 16 new feature</a><br><a href="https://juejin.im/post/5c7df2e7f265da2d8a55d49d" target="_blank" rel="noopener">【React深入】React事件机制</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;../../03/React-16-New-feature-Summary-Links/&quot;&gt;React 16 new feature&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;https://juejin.im/post/5c7df2e7f265da2d8a55d
+        &lt;p&gt;&lt;a href=&quot;../React-16-New-feature-Summary-Links.html&quot;&gt;React 16 new feature&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://juejin.im/post/5c7df2e7f265da2d8a55d49
       
     
     </summary>
@@ -396,8 +395,8 @@
   
   <entry>
     <title>Markdown表格中单元格合并</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/03/Markdown%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/03/Markdown表格中单元格合并/</id>
+    <link href="https://catherineliyuankun.github.io/Markdown%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6.html"/>
+    <id>https://catherineliyuankun.github.io/Markdown表格中单元格合并.html</id>
     <published>2019-09-03T17:56:29.000Z</published>
     <updated>2019-09-03T12:01:02.508Z</updated>
     
@@ -419,8 +418,8 @@
   
   <entry>
     <title>React 16 - DOM Attributes</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/03/React-16-DOM-Attributes/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/03/React-16-DOM-Attributes/</id>
+    <link href="https://catherineliyuankun.github.io/React-16-DOM-Attributes.html"/>
+    <id>https://catherineliyuankun.github.io/React-16-DOM-Attributes.html</id>
     <published>2019-09-03T09:08:53.000Z</published>
     <updated>2019-09-03T06:29:26.309Z</updated>
     
@@ -441,8 +440,8 @@
   
   <entry>
     <title>React 16 - Portal</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/03/React-16-Portal/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/03/React-16-Portal/</id>
+    <link href="https://catherineliyuankun.github.io/React-16-Portal.html"/>
+    <id>https://catherineliyuankun.github.io/React-16-Portal.html</id>
     <published>2019-09-03T09:07:35.000Z</published>
     <updated>2019-09-09T07:56:15.189Z</updated>
     
@@ -471,12 +470,12 @@
   
   <entry>
     <title>React 16 - New feature Summary Links</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/03/React-16-New-feature-Summary-Links/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/03/React-16-New-feature-Summary-Links/</id>
+    <link href="https://catherineliyuankun.github.io/React-16-New-feature-Summary-Links.html"/>
+    <id>https://catherineliyuankun.github.io/React-16-New-feature-Summary-Links.html</id>
     <published>2019-09-03T09:06:45.000Z</published>
-    <updated>2019-09-16T03:54:36.452Z</updated>
+    <updated>2019-11-04T17:06:42.398Z</updated>
     
-    <content type="html"><![CDATA[<p>React<br><a href="https://github.com/facebook/react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">https://github.com/facebook/react/blob/master/CHANGELOG.md</a></p><p>VersionFeatureHostTech Article<br>16.0.0 (September 26, 2017)</p><table><thead><tr><th>Version</th><th>Feature</th><th>Article Links</th></tr></thead><tbody><tr><td>16.0.0 (September 26, 2017)</td><td><a href="https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html" target="_blank" rel="noopener">Error boundaries</a></td><td><a href="../React-16-Error-Handling/">Error boundaries</a></td></tr><tr><td>-</td><td>First-class support for declaratively rendering a subtree into another DOM node with <a href="https://reactjs.org/docs/portals.html#event-bubbling-through-portals" target="_blank" rel="noopener">ReactDOM.createPortal()</a></td><td><a href="../React-16-Portal/">Portal</a></td></tr><tr><td>-</td><td><a href="https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html" target="_blank" rel="noopener">React DOM now allows passing non-standard attributes</a></td><td>DOM Attributes</td></tr><tr><td>16.2.0 (November 28, 2017)</td><td><a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">Improved Support for Fragments</a></td><td>Fragments</td></tr><tr><td><a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html" target="_blank" rel="noopener">16.3.0 (March 29, 2018)</a></td><td><a href="https://reactjs.org/docs/context.html#contextprovider" target="_blank" rel="noopener">New officially supported context API</a></td><td>context API</td></tr><tr><td>16.2.0 (November 28, 2017)</td><td><a href="https://reactjs.org/docs/react-api.html#reactcreateref" target="_blank" rel="noopener">New React.createRef()</a></td><td>React.createRef</td></tr><tr><td>-</td><td><a href="https://reactjs.org/docs/react-api.html#reactforwardref" target="_blank" rel="noopener">New React.forwardRef()</a></td><td>React.forwardRef</td></tr><tr><td>-</td><td><a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">StrictMode Component</a></td><td>Fragments</td></tr><tr><td>-</td><td>New lifecycles Add a new getDerivedStateFromProps() lifecycle and UNSAFE_ aliases for the legacy lifecycles.</td><td></td></tr></tbody></table><p>Add a new getSnapshotBeforeUpdate() lifecycle.<br><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html" target="_blank" rel="noopener">https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html</a> <a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">Improved Support for Fragments</a> | Fragments</p>]]></content>
+    <content type="html"><![CDATA[<p>React<br><a href="https://github.com/facebook/react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">https://github.com/facebook/react/blob/master/CHANGELOG.md</a></p><p>VersionFeatureHostTech Article<br>16.0.0 (September 26, 2017)</p><table><thead><tr><th>Version</th><th>Feature</th><th>Article Links</th></tr></thead><tbody><tr><td>16.0.0 (September 26, 2017)</td><td><a href="https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html" target="_blank" rel="noopener">Error boundaries</a></td><td><a href="../React-16-Error-Handling.html">Error boundaries</a></td></tr><tr><td>-</td><td>First-class support for declaratively rendering a subtree into another DOM node with <a href="https://reactjs.org/docs/portals.html#event-bubbling-through-portals" target="_blank" rel="noopener">ReactDOM.createPortal()</a></td><td><a href="../React-16-Portal.html">Portal</a></td></tr><tr><td>-</td><td><a href="https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html" target="_blank" rel="noopener">React DOM now allows passing non-standard attributes</a></td><td>DOM Attributes</td></tr><tr><td>16.2.0 (November 28, 2017)</td><td><a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">Improved Support for Fragments</a></td><td>Fragments</td></tr><tr><td><a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html" target="_blank" rel="noopener">16.3.0 (March 29, 2018)</a></td><td><a href="https://reactjs.org/docs/context.html#contextprovider" target="_blank" rel="noopener">New officially supported context API</a></td><td>context API</td></tr><tr><td>16.2.0 (November 28, 2017)</td><td><a href="https://reactjs.org/docs/react-api.html#reactcreateref" target="_blank" rel="noopener">New React.createRef()</a></td><td>React.createRef</td></tr><tr><td>-</td><td><a href="https://reactjs.org/docs/react-api.html#reactforwardref" target="_blank" rel="noopener">New React.forwardRef()</a></td><td>React.forwardRef</td></tr><tr><td>-</td><td><a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">StrictMode Component</a></td><td>Fragments</td></tr><tr><td>-</td><td>New lifecycles Add a new getDerivedStateFromProps() lifecycle and UNSAFE_ aliases for the legacy lifecycles.</td><td></td></tr></tbody></table><p>Add a new getSnapshotBeforeUpdate() lifecycle.<br><a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html" target="_blank" rel="noopener">https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html</a> <a href="https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html" target="_blank" rel="noopener">Improved Support for Fragments</a> | Fragments</p>]]></content>
     
     <summary type="html">
     
@@ -501,8 +500,8 @@
   
   <entry>
     <title>React 16 - Error Handling</title>
-    <link href="https://catherineliyuankun.github.io/2019/09/03/React-16-Error-Handling/"/>
-    <id>https://catherineliyuankun.github.io/2019/09/03/React-16-Error-Handling/</id>
+    <link href="https://catherineliyuankun.github.io/React-16-Error-Handling.html"/>
+    <id>https://catherineliyuankun.github.io/React-16-Error-Handling.html</id>
     <published>2019-09-03T09:06:09.000Z</published>
     <updated>2019-09-03T13:12:15.894Z</updated>
     
@@ -533,8 +532,8 @@
   
   <entry>
     <title>cryptic abbreviations of Github comments</title>
-    <link href="https://catherineliyuankun.github.io/2019/08/08/cryptic-abbreviations-of-Github-comments/"/>
-    <id>https://catherineliyuankun.github.io/2019/08/08/cryptic-abbreviations-of-Github-comments/</id>
+    <link href="https://catherineliyuankun.github.io/cryptic-abbreviations-of-Github-comments.html"/>
+    <id>https://catherineliyuankun.github.io/cryptic-abbreviations-of-Github-comments.html</id>
     <published>2019-08-08T18:31:39.000Z</published>
     <updated>2019-08-08T12:53:47.788Z</updated>
     
@@ -565,8 +564,8 @@
   
   <entry>
     <title> Mac 上优化储存空间</title>
-    <link href="https://catherineliyuankun.github.io/2019/07/11/Mac-%E4%B8%8A%E4%BC%98%E5%8C%96%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4/"/>
-    <id>https://catherineliyuankun.github.io/2019/07/11/Mac-上优化储存空间/</id>
+    <link href="https://catherineliyuankun.github.io/Mac-%E4%B8%8A%E4%BC%98%E5%8C%96%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4.html"/>
+    <id>https://catherineliyuankun.github.io/Mac-上优化储存空间.html</id>
     <published>2019-07-11T09:08:39.000Z</published>
     <updated>2019-07-11T03:20:33.212Z</updated>
     
@@ -593,12 +592,12 @@
   
   <entry>
     <title>hexo-reference path for link to another blog post</title>
-    <link href="https://catherineliyuankun.github.io/2019/07/10/hexo-reference%20path%20for%20link%20to%20another%20blog%20post/"/>
-    <id>https://catherineliyuankun.github.io/2019/07/10/hexo-reference path for link to another blog post/</id>
+    <link href="https://catherineliyuankun.github.io/hexo-reference%20path%20for%20link%20to%20another%20blog%20post.html"/>
+    <id>https://catherineliyuankun.github.io/hexo-reference path for link to another blog post.html</id>
     <published>2019-07-10T14:55:24.000Z</published>
-    <updated>2019-07-10T09:31:40.472Z</updated>
+    <updated>2019-11-04T16:40:39.773Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需求">需求</h2><p>Hexo blog里面，需要一篇文章里link到另一篇文章。最好是相对路径，绝对路径容易出错，而且不灵活，一换域名所有的link都不能用了。</p><h2 id="hexo的路径生成">Hexo的路径生成</h2><p>我们可以看到Hexo的路径生成：</p><p>例子1：<br><a href="http://localhost:4000/2019/06/11/BlogName1/" target="_blank" rel="noopener">http://localhost:4000/2019/06/11/BlogName1/</a></p><p>例子2：<br><a href="http://liyuankun.top/2019/06/11/Changing-SSL-port-from-8443-to-443/" target="_blank" rel="noopener">http://liyuankun.top/2019/06/11/Changing-SSL-port-from-8443-to-443/</a></p><blockquote><p>域名：端口/YYYY/MM/DD/BlogName</p></blockquote><blockquote><p>域名/YYYY/MM/DD/BlogName</p></blockquote><p>YYYY/MM/DD 是BlogName的创建时间，date: 2019-06-11 16:55:24</p><h2 id="解决方法">解决方法</h2><p>例子1：</p><p>在BlogName1里面link到BlogName2 的链接就为：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">BlogName2</span>](<span class="link">../../../../2019/06/11/BlogName2</span>)</span><br></pre></td></tr></table></figure><p>2019/06/11 必须是BlogName2的date</p><p>例子2：</p><p>本篇文章link到文章“Changing SSL port from 8443 to 443”</p><p>markdown写为：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/</span>)</span><br></pre></td></tr></table></figure><p>效果为：<br><a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing-SSL-port-from-8443-to-443</a></p><h2 id="参考">参考</h2><p><a href="https://markdown-zh.readthedocs.io/en/latest/spanelements/" target="_blank" rel="noopener">Markdown 中文文档 内联元素</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="需求">需求</h2><p>Hexo blog里面，需要一篇文章里link到另一篇文章。最好是相对路径，绝对路径容易出错，而且不灵活，一换域名所有的link都不能用了。</p><h2 id="hexo的路径生成">Hexo的路径生成</h2><p>我们可以看到Hexo的路径生成：</p><p>例子1：<br><a href="http://localhost:4000/2019/06/11/BlogName1/" target="_blank" rel="noopener">http://localhost:4000/2019/06/11/BlogName1/</a></p><p>例子2：<br><a href="http://liyuankun.top/2019/06/11/Changing-SSL-port-from-8443-to-443/" target="_blank" rel="noopener">http://liyuankun.top/2019/06/11/Changing-SSL-port-from-8443-to-443/</a></p><blockquote><p>域名：端口/YYYY/MM/DD/BlogName</p></blockquote><blockquote><p>域名/YYYY/MM/DD/BlogName</p></blockquote><p>YYYY/MM/DD 是BlogName的创建时间，date: 2019-06-11 16:55:24</p><h2 id="解决方法">解决方法</h2><p>例子1：</p><p>在BlogName1里面link到BlogName2 的链接就为：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">当_config.yml  permalink: :year/:month/:day/:title/</span><br><span class="line">[<span class="string">BlogName2</span>](<span class="link">../../../../2019/06/11/BlogName2</span>)</span><br><span class="line">或</span><br><span class="line">当_config.yml permalink: :title.html</span><br><span class="line">[<span class="string">BlogName2</span>](<span class="link">../BlogName2.html</span>)</span><br></pre></td></tr></table></figure><p>2019/06/11 必须是BlogName2的date</p><p>例子2：</p><p>本篇文章link到文章“Changing SSL port from 8443 to 443”</p><p>markdown写为：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">当_config.yml  permalink: :year/:month/:day/:title/</span><br><span class="line"></span><br><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/</span>)</span><br><span class="line">或</span><br><span class="line">当_config.yml permalink: :title.html</span><br><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../Changing-SSL-port-from-8443-to-443.html</span>)</span><br></pre></td></tr></table></figure><p>效果为：<br>当_config.yml  permalink: :year/:month/:day/:title/<br><a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing-SSL-port-from-8443-to-443</a><br>或<br>当_config.yml permalink: :title.html<br><a href="../Changing-SSL-port-from-8443-to-443.html">Changing-SSL-port-from-8443-to-443</a></p><h2 id="参考">参考</h2><p><a href="https://markdown-zh.readthedocs.io/en/latest/spanelements/" target="_blank" rel="noopener">Markdown 中文文档 内联元素</a></p>]]></content>
     
     <summary type="html">
     

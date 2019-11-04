@@ -3,15 +3,50 @@
 
 
     <url>
+        <loc>https://catherineliyuankun.github.io/tags/Links/</loc>
+        <lastmod>2019-11-04T17:06:57.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/React-16/</loc>
+        <lastmod>2019-11-04T17:06:42.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/IntelliJ/</loc>
+        <lastmod>2019-11-04T17:05:56.689Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/CORS/</loc>
+        <lastmod>2019-11-04T17:04:37.707Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/tags/Blog/</loc>
-        <lastmod>2019-11-04T15:14:46.158Z</lastmod>
+        <lastmod>2019-11-04T16:40:39.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://catherineliyuankun.github.io/tags/Hexo/</loc>
-        <lastmod>2019-11-04T15:14:46.158Z</lastmod>
+        <lastmod>2019-11-04T16:40:39.773Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/Tomcat/</loc>
+        <lastmod>2019-11-04T16:36:43.255Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -31,13 +66,6 @@
     </url>
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/React-16/</loc>
-        <lastmod>2019-10-29T12:28:26.919Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://catherineliyuankun.github.io/tags/TODO/</loc>
         <lastmod>2019-10-29T12:24:43.149Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,20 +75,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/IndexedDB/</loc>
         <lastmod>2019-10-28T16:10:34.647Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/CORS/</loc>
-        <lastmod>2019-10-22T08:33:35.042Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/Links/</loc>
-        <lastmod>2019-10-22T08:33:35.032Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -89,20 +103,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/Mac/</loc>
         <lastmod>2019-07-11T03:20:33.212Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/IntelliJ/</loc>
-        <lastmod>2019-07-10T10:23:16.940Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/Tomcat/</loc>
-        <lastmod>2019-07-10T09:04:29.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

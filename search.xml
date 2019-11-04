@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>英文标点符号+运算符号</title>
-    <url>/2019/10/30/%E8%8B%B1%E6%96%87%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7/</url>
+    <url>/%E8%8B%B1%E6%96%87%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7.html</url>
     <content><![CDATA[<table>
 <thead>
 <tr>
@@ -414,7 +414,7 @@
   </entry>
   <entry>
     <title>Promise Vs setTimeout</title>
-    <url>/2019/10/29/Promise-Vs-setTimeout/</url>
+    <url>/Promise-Vs-setTimeout.html</url>
     <content><![CDATA[<p>了解这个，就得了解JavaScript异步编程，了解任务队列才能知其根本。</p>
 <p>一个事件循环（event loop）+多个任务队列（task queue）</p>
 <h2 id="事件循环-event-loop">事件循环（event loop）</h2>
@@ -536,7 +536,7 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>Browser Caching</title>
-    <url>/2019/10/28/Browser-Caching/</url>
+    <url>/Browser-Caching.html</url>
     <content><![CDATA[<h1 id="reference-links">Reference Links:</h1>
 <ul>
 <li><a href="https://github.com/amandakelake/blog/issues/43" target="_blank" rel="noopener">缓存（一）——缓存总览：从性能优化的角度看缓存 #43</a></li>
@@ -563,7 +563,7 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>IndexedDB-delete whole database by javaScript</title>
-    <url>/2019/10/28/IndexedDB-delete-whole-database-by-javaScript/</url>
+    <url>/IndexedDB-delete-whole-database-by-javaScript.html</url>
     <content><![CDATA[<h1 id="使用indexeddb-deletedatabase：">使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase" target="_blank" rel="noopener">indexedDB.deleteDatabase</a>：</h1>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> DBDeleteRequest = <span class="built_in">window</span>.indexedDB.deleteDatabase(<span class="string">"toDoList"</span>);</span><br><span class="line"></span><br><span class="line">DBDeleteRequest.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Error deleting database."</span>);</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">DBDeleteRequest.onsuccess = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Database deleted successfully"</span>);</span><br><span class="line">    </span><br><span class="line">  <span class="built_in">console</span>.log(event.result); <span class="comment">// should be undefined</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// you must call db.close() before delete, if you already open. otherwise you will get onblocked event</span></span><br><span class="line">DBDeleteRequest.onblocked = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Couldn't delete database due to the operation being blocked"</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="indexeddb-databases">indexedDB.<a href="developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">databases()</a></h1>
@@ -602,7 +602,7 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>Z-index</title>
-    <url>/2019/10/24/Z-index/</url>
+    <url>/Z-index.html</url>
     <content><![CDATA[<h2 id="reference-links">Reference Links</h2>
 <ul>
 <li><a href="https://webdesign.tutsplus.com/zh-hans/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892" target="_blank" rel="noopener">关于z-index 那些你不知道的事</a></li>
@@ -619,9 +619,10 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>HTTP CORS disable for chrome</title>
-    <url>/2019/10/21/HTTP-CORS-disable/</url>
-    <content><![CDATA[<p>CORS的基本原理请看上一篇：<br>
-[CORS的基本原理](…/…/…/…/2019/10/21/HTTP CORS disable)</p>
+    <url>/HTTP-CORS-disable.html</url>
+    <content><![CDATA[<p>CORS的基本原理请看上一篇：</p>
+<!-- [CORS的基本原理](../../../../2019/10/21/HTTP CORS disable) -->
+<p><a href="../HTTP-CORS.html">CORS的基本原理</a></p>
 <p>简单关闭Chrome的CORS方法:</p>
 <h1 id="macos">MacOS</h1>
 <p>命令行里, 会另外打开一个Chrome窗口：</p>
@@ -649,7 +650,7 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>React 16 - Hooks</title>
-    <url>/2019/10/21/React-16-Hooks/</url>
+    <url>/React-16-Hooks.html</url>
     <content><![CDATA[<h1 id="hooks-faq">Hooks FAQ</h1>
 <p>觉得<a href="https://zh-hans.reactjs.org/docs/hooks-faq.html" target="_blank" rel="noopener">Hooks FAQ</a>里面回答了很多很实际的疑问。</p>
 <h2 id="生命周期方法要如何对应到-hook？">生命周期方法要如何对应到 Hook？</h2>
@@ -694,7 +695,7 @@ will be executed at the bottom of the next Event Loop</li>
   </entry>
   <entry>
     <title>Github All You should know</title>
-    <url>/2019/10/15/Github-All-You-should-know/</url>
+    <url>/Github-All-You-should-know.html</url>
     <content><![CDATA[<h2 id="who-is-assignees">Who is Assignees?</h2>
 <p><a href="https://stackoverflow.com/questions/43617352/" target="_blank" rel="noopener"> What do reviewer and assignee mean in pull request?</a> 里的答案：</p>
 <blockquote>
@@ -750,7 +751,7 @@ Assignees: 其实，没有严格定义，可以具体看项目组怎么用这个
   </entry>
   <entry>
     <title>Responsive web - Flexbox</title>
-    <url>/2019/10/15/Responsive-web-Flexbox/</url>
+    <url>/Responsive-web-Flexbox.html</url>
     <content><![CDATA[<h2 id="基础教程：">基础教程：</h2>
 <ul>
 <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener"> 官方文档 A Complete Guide to Flexbox</a></li>
@@ -798,7 +799,7 @@ Assignees: 其实，没有严格定义，可以具体看项目组怎么用这个
   </entry>
   <entry>
     <title>ES6-Promise</title>
-    <url>/2019/10/13/ES6-Promise/</url>
+    <url>/ES6-Promise.html</url>
     <content><![CDATA[<h1 id="promise">Promise</h1>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ... some code</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (<span class="comment">/* 异步操作成功 */</span>)&#123;</span><br><span class="line">    resolve(value);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    reject(error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject。它们是两个函数，由 JavaScript 引擎提供，不用自己部署。</p>
@@ -898,7 +899,7 @@ database.users.get({id: userId})<br>
   </entry>
   <entry>
     <title>HTTP CORS</title>
-    <url>/2019/10/12/HTTP-CORS/</url>
+    <url>/HTTP-CORS.html</url>
     <content><![CDATA[<p>Reference Links里的两篇文章讲述的已经很详细了。简单列一下：</p>
 <h1 id="0-cors">0 CORS</h1>
 <p>简单说就是从A网址（origin (domain) ）向B网址发送请求，称为跨域。从A网址向A网址发送请求就是，同域。</p>
@@ -1021,8 +1022,8 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>React all articles</title>
-    <url>/2019/09/09/React-all-articles/</url>
-    <content><![CDATA[<p><a href="../../03/React-16-New-feature-Summary-Links/">React 16 new feature</a><br>
+    <url>/React-all-articles.html</url>
+    <content><![CDATA[<p><a href="../React-16-New-feature-Summary-Links.html">React 16 new feature</a><br>
 <a href="https://juejin.im/post/5c7df2e7f265da2d8a55d49d" target="_blank" rel="noopener">【React深入】React事件机制</a></p>
 ]]></content>
       <categories>
@@ -1036,7 +1037,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>Markdown表格中单元格合并</title>
-    <url>/2019/09/03/Markdown%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6/</url>
+    <url>/Markdown%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6.html</url>
     <content><![CDATA[<ul>
 <li><a href="https://3nice.cc/2018/10/01/markdowntable/" target="_blank" rel="noopener">解决在Markdown中的表格单元格合并的问题</a></li>
 <li><a href="https://www.zhihu.com/question/50267650" target="_blank" rel="noopener">markdown的表格语法能合并单元格吗？</a><br>
@@ -1046,7 +1047,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>React 16 - DOM Attributes</title>
-    <url>/2019/09/03/React-16-DOM-Attributes/</url>
+    <url>/React-16-DOM-Attributes.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>TECH</category>
@@ -1059,7 +1060,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>React 16 - Portal</title>
-    <url>/2019/09/03/React-16-Portal/</url>
+    <url>/React-16-Portal.html</url>
     <content><![CDATA[<p>转<a href="https://zhuanlan.zhihu.com/p/29880992" target="_blank" rel="noopener">传送门：React Portal</a>， 在这个基础上做了小的修改。</p>
 <p>似乎所有说React Portal都直接用Portal这个单词，没听过这词的朋友可能觉得不知所云，其实，Portal可以有一个很形象的翻译——“传送门”。</p>
 <h2 id="什么是传送门？">什么是传送门？</h2>
@@ -1159,7 +1160,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>React 16 - New feature Summary Links</title>
-    <url>/2019/09/03/React-16-New-feature-Summary-Links/</url>
+    <url>/React-16-New-feature-Summary-Links.html</url>
     <content><![CDATA[<p>React<br>
 <a href="https://github.com/facebook/react/blob/master/CHANGELOG.md" target="_blank" rel="noopener">https://github.com/facebook/react/blob/master/CHANGELOG.md</a></p>
 <p>Version	Feature	Host	Tech Article<br>
@@ -1176,12 +1177,12 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
 <tr>
 <td>16.0.0 (September 26, 2017)</td>
 <td><a href="https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html" target="_blank" rel="noopener">Error boundaries</a></td>
-<td><a href="../React-16-Error-Handling/">Error boundaries</a></td>
+<td><a href="../React-16-Error-Handling.html">Error boundaries</a></td>
 </tr>
 <tr>
 <td>-</td>
 <td>First-class support for declaratively rendering a subtree into another DOM node with <a href="https://reactjs.org/docs/portals.html#event-bubbling-through-portals" target="_blank" rel="noopener">ReactDOM.createPortal()</a></td>
-<td><a href="../React-16-Portal/">Portal</a></td>
+<td><a href="../React-16-Portal.html">Portal</a></td>
 </tr>
 <tr>
 <td>-</td>
@@ -1234,7 +1235,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>React 16 - Error Handling</title>
-    <url>/2019/09/03/React-16-Error-Handling/</url>
+    <url>/React-16-Error-Handling.html</url>
     <content><![CDATA[<h2 id="react-15：">React 15：</h2>
 <p>渲染过程中有出错，直接crash整个页面，并且错误信息不明确，可读性差.<br>
 一旦某个组件发生错误，整个组件树将会从根节点被unmount下来。</p>
@@ -1320,7 +1321,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>cryptic abbreviations of Github comments</title>
-    <url>/2019/08/08/cryptic-abbreviations-of-Github-comments/</url>
+    <url>/cryptic-abbreviations-of-Github-comments.html</url>
     <content><![CDATA[<p>我们Github code review 的时候第一次遇到这些缩写时，一脸懵逼，一无所知脸的偷偷去搜搜是什么意思？<br>
 这里整理一下这些缩写都是什么含义，以后我们也可以欢快地装逼了，装作娴熟的司机们来使用缩写来达到提高逼格的效果~~</p>
 <ul>
@@ -1360,7 +1361,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title> Mac 上优化储存空间</title>
-    <url>/2019/07/11/Mac-%E4%B8%8A%E4%BC%98%E5%8C%96%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4/</url>
+    <url>/Mac-%E4%B8%8A%E4%BC%98%E5%8C%96%E5%82%A8%E5%AD%98%E7%A9%BA%E9%97%B4.html</url>
     <content><![CDATA[<ol>
 <li><a href="https://support.apple.com/zh-cn/guide/system-information/sysp4ee93ca4/mac" target="_blank" rel="noopener">在 Mac 上优化储存空间</a></li>
 </ol>
@@ -1381,7 +1382,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>hexo-reference path for link to another blog post</title>
-    <url>/2019/07/10/hexo-reference%20path%20for%20link%20to%20another%20blog%20post/</url>
+    <url>/hexo-reference%20path%20for%20link%20to%20another%20blog%20post.html</url>
     <content><![CDATA[<h2 id="需求">需求</h2>
 <p>Hexo blog里面，需要一篇文章里link到另一篇文章。最好是相对路径，绝对路径容易出错，而且不灵活，一换域名所有的link都不能用了。</p>
 <h2 id="hexo的路径生成">Hexo的路径生成</h2>
@@ -1400,14 +1401,18 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
 <h2 id="解决方法">解决方法</h2>
 <p>例子1：</p>
 <p>在BlogName1里面link到BlogName2 的链接就为：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">BlogName2</span>](<span class="link">../../../../2019/06/11/BlogName2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">当_config.yml  permalink: :year/:month/:day/:title/</span><br><span class="line">[<span class="string">BlogName2</span>](<span class="link">../../../../2019/06/11/BlogName2</span>)</span><br><span class="line">或</span><br><span class="line">当_config.yml permalink: :title.html</span><br><span class="line">[<span class="string">BlogName2</span>](<span class="link">../BlogName2.html</span>)</span><br></pre></td></tr></table></figure>
 <p>2019/06/11 必须是BlogName2的date</p>
 <p>例子2：</p>
 <p>本篇文章link到文章“Changing SSL port from 8443 to 443”</p>
 <p>markdown写为：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">当_config.yml  permalink: :year/:month/:day/:title/</span><br><span class="line"></span><br><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/</span>)</span><br><span class="line">或</span><br><span class="line">当_config.yml permalink: :title.html</span><br><span class="line">[<span class="string">Changing-SSL-port-from-8443-to-443</span>](<span class="link">../Changing-SSL-port-from-8443-to-443.html</span>)</span><br></pre></td></tr></table></figure>
 <p>效果为：<br>
-<a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing-SSL-port-from-8443-to-443</a></p>
+当_config.yml  permalink: :year/:month/:day/:title/<br>
+<a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing-SSL-port-from-8443-to-443</a><br>
+或<br>
+当_config.yml permalink: :title.html<br>
+<a href="../Changing-SSL-port-from-8443-to-443.html">Changing-SSL-port-from-8443-to-443</a></p>
 <h2 id="参考">参考</h2>
 <p><a href="https://markdown-zh.readthedocs.io/en/latest/spanelements/" target="_blank" rel="noopener">Markdown 中文文档 内联元素</a></p>
 ]]></content>
@@ -1422,7 +1427,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>IntelliJ IDEA:Set git</title>
-    <url>/2019/07/10/IntelliJ-IDEA-Set-git/</url>
+    <url>/IntelliJ-IDEA-Set-git.html</url>
     <content><![CDATA[<ol>
 <li>
 <p>打开Preference-&gt;Version Control-&gt;Git<br>
@@ -1437,13 +1442,14 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
 <img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/IntelliJ-IDEA-Set-git/Ignored%20Files.png" alt="Ignored Files"></p>
 </li>
 <li>
-<p>添加Unregistered的project<br>
-<a href="../../../../2019/07/10/IntelliJ-IDEA-Unregistered-VCS-root-detected/">IntelliJ IDEA:Unregistered VCS root detected</a></p>
+<p>添加Unregistered的project</p>
 </li>
-<li>
-<p>可以在IDE最下方使用Version Control工具<br>
-<img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/IntelliJ-IDEA-Set-git/Version%20Control.png" alt="Version Control"></p>
-</li>
+</ol>
+<!-- [IntelliJ IDEA:Unregistered VCS root detected](../../../../2019/07/10/IntelliJ-IDEA-Unregistered-VCS-root-detected/) -->
+<p><a href="../IntelliJ-IDEA-Unregistered-VCS-root-detected.html">IntelliJ IDEA:Unregistered VCS root detected</a></p>
+<ol start="5">
+<li>可以在IDE最下方使用Version Control工具<br>
+<img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/IntelliJ-IDEA-Set-git/Version%20Control.png" alt="Version Control"></li>
 </ol>
 <p>Log branch commit信息</p>
 <p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/IntelliJ-IDEA-Set-git/log.png" alt="Log"></p>
@@ -1458,8 +1464,8 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>IntelliJ IDEA:Unregistered VCS root detected</title>
-    <url>/2019/07/10/IntelliJ-IDEA-Unregistered-VCS-root-detected/</url>
-    <content><![CDATA[<p>如果还没有配置git，参考<a href="../../../../2019/07/10/IntelliJ-IDEA-Set-git/">IntelliJ-IDEA-Set-git</a>。</p>
+    <url>/IntelliJ-IDEA-Unregistered-VCS-root-detected.html</url>
+    <content><![CDATA[<p>如果还没有配置git，参考<a href="../IntelliJ-IDEA-Set-git.html">IntelliJ-IDEA-Set-git</a>。</p>
 <p>在IntelliJ IDEA导入已有的git项目时，出现warning：</p>
 <p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/IntelliJ-IDEA-Unregistered-VCS-root-detected/1.png" alt="warning"></p>
 <p>打开Preference-&gt;Version Control，看到Unregistered的project目录：<br>
@@ -1479,7 +1485,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>Server Tomcat v8.0 Server at localhost was unable to start within 180 seconds in Eclipse</title>
-    <url>/2019/07/01/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse/</url>
+    <url>/Server-Tomcat-v8-0-Server-at-localhost-was-unable-to-start-within-180-seconds-in-Eclipse.html</url>
     <content><![CDATA[<p>When I run the project in Eclipse, the error shows as:</p>
 <blockquote>
 <p>Server Tomcat v8.0 Server at localhost was unable to start within 180 seconds. If the server requires more time, try increasing the timeout in the server editor.</p>
@@ -1499,7 +1505,7 @@ CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服
   </entry>
   <entry>
     <title>VirtualBox Error “kernel driver not installed (rc=-1908)” on macOS</title>
-    <url>/2019/07/01/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/</url>
+    <url>/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS.html</url>
     <content><![CDATA[<p>I installed VirtualBox on Macbook Pro to run a new imported VM. Here is what I got when trying to start one:</p>
 <p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error1.png" alt="Error1"></p>
 <p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/VirtualBox-Error-%E2%80%9Ckernel-driver-not-installed-rc-1908-%E2%80%9D-on-macOS/Vitualbox%20error2.png" alt="Error2"></p>
@@ -1527,8 +1533,9 @@ Thanks for the comments!</p>
   </entry>
   <entry>
     <title>Changing SSL port from 8443 to 443</title>
-    <url>/2019/06/11/Changing-SSL-port-from-8443-to-443/</url>
-    <content><![CDATA[<p>My another blogs: <a href="../../../../2019/06/11/Difference-between-HTTPS-Port-443-and-Port-8443/">Difference between HTTPS Port 443 and Port 8443</a> and <a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/">Changing SSL port from 8443 to 443</a></p>
+    <url>/Changing-SSL-port-from-8443-to-443.html</url>
+    <content><![CDATA[<!-- My another blogs: [Difference between HTTPS Port 443 and Port 8443](../../../../2019/06/11/Difference-between-HTTPS-Port-443-and-Port-8443/) and [Changing SSL port from 8443 to 443](../../../../2019/06/11/Changing-SSL-port-from-8443-to-443/) -->
+<p>My another blogs: <a href="../Difference-between-HTTPS-Port-443-and-Port-8443.html">Difference between HTTPS Port 443 and Port 8443</a> and <a href="../Changing-SSL-port-from-8443-to-443.html">Changing SSL port from 8443 to 443</a></p>
 <p>We modify connector under /Your tomcat folder/conf/server.xml</p>
 <h1 id="modify-non-ssl-http-1-1-connector-to-443-port">modify non-SSL HTTP/1.1 Connector to 443 port</h1>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"80"</span> <span class="attr">maxHttpHeaderSize</span>=<span class="string">"8192"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">maxThreads</span>=<span class="string">"500"</span> <span class="attr">minSpareThreads</span>=<span class="string">"25"</span> <span class="attr">maxSpareThreads</span>=<span class="string">"75"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">enableLookups</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">redirectPort</span>=<span class="string">"443"</span> <span class="attr">acceptCount</span>=<span class="string">"100"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span> <span class="attr">disableUploadTimeout</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1559,7 +1566,7 @@ Thanks for the comments!</p>
   </entry>
   <entry>
     <title>Difference between HTTPS Port 443 and Port 8443</title>
-    <url>/2019/06/11/Difference-between-HTTPS-Port-443-and-Port-8443/</url>
+    <url>/Difference-between-HTTPS-Port-443-and-Port-8443.html</url>
     <content><![CDATA[<p>Has you ever non HTTPS ports 443 or Port 8443? Do you no their differences?</p>
 <p>If you say their only difference is the number “8”, this answer may be not completely right.</p>
 <p>In dis article, we need to learn wat the HTTPS port 443 is, wat the port 8443 is and their differences.</p>
@@ -1585,7 +1592,8 @@ In teh list of IP rules, move teh rules of teh TCP protocol on teh first positio
 <li>Port 443 can access wifout the need for port number, is the equivalent of http 80. It can directly access through the domain name. Example: <a href="https://domainname.com" target="_blank" rel="noopener">https://domainname.com</a>.</li>
 </ul>
 <h1 id="change-8443-to-443-for-tomcat">Change 8443 to 443 for tomcat</h1>
-<p><a href="../../../../2019/06/11/Changing-SSL-port-from-8443-to-443">Changing SSL port from 8443 to 443</a></p>
+<!-- [Changing SSL port from 8443 to 443](../../../../2019/06/11/Changing-SSL-port-from-8443-to-443) -->
+<p><a href="../Changing-SSL-port-from-8443-to-443.html">Changing SSL port from 8443 to 443</a></p>
 <h1 id="reference-links">Reference Links:</h1>
 <p><a href="https://www.router-switch.com/faq/difference-between-https-port-443-and-8443.html" target="_blank" rel="noopener">Difference between HTTPS Port 443 and Port 8443</a></p>
 ]]></content>
@@ -1600,7 +1608,7 @@ In teh list of IP rules, move teh rules of teh TCP protocol on teh first positio
   </entry>
   <entry>
     <title>ComponentDidUpdate setState and Maximum update depth exceeded</title>
-    <url>/2019/05/14/ComponentDidUpdate-setState-and-Maximum-update-depth-exceeded/</url>
+    <url>/ComponentDidUpdate-setState-and-Maximum-update-depth-exceeded.html</url>
     <content><![CDATA[<h1 id="dossierpageindicatorcontainer">DossierPageIndicatorContainer</h1>
 <p>一个简单的显示页面页码的pure component，在切换页面（也就是上一回的页码与这次不同时）会显示，过3s消失。</p>
 <p>Code:</p>
@@ -1630,7 +1638,7 @@ In teh list of IP rules, move teh rules of teh TCP protocol on teh first positio
   </entry>
   <entry>
     <title>Can not find the tag library descriptor for .tld</title>
-    <url>/2019/05/14/Can-not-find-the-tag-library-descriptor-for-jsp/</url>
+    <url>/Can-not-find-the-tag-library-descriptor-for-jsp.html</url>
     <content><![CDATA[<h1 id="problem">Problem</h1>
 <p>Eclipse Photon<br>
 eclipse web project一直在正常使用，不知哪天。。。突然 Promblems tab 里就冒出了好多error:</p>
@@ -1657,7 +1665,7 @@ eclipse web project一直在正常使用，不知哪天。。。突然 Promblems
   </entry>
   <entry>
     <title>"Hexo fs.SyncWriteStream is deprecated"</title>
-    <url>/2019/05/13/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated/</url>
+    <url>/Hexo-node-28561-DEP0061-DeprecationWarning-fs-SyncWriteStream-is-deprecated.html</url>
     <content><![CDATA[<h1 id="problem">Problem</h1>
 <p>NodeJs V8 使用hexo时报错：</p>
 <p>(node:28561) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.</p>
@@ -1698,7 +1706,7 @@ eclipse web project一直在正常使用，不知哪天。。。突然 Promblems
   </entry>
   <entry>
     <title>从微信语音or笔记爬取音频</title>
-    <url>/2019/04/25/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E8%AF%AD%E9%9F%B3or%E7%AC%94%E8%AE%B0%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/</url>
+    <url>/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E8%AF%AD%E9%9F%B3or%E7%AC%94%E8%AE%B0%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91.html</url>
     <content><![CDATA[<h1 id="方法">方法</h1>
 <p><a href="https://www.zhihu.com/question/30112442/answer/561089000" target="_blank" rel="noopener">Leon 的回答</a>比较符合我的需求, 转化下就是:</p>
 <figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">If (MacOS)</span><br><span class="line">    If (语音 <span class="keyword">in</span> 电脑微信窗口记录)</span><br><span class="line">        在聊天窗口找个图片;</span><br><span class="line">        右键--&gt;打开文件夹;</span><br><span class="line">        里面看到的silk文件就是聊天的语音;</span><br><span class="line"></span><br><span class="line">    If (语音 <span class="keyword">not</span> <span class="keyword">in</span> 电脑微信窗口记录)</span><br><span class="line">        收藏(语音);</span><br><span class="line">        播放(语音);</span><br><span class="line">        去到(<span class="string">"/Users/&#123;用户名&#125;/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/"</span>);</span><br><span class="line">        搜索(Favorites目录);</span><br><span class="line">        然后data下面就有silk文件 </span><br><span class="line">        使用[kn007/silk-v3-decoder](https://github.com/kn007/silk-v3-decoder)</span><br><span class="line">            &gt; brew install lame</span><br><span class="line">            &gt; brew install ffmpeg  --enable-libmp3lame</span><br><span class="line"></span><br><span class="line">        将silk文件转为wav</span><br><span class="line">            &gt; silk-v3-decoder/converter.sh ab.silk wav</span><br><span class="line"></span><br><span class="line">    If (语音 <span class="keyword">in</span> 电脑微信窗口记录的链接内)</span><br><span class="line">        open(链接);</span><br><span class="line">        播放(语音);</span><br><span class="line">        去到(<span class="string">"/Users/&#123;用户名&#125;/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/"</span>);</span><br><span class="line">        搜索(⁨OpenData⁩);</span><br><span class="line">        下面的某个文件里的音频.wav文件</span><br><span class="line">        例如:Macintosh HD⁩ ▸ ⁨Users⁩ ▸ ⁨muzilan⁩ ▸ ⁨Library⁩ ▸ ⁨Containers⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨Data⁩ ▸ ⁨Library⁩ ▸ ⁨Application Support⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨<span class="number">2.0b4</span>.0.9⁩ ▸ ⁨f68564a536bd7f4613c075bf2be66c8e⁩ ▸ ⁨Message⁩ ▸ ⁨MessageTemp⁩ ▸ ⁨9e20f478899dc29eb19741386f9343c8⁩ ▸ ⁨OpenData⁩ ▸ ⁨<span class="number">177</span>⁩▸a8b51cec5109b6774a1efcac305692c4.wav</span><br><span class="line">        直接拷贝;</span><br><span class="line"></span><br><span class="line">        搜索(⁨Audio);</span><br><span class="line">        下面的某个文件里的音频.silk文件</span><br><span class="line">        例如:‎⁨ Macintosh HD⁩ ▸ ⁨Users⁩ ▸ ⁨muzilan⁩ ▸ ⁨Library⁩ ▸ ⁨Containers⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨Data⁩ ▸ ⁨Library⁩ ▸ ⁨Application Support⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨<span class="number">2.0b4</span>.0.9⁩ ▸ ⁨f68564a536bd7f4613c075bf2be66c8e⁩ ▸ ⁨Message⁩ ▸ ⁨MessageTemp⁩ ▸ ⁨fce9f67a422f2c52cee716585240bf41⁩ ▸ ⁨Audio ▸ <span class="number">111.</span>aud.silk</span><br><span class="line"></span><br><span class="line">        使用[kn007/silk-v3-decoder](https://github.com/kn007/silk-v3-decoder)</span><br><span class="line">            &gt; brew install lame</span><br><span class="line">            &gt; brew install ffmpeg  --enable-libmp3lame</span><br><span class="line"></span><br><span class="line">        将silk文件转为wav</span><br><span class="line">            &gt; silk-v3-decoder/converter.sh ab.silk wav</span><br><span class="line"></span><br><span class="line">        Or 按修改时间排序，最近被改的文件夹</span><br><span class="line">        ‎⁨Macintosh HD⁩ ▸ ⁨Users⁩ ▸ ⁨muzilan⁩ ▸ ⁨Library⁩ ▸ ⁨Containers⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨Data⁩ ▸ ⁨Library⁩ ▸ ⁨Application Support⁩ ▸ ⁨com.tencent.xinWeChat⁩ ▸ ⁨<span class="number">2.0b4</span>.0.9⁩ ▸ ⁨f68564a536bd7f4613c075bf2be66c8e⁩ ▸ ⁨Message⁩ ▸ ⁨MessageTemp</span><br></pre></td></tr></table></figure>
@@ -1715,7 +1723,7 @@ eclipse web project一直在正常使用，不知哪天。。。突然 Promblems
   </entry>
   <entry>
     <title>从微信链接爬取音频</title>
-    <url>/2019/04/24/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91/</url>
+    <url>/%E4%BB%8E%E5%BE%AE%E4%BF%A1%E9%93%BE%E6%8E%A5-mpvoice-%E7%88%AC%E5%8F%96%E9%9F%B3%E9%A2%91.html</url>
     <content><![CDATA[<h1 id="故事是这样的">故事是这样的</h1>
 <p>报名了某英语课程, 进群后老师会发微信课程链接, 链接里有音频视频等. 我就想做笔记把这个文字和音频视频内容保存下来.</p>
 <h1 id="看代码去">看代码去</h1>
@@ -1742,7 +1750,7 @@ eclipse web project一直在正常使用，不知哪天。。。突然 Promblems
   </entry>
   <entry>
     <title>Max size for HTTP POST servlet parameter content?</title>
-    <url>/2019/04/24/Max-size-for-HTTP-POST-servlet-parameter-content/</url>
+    <url>/Max-size-for-HTTP-POST-servlet-parameter-content.html</url>
     <content><![CDATA[<h1 id="problem">Problem</h1>
 <p>Recently i meet a issue that when user import large file to send request by HTTP POST and servlet. The page redirect to welcome page.<br>
 Then i debug it and find that web server do not get the right parameter from servlet.</p>
@@ -1827,7 +1835,7 @@ Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recomm
   </entry>
   <entry>
     <title>Force IE rerender</title>
-    <url>/2019/04/24/Force-IE-rerender/</url>
+    <url>/Force-IE-rerender.html</url>
     <content><![CDATA[<h1 id="the-height-of-same-row-is-different-of-grid">The height of same row is different of grid</h1>
 <p><img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Force-IE-rerender/compare.png" alt="compare"><br>
 <img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/Force-IE-rerender/mark.png" alt="mark"><br>
@@ -1846,7 +1854,7 @@ Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recomm
   </entry>
   <entry>
     <title>Voice over for OSX Keyboard Shortcuts</title>
-    <url>/2019/01/21/Voice-over-for-OSX-Keyboard-Shortcuts/</url>
+    <url>/Voice-over-for-OSX-Keyboard-Shortcuts.html</url>
     <content><![CDATA[<h1 id="basic">Basic</h1>
 <table>
 <thead>
@@ -2246,7 +2254,7 @@ Teh ISAPI module still has a PostBufferLimit setting in wc.ini, but we recomm
   </entry>
   <entry>
     <title>A11ycasts Learning Notes</title>
-    <url>/2018/11/01/A11ycasts-Learning-Notes/</url>
+    <url>/A11ycasts-Learning-Notes.html</url>
     <content><![CDATA[<p>You can also visit the whole list in <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g" target="_blank" rel="noopener">A11ycasts with Rob Dodson</a>.</p>
 <p>These are my learning notes from the video.</p>
 <h2 id="introducing-a11ycasts-a11ycasts-01">Introducing A11ycasts! – A11ycasts #01</h2>
@@ -2457,7 +2465,7 @@ HTML dictates focus order (If developer change the order/position of dom via css
   </entry>
   <entry>
     <title>Git Pages + Jekyll/Hexo Build your own blog</title>
-    <url>/2018/10/09/Git-Pages-Jekyll-Hexo-Build-your-own-blog/</url>
+    <url>/Git-Pages-Jekyll-Hexo-Build-your-own-blog.html</url>
     <content><![CDATA[<h1 id="1-github-pages">1 Github Pages</h1>
 <p>比较懒，默认都是用过gitbhub的啦</p>
 <p>安装 Git</p>
@@ -3042,6 +3050,7 @@ GitHub commit： <a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan
 <p>整个修改过程参考commit： <a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit/4607f6174e0615bf5bcc4bdada7715c6934b0d29" target="_blank" rel="noopener">category 分页样式修改+分页每页数量</a></p>
 <h2 id="error-eisdir-illegal-operation-on-a-directory">ERROR EISDIR: illegal operation on a directory</h2>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded <span class="keyword">in</span> 564 ms</span><br><span class="line">ERROR EISDIR: illegal operation on a directory, <span class="built_in">read</span></span><br><span class="line">Error: EISDIR: illegal operation on a directory, <span class="built_in">read</span></span><br></pre></td></tr></table></figure>
+<p>查了下貌似和npm有关，但我试了试网上的方法并不起作用，但是这个错也不影响我的博客功能。暂且放下，找到方法了再更新。</p>
 <h2 id="其他小的修改">其他小的修改</h2>
 <p>页面内容width修改，在大屏幕（&gt;1800px 和&gt; 2400px）下，页面内容更宽。<br>
 commit：t<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit/64a23dad122b7cf59039d754125fc59307c6a9f1" target="_blank" rel="noopener">he .container with responsive when screen width is larger than 1800px</a></p>
@@ -3086,7 +3095,7 @@ commit：t<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit
   </entry>
   <entry>
     <title>Installing MySQL on Mac</title>
-    <url>/2018/09/29/Installing-MySQL-on-Mac/</url>
+    <url>/Installing-MySQL-on-Mac.html</url>
     <content><![CDATA[<p>This short tutorial shows how to install MySQL on a Mac using Homebrew and how to verify it is running using Sequel Pro.</p>
 <h1 id="install-homebrew">Install Homebrew</h1>
 <p><a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> is a package manager for Mac and serves a similar purpose to apt-get in Linux.</p>
@@ -3203,7 +3212,7 @@ If you are interested in using MySQL with Node.js, check out the setting up Node
   </entry>
   <entry>
     <title>[Hexo] Theme Zilan</title>
-    <url>/2018/08/18/hexo-theme-zilan/</url>
+    <url>/hexo-theme-zilan.html</url>
     <content><![CDATA[<blockquote>
 <p>Ported Theme of <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">Hux Blog</a>, Thank <a href="https://github.com/Huxpro" target="_blank" rel="noopener">Huxpro</a> for designing such a flawless theme.</p>
 <p>This Zilan theme created by <a href="https://catherineliyuankun.github.io/">YuankunLi</a> modified from the original Porter <a href="http://kaijun.rocks/hexo-theme-huxblog/" target="_blank" rel="noopener">Kaijun</a> and <a href="http://beantech.org/" target="_blank" rel="noopener">YuHsuan</a></p>
