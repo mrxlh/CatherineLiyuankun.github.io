@@ -1074,6 +1074,7 @@ If you are interested in using MySQL with Node.js, check out the setting up Node
                 '</div>');
             input = document.getElementById("local-search-input");
             resultContent = document.getElementById("local-search-result");
+            // Fix Bug: close not work
             var searchClose = document.querySelector(".popup-btn-close");
             searchClose.addEventListener('click', onPopupClose);
           }

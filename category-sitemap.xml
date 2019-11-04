@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
+        <lastmod>2019-11-04T15:14:46.158Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2019-11-04T15:14:46.158Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/categories/English-Learning/%E6%97%A5%E5%B8%B8%E8%8B%B1%E8%AF%AD/</loc>
         <lastmod>2019-10-31T16:12:38.334Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,20 +31,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/categories/English-Learning/</loc>
         <lastmod>2019-10-31T16:12:38.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Hexo/</loc>
-        <lastmod>2019-10-31T13:20:50.320Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2019-10-31T13:20:50.320Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

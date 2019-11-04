@@ -1168,6 +1168,7 @@ HTML dictates focus order (If developer change the order/position of dom via css
                 '</div>');
             input = document.getElementById("local-search-input");
             resultContent = document.getElementById("local-search-result");
+            // Fix Bug: close not work
             var searchClose = document.querySelector(".popup-btn-close");
             searchClose.addEventListener('click', onPopupClose);
           }

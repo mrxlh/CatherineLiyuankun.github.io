@@ -1013,6 +1013,7 @@ Assignees: 其实，没有严格定义，可以具体看项目组怎么用这个
                 '</div>');
             input = document.getElementById("local-search-input");
             resultContent = document.getElementById("local-search-result");
+            // Fix Bug: close not work
             var searchClose = document.querySelector(".popup-btn-close");
             searchClose.addEventListener('click', onPopupClose);
           }
