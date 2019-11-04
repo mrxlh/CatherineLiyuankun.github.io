@@ -2,13 +2,13 @@
 <html lang="en">
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
+    <meta name="description" content>
+    <meta name="keyword" content>
     <link rel="shortcut icon" href="/img/cat-icon-512.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="/css/gitment.css">
 
     <link rel="stylesheet" href="/css/copyright.css">
+
+    <link rel="stylesheet" href="/css/search/localsearch.css">
 
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -80,15 +82,15 @@
         
     }
     
-    #signature{
-        background-image: url('/img/signature/signature-white.png');
-    }
+        #signature{
+            background-image: url('/img/signature/signature-white.png');
+        }
     
 
     
-    #header-cover{
-        background-color: rgba(0,0,0,.2);
-    }
+        #header-cover {
+            background-color: rgba(0,0,0,.2);
+        }
     
 </style>
 
@@ -163,6 +165,19 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">岚</a>
+            <!-- Search -->
+            
+            
+                <li class="menu-item menu-item-search">
+                
+                    <a href="javascript:;" class="popup-trigger">
+                
+                    
+                        <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+                    
+                </a>
+                </li>
+            
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -185,14 +200,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -453,7 +468,7 @@ Downloads → Components。如果安装过Xcode和 Command-Line Tools，那就�
 主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
 <h2 id="step3-hexo-命令">step3 Hexo 命令</h2>
 <p>在<folder>文件夹下就可以执行</folder></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g <span class="comment">#hexo generate 生成</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s <span class="comment">#启动本地web服务器</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g #hexo <span class="keyword">generate</span> 生成</span><br><span class="line">$ hexo s #启动本地web服务器</span><br></pre></td></tr></table></figure>
 <p>这时，通过http://localhost:4000 ，访问页面。就可以看到，hexo默认带的主题landscap的效果。</p>
 <blockquote>
 <p>Hexo<a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">常用的几个命令</a>：<br>
@@ -466,7 +481,7 @@ hexo deploy (hexo d) 部署播客到远端（比如github, heroku等平台）<br
 <p>常用简写</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n == hexo new</span><br><span class="line">$ hexo g == hexo generate</span><br><span class="line">$ hexo s == hexo server</span><br><span class="line">$ hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
 <p>常用组合</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d -g <span class="comment">#生成部署</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s -g <span class="comment">#生成预览</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo d -g <span class="comment">#生成部署</span></span><br><span class="line"><span class="variable">$ </span>hexo s -g <span class="comment">#生成预览</span></span><br></pre></td></tr></table></figure>
 <h2 id="step4-添加其他主题">step4 添加其他主题</h2>
 <p>官网主题(模板)： <a href="https://hexo.io/themes/%EF%BC%8C%E5%9C%A8%E4%B8%8A%E9%9D%A2%E9%80%89%E6%8B%A9%E8%87%AA%E5%B7%B1%E5%96%9C%E6%AC%A2%E7%9A%84%E6%A8%A1%E6%9D%BF%EF%BC%8C%E8%BF%9B%E5%85%A5%E5%AE%83%E5%AF%B9%E5%BA%94%E7%9A%84git%E9%A1%B5%E9%9D%A2%EF%BC%8C%E8%8E%B7%E5%BE%97clone%E7%9A%84%E9%93%BE%E6%8E%A5%E3%80%82" target="_blank" rel="noopener">https://hexo.io/themes/，在上面选择自己喜欢的模板，进入它对应的git页面，获得clone的链接。</a></p>
 <p>这里以我改的主题Hexo-theme-zilan为例进行说明， 我这个主题增加了。</p>
@@ -489,7 +504,7 @@ Hexo -g 会生成一个静态网站（第一次会生成一个public目录），
 hexo deploy可以部署到很多平台，具体可以参考这个链接. 如果部署到github，需要在配置文件_config.xml中作如下修改：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com/CatherineLiyuankun.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>注意部署到git需要提前安装一个扩展：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <p>然后在命令行中执行</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
 <p>即可完成部署。</p>
@@ -592,7 +607,7 @@ Commit 代码3：<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan
 <p>对于下载的<a href="https://github.com/hexojs/hexo-renderer-ejs" target="_blank" rel="noopener">Ejs的模板</a>，需要在安装插件。终端下输入：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-renderer-ejs <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <p>对于下载的<a href="https://github.com/hexojs/hexo-renderer-haml" target="_blank" rel="noopener">Haml的模板</a>，需要在安装插件。终端下输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-renderer-haml --save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-renderer-haml <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="5-博客配置">5 博客配置</h1>
 <h2 id="5-1-绑定域名">5.1 绑定域名</h2>
@@ -771,10 +786,10 @@ source\lib\needsharebutton\needsharebutton.js</p>
 对应commit 代码： <a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit/21b7d216e43e494c3757b6764198d214b021943f" target="_blank" rel="noopener">[copyright][post] add copyright</a></p>
 <h3 id="5-13-1-html-内容">5.13.1 Html 内容</h3>
 <p>在your_theme\layout_partial\post下面，创建一个名为copyright.ejs的文件，在里面填写</p>
-<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加版权信息 <span class="attr">--</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-footer-copyright"</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>本文标题: <span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%-</span></span></span><span class="ruby"> config.root </span><span class="xml"><span class="tag"><span class="string">%&gt;&lt;%-</span></span></span><span class="ruby"> page.path </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> page.title </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> page.title </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>本文链接: <span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%-</span></span></span><span class="ruby"> config.root </span><span class="xml"><span class="tag"><span class="string">%&gt;&lt;%-</span></span></span><span class="ruby"> page.path </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> page.title </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> config.url </span><span class="xml"><span class="tag">%&gt;</span>/<span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> page.path </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>本文由<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> config.root </span><span class="xml"><span class="tag"><span class="string">%&gt;index.html"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> config.author </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span></span><span class="ruby"> config.author </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>创作和发表,采用<span class="tag">&lt;<span class="name">b</span>&gt;</span>BY<span class="tag">&lt;/<span class="name">b</span>&gt;</span>-<span class="tag">&lt;<span class="name">b</span>&gt;</span>NC<span class="tag">&lt;/<span class="name">b</span>&gt;</span>-<span class="tag">&lt;<span class="name">b</span>&gt;</span>SA<span class="tag">&lt;/<span class="name">b</span>&gt;</span>国际许可协议进行许可,转载请注明作者及出处。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">!</span> <span class="attr">--</span> 添加版权信息 <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-footer-copyright"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>本文标题: <span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- page.path %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%= page.title %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">page.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>本文链接: <span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- page.path %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%= page.title %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">config.url</span> %&gt;</span>/<span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.path</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>本文由<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;index.html"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"&lt;%= config.author %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>创作和发表,采用<span class="tag">&lt;<span class="name">b</span>&gt;</span>BY<span class="tag">&lt;/<span class="name">b</span>&gt;</span>-<span class="tag">&lt;<span class="name">b</span>&gt;</span>NC<span class="tag">&lt;/<span class="name">b</span>&gt;</span>-<span class="tag">&lt;<span class="name">b</span>&gt;</span>SA<span class="tag">&lt;/<span class="name">b</span>&gt;</span>国际许可协议进行许可,转载请注明作者及出处。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="5-13-2-html-内容添加到post文尾">5.13.2 Html 内容添加到post文尾</h3>
 <p>在your_theme/layout/post.ejs 的&lt;%- page.content %&gt;后面添加</p>
-<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%-</span></span></span><span class="ruby"> partial(<span class="string">'_partial/post/copyright'</span>) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>- partial<span class="comment">('_partial/post/copyright')</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="5-13-3-修改样式css">5.13.3 修改样式css</h3>
 <p>在/zilan/source/css/下创建 copyright.styl，并在head.ejs里引用   &lt;%- css(‘css/copyright’)%&gt;</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.article-footer-copyright</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">5em</span> <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> solid <span class="number">#0085a1</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f9f9f9</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -805,6 +820,14 @@ source\lib\needsharebutton\needsharebutton.js</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">11</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">archives</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 主页每页显示文章数</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">    per_page:</span> <span class="number">12</span></span><br><span class="line"><span class="comment">## archive分页每页显示文章数</span></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">15</span></span><br><span class="line"><span class="attr">  yearly:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  monthly:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  daily:</span> <span class="literal">false</span></span><br><span class="line"><span class="comment">## tag分页每页显示文章数</span></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line"><span class="attr">    per_page:</span> <span class="number">16</span></span><br><span class="line"><span class="comment">## category分页每页显示文章数</span></span><br><span class="line"><span class="attr">category_generator:</span> </span><br><span class="line"><span class="attr">    per_page:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
 <p>要说唯一不同的是，我之前的pagination_dir: archives，而查阅的其他文章中都是pagination_dir: page。<br>
 但我改成page也还是不起作用。。。。</p>
+<p>等我发布（hexo deploy）出来后发现，其实除了tag_generator 和 archive_generator 没有成功以外，其他的设置都成功了，可能是本地模式（hexo server）下没有更新。</p>
+<p>整个修改过程参考commit： <a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit/4607f6174e0615bf5bcc4bdada7715c6934b0d29" target="_blank" rel="noopener">category 分页样式修改+分页每页数量</a></p>
+<h2 id="error-eisdir-illegal-operation-on-a-directory">ERROR EISDIR: illegal operation on a directory</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  Hexo-theme-zilan git:(master) ✗ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded <span class="keyword">in</span> 564 ms</span><br><span class="line">ERROR EISDIR: illegal operation on a directory, <span class="built_in">read</span></span><br><span class="line">Error: EISDIR: illegal operation on a directory, <span class="built_in">read</span></span><br></pre></td></tr></table></figure>
+<h2 id="其他小的修改">其他小的修改</h2>
+<p>页面内容width修改，在大屏幕（&gt;1800px 和&gt; 2400px）下，页面内容更宽。<br>
+commit：t<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit/64a23dad122b7cf59039d754125fc59307c6a9f1" target="_blank" rel="noopener">he .container with responsive when screen width is larger than 1800px</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">2400px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">2070px</span> <span class="meta">!important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">1800px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1770px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="参考文章：">参考文章：</h1>
 <ul>
@@ -828,6 +851,9 @@ source\lib\needsharebutton\needsharebutton.js</p>
 </li>
 <li>
 <p><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></p>
+</li>
+<li>
+<p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT 主题使用</a></p>
 </li>
 </ul>
 
@@ -913,7 +939,7 @@ source\lib\needsharebutton\needsharebutton.js</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-github-pages"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1 Github Pages</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-创建一个库-create-a-repository"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">step1 创建一个库 Create a repository</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-clone-库"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">step2 clone 库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-创建index-html"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">step3 创建index.html</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-git-push"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">step4 git push</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-访问页面"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">step5 访问页面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-jekyll-or-hexo"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2 Jekyll or Hexo ?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-jekyll"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3 Jekyll</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step-0-前提安装有ruby"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">step 0 前提安装有ruby</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-安装jekyll"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">step1 安装Jekyll</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-建my-awesome-site"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">step2 建my-awesome-site</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-启动jekyll环境"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">step3 启动Jekyll环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-访问页面"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">step4 访问页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-jekyll博客模板"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">step5 Jekyll博客模板</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-hexo"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4 Hexo</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step-0-前提安装有node-js"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">step 0 前提安装有Node.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-安装-hexo"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">step1 安装 Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-init-hexo"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">step2 init Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-hexo-命令"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">step3 Hexo 命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-添加其他主题"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">step4 添加其他主题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装主题"><span class="toc-nav-number">4.5.1.</span> <span class="toc-nav-text">安装主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启用主题"><span class="toc-nav-number">4.5.2.</span> <span class="toc-nav-text">启用主题</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-部署到git-pages"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">step5 部署到git pages</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-添加分类"><span class="toc-nav-number">4.7.</span> <span class="toc-nav-text">step5 添加分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加分类页"><span class="toc-nav-number">4.7.1.</span> <span class="toc-nav-text">添加分类页</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-分类显示页面"><span class="toc-nav-number">4.8.</span> <span class="toc-nav-text">step5+ 分类显示页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step6-多级分类显示"><span class="toc-nav-number">4.9.</span> <span class="toc-nav-text">step6 多级分类显示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step6-分类页面显示不同背景图片"><span class="toc-nav-number">4.10.</span> <span class="toc-nav-text">step6+ 分类页面显示不同背景图片</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step7-添加widget"><span class="toc-nav-number">4.11.</span> <span class="toc-nav-text">step7 添加widget</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step8-模板"><span class="toc-nav-number">4.12.</span> <span class="toc-nav-text">step8 模板</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-博客配置"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5 博客配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-1-绑定域名"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 绑定域名</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step1-买域名"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">step1 买域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step2-修改cname"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">step2 修改CNAME</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step3-域名解析"><span class="toc-nav-number">5.1.3.</span> <span class="toc-nav-text">step3 域名解析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step4-域名备案"><span class="toc-nav-number">5.1.4.</span> <span class="toc-nav-text">step4 域名备案</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1通过全国公安机关互联网安全管理服务平台-备案"><span class="toc-nav-number">5.1.4.1.</span> <span class="toc-nav-text">1通过全国公安机关互联网安全管理服务平台 备案</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2通过阿里云-备案"><span class="toc-nav-number">5.1.4.2.</span> <span class="toc-nav-text">2通过阿里云 备案</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-2-网站统计"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 网站统计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sitemap"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">sitemap</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-3-评论"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 评论</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#disqus"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">Disqus</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gitment"><span class="toc-nav-number">5.3.2.</span> <span class="toc-nav-text">Gitment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#step-2-添加-gitment-到博客"><span class="toc-nav-number">5.3.2.1.</span> <span class="toc-nav-text">step 2 添加 Gitment 到博客</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-4-二维码"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 二维码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-5-git-fork-me"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">5.5 git fork me</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-6-使用图床"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">5.6 使用图床</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#七牛云"><span class="toc-nav-number">5.6.1.</span> <span class="toc-nav-text">七牛云</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#github-做图床"><span class="toc-nav-number">5.6.2.</span> <span class="toc-nav-text">github 做图床</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-7-rss订阅"><span class="toc-nav-number">5.7.</span> <span class="toc-nav-text">5.7 RSS订阅</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装插件"><span class="toc-nav-number">5.7.1.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置"><span class="toc-nav-number">5.7.2.</span> <span class="toc-nav-text">配置</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-8-font-awesome-图标"><span class="toc-nav-number">5.8.</span> <span class="toc-nav-text">5.8 font awesome 图标</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-9-添加email-to"><span class="toc-nav-number">5.9.</span> <span class="toc-nav-text">5.9 添加email to</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-10-捐赠-赏"><span class="toc-nav-number">5.10.</span> <span class="toc-nav-text">5.10 捐赠/赏</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-11-利用-fancybox-添加图片放大预览查看功能"><span class="toc-nav-number">5.11.</span> <span class="toc-nav-text">5.11 利用 Fancybox 添加图片放大预览查看功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-11-添加站内搜索"><span class="toc-nav-number">5.12.</span> <span class="toc-nav-text">5.11 添加站内搜索</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-12-share-分享"><span class="toc-nav-number">5.13.</span> <span class="toc-nav-text">5.12 Share 分享</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-13-版权声明"><span class="toc-nav-number">5.14.</span> <span class="toc-nav-text">5.13 版权声明</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-1-html-内容"><span class="toc-nav-number">5.14.1.</span> <span class="toc-nav-text">5.13.1 Html 内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-2-html-内容添加到post文尾"><span class="toc-nav-number">5.14.2.</span> <span class="toc-nav-text">5.13.2 Html 内容添加到post文尾</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-3-修改样式css"><span class="toc-nav-number">5.14.3.</span> <span class="toc-nav-text">5.13.3 修改样式css</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-14-代码块复制功能"><span class="toc-nav-number">5.15.</span> <span class="toc-nav-text">5.14 代码块复制功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#6-遇到的坑"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6 遇到的坑</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#目录-无法跳转"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">目录 无法跳转</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#disqus用username无法显示"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Disqus用username无法显示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#category-分类页面分页只显示10个文章"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">Category 分类页面分页只显示10个文章</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#参考文章："><span class="toc-nav-number">7.</span> <span class="toc-nav-text">参考文章：</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-github-pages"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1 Github Pages</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-创建一个库-create-a-repository"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">step1 创建一个库 Create a repository</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-clone-库"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">step2 clone 库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-创建index-html"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">step3 创建index.html</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-git-push"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">step4 git push</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-访问页面"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">step5 访问页面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-jekyll-or-hexo"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2 Jekyll or Hexo ?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-jekyll"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3 Jekyll</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step-0-前提安装有ruby"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">step 0 前提安装有ruby</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-安装jekyll"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">step1 安装Jekyll</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-建my-awesome-site"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">step2 建my-awesome-site</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-启动jekyll环境"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">step3 启动Jekyll环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-访问页面"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">step4 访问页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-jekyll博客模板"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">step5 Jekyll博客模板</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-hexo"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4 Hexo</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step-0-前提安装有node-js"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">step 0 前提安装有Node.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step1-安装-hexo"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">step1 安装 Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step2-init-hexo"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">step2 init Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step3-hexo-命令"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">step3 Hexo 命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step4-添加其他主题"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">step4 添加其他主题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装主题"><span class="toc-nav-number">4.5.1.</span> <span class="toc-nav-text">安装主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启用主题"><span class="toc-nav-number">4.5.2.</span> <span class="toc-nav-text">启用主题</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-部署到git-pages"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">step5 部署到git pages</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-添加分类"><span class="toc-nav-number">4.7.</span> <span class="toc-nav-text">step5 添加分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加分类页"><span class="toc-nav-number">4.7.1.</span> <span class="toc-nav-text">添加分类页</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step5-分类显示页面"><span class="toc-nav-number">4.8.</span> <span class="toc-nav-text">step5+ 分类显示页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step6-多级分类显示"><span class="toc-nav-number">4.9.</span> <span class="toc-nav-text">step6 多级分类显示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step6-分类页面显示不同背景图片"><span class="toc-nav-number">4.10.</span> <span class="toc-nav-text">step6+ 分类页面显示不同背景图片</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step7-添加widget"><span class="toc-nav-number">4.11.</span> <span class="toc-nav-text">step7 添加widget</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#step8-模板"><span class="toc-nav-number">4.12.</span> <span class="toc-nav-text">step8 模板</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-博客配置"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5 博客配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-1-绑定域名"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 绑定域名</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step1-买域名"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">step1 买域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step2-修改cname"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">step2 修改CNAME</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step3-域名解析"><span class="toc-nav-number">5.1.3.</span> <span class="toc-nav-text">step3 域名解析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#step4-域名备案"><span class="toc-nav-number">5.1.4.</span> <span class="toc-nav-text">step4 域名备案</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1通过全国公安机关互联网安全管理服务平台-备案"><span class="toc-nav-number">5.1.4.1.</span> <span class="toc-nav-text">1通过全国公安机关互联网安全管理服务平台 备案</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2通过阿里云-备案"><span class="toc-nav-number">5.1.4.2.</span> <span class="toc-nav-text">2通过阿里云 备案</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-2-网站统计"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 网站统计</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sitemap"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">sitemap</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-3-评论"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 评论</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#disqus"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">Disqus</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gitment"><span class="toc-nav-number">5.3.2.</span> <span class="toc-nav-text">Gitment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#step-2-添加-gitment-到博客"><span class="toc-nav-number">5.3.2.1.</span> <span class="toc-nav-text">step 2 添加 Gitment 到博客</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-4-二维码"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 二维码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-5-git-fork-me"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">5.5 git fork me</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-6-使用图床"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">5.6 使用图床</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#七牛云"><span class="toc-nav-number">5.6.1.</span> <span class="toc-nav-text">七牛云</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#github-做图床"><span class="toc-nav-number">5.6.2.</span> <span class="toc-nav-text">github 做图床</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-7-rss订阅"><span class="toc-nav-number">5.7.</span> <span class="toc-nav-text">5.7 RSS订阅</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装插件"><span class="toc-nav-number">5.7.1.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置"><span class="toc-nav-number">5.7.2.</span> <span class="toc-nav-text">配置</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-8-font-awesome-图标"><span class="toc-nav-number">5.8.</span> <span class="toc-nav-text">5.8 font awesome 图标</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-9-添加email-to"><span class="toc-nav-number">5.9.</span> <span class="toc-nav-text">5.9 添加email to</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-10-捐赠-赏"><span class="toc-nav-number">5.10.</span> <span class="toc-nav-text">5.10 捐赠/赏</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-11-利用-fancybox-添加图片放大预览查看功能"><span class="toc-nav-number">5.11.</span> <span class="toc-nav-text">5.11 利用 Fancybox 添加图片放大预览查看功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-11-添加站内搜索"><span class="toc-nav-number">5.12.</span> <span class="toc-nav-text">5.11 添加站内搜索</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-12-share-分享"><span class="toc-nav-number">5.13.</span> <span class="toc-nav-text">5.12 Share 分享</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-13-版权声明"><span class="toc-nav-number">5.14.</span> <span class="toc-nav-text">5.13 版权声明</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-1-html-内容"><span class="toc-nav-number">5.14.1.</span> <span class="toc-nav-text">5.13.1 Html 内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-2-html-内容添加到post文尾"><span class="toc-nav-number">5.14.2.</span> <span class="toc-nav-text">5.13.2 Html 内容添加到post文尾</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-13-3-修改样式css"><span class="toc-nav-number">5.14.3.</span> <span class="toc-nav-text">5.13.3 修改样式css</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-14-代码块复制功能"><span class="toc-nav-number">5.15.</span> <span class="toc-nav-text">5.14 代码块复制功能</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#6-遇到的坑"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6 遇到的坑</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#目录-无法跳转"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">目录 无法跳转</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#disqus用username无法显示"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Disqus用username无法显示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#category-分类页面分页只显示10个文章"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">Category 分类页面分页只显示10个文章</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#error-eisdir-illegal-operation-on-a-directory"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">ERROR EISDIR: illegal operation on a directory</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他小的修改"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">其他小的修改</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#参考文章："><span class="toc-nav-number">7.</span> <span class="toc-nav-text">参考文章：</span></a></li></ol>
         
         </div>
       </aside>
@@ -1219,7 +1245,386 @@ source\lib\needsharebutton\needsharebutton.js</p>
 
     <!-- Fork me on GitHub -->
     
-    
+       
+    <!-- Search -->
+    <!-- {% include 'tinysou.swig' %}
+ {% include 'localsearch.swig' %}
+ {% include 'algolia-search/assets.swig' %} -->
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = 'search.xml';
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = '/' + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        // dataType: isXml ? "xml" : "json",
+        // dataType: "binary",
+        // contentType: "text/xml",
+        dataType: "text", // Fix Bug: xml parser error
+        async: true,
+        data: "{}",
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-cover');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if (!input || !resultContent) {
+            // Fix Bug: add /zilan/layout/_partial/search/localsearch.ejs inside "site-search"
+              $(".site-search")
+              .append(
+                  '<div class="popup search-popup local-search-popup">' +
+                  '<div class="local-search-header clearfix">' +
+                    '<span class="search-icon">' +
+                      '<i class="fa fa-search"></i>' +
+                  '</span>' +
+                    '<span class="popup-btn-close">' +
+                      '<i class="fa fa-times-circle"></i>' +
+                    '</span>' +
+                    '<div class="local-search-input-wrapper">' +
+                      '<input autocomplete="off"' +
+                            'placeholder="search" spellcheck="false"' +
+                            'type="text" id="local-search-input">' +
+                    '</div>' +
+                  '</div>' +
+                  '<div id="local-search-result"></div>' +
+                '</div>');
+            input = document.getElementById("local-search-input");
+            resultContent = document.getElementById("local-search-result");
+            var searchClose = document.querySelector(".popup-btn-close");
+            searchClose.addEventListener('click', onPopupClose);
+          }
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            /*弹出jqXHR对象的信息*/
+            alert(jqXHR.responseText);
+            alert(jqXHR.status);
+            alert(jqXHR.readyState);
+            alert(jqXHR.statusText);
+            /*弹出其他两个参数的信息*/
+            alert(textStatus);
+            alert(errorThrown);
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    var registerESCKeyEvent =  function () {
+      $(document).on('keyup', function (event) {
+        var shouldDismissSearchPopup = event.which === 27 &&
+          $('.search-popup').is(':visible');
+        if (shouldDismissSearchPopup) {
+          $('.search-popup').hide();
+          $('.search-popup-overlay').remove();
+          $('body').css('overflow', '');
+        }
+      });
+    };
+    registerESCKeyEvent();
+  </script>
+
+
+
+
+
     <!-- Share -->
       
     <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
@@ -1274,6 +1679,15 @@ source\lib\needsharebutton\needsharebutton.js</p>
     
 
 
+    <!-- Share float -->
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt fa-inverse" aria-hidden="true"></i>
+        </span>
+      </div>
+      
+
     <!-- Git Comment -->
     
     
@@ -1301,13 +1715,13 @@ source\lib\needsharebutton\needsharebutton.js</p>
                 }
             };
             if(true) {
-                option.lang = "null" || navigator.language || navigator.systemLanguage || navigator.userLanguage;
+                option.lang = "" || navigator.language || navigator.systemLanguage || navigator.userLanguage;
             }
-            if (true && null) {
-                option.oauth.redirect_protocol = 'null';
+            if (true && ) {
+                option.oauth.redirect_protocol = '';
             }
-            if (true && null) {
-                option.oauth.proxy_gateway = 'null';
+            if (true && ) {
+                option.oauth.proxy_gateway = '';
             } else {
                 option.oauth.client_secret = 'bedf5010df925fa0e02e8be9399a64caac3d2b4e';
             }
@@ -1359,15 +1773,42 @@ source\lib\needsharebutton\needsharebutton.js</p>
     <!-- Duoshuo Comment -->
     
 
-    <!-- Share float -->
+    <!-- Search popup-->
     
-    <div id="needsharebutton-float">
-      <span class="btn">
-        <i class="fa fa-share-alt fa-inverse" aria-hidden="true"></i>
-      </span>
-    </div>
     
+      <div class="site-search">
+      <!-- {% if theme.algolia_search.enable %}
+  {% include '../_third-party/search/algolia-search/dom.swig' %}
+{% elseif theme.swiftype_key %}
+  {% include 'search/swiftype.swig' %}
+{% elseif theme.tinysou_Key %}
+  {% include 'search/tinysou.swig' %}
+{% elseif theme.local_search.enable %}
+  {% include 'search/localsearch.swig' %}
+{% endif %} -->
 
+<div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="search" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+      </div>
+    
+    
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
