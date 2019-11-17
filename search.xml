@@ -518,7 +518,7 @@ will be executed at the bottom of the next Event Loop</li>
 <li><a href="https://juejin.im/post/5b7057b251882561381e69bf" target="_blank" rel="noopener">浅析setTimeout与Promise</a></li>
 <li><a href="https://juejin.im/post/5b7057b251882561381e69bf" target="_blank" rel="noopener">What is the relationship between event loop and Promise [stackoverflow]</a></li>
 <li><a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="noopener">ES6 Book </a></li>
-<li><a href="https://www.zhihu.com/question/36972010" target="_blank" rel="noopener">Promise的队列与setTimeout的队列有何关联？</a></li>
+<li><a href="https://www.zhihu.com/question/36972010" target="_blank" rel="noopener">Promise的队列与setTimeout的队列有何关联？[知乎]</a></li>
 <li><a href="https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout" target="_blank" rel="noopener">Writing a JavaScript framework - Execution timing, beyond setTimeout</a></li>
 <li><a href="https://github.com/deenjohn/NodeRevision/blob/master/6-Concurrency%20model%20and%20event%20loop%20-part%20B.md" target="_blank" rel="noopener">6-Concurrency model and event loop -part B</a></li>
 <li><a href="https://stackoverflow.com/questions/34753342/microtasks-vs-events-and-how-to-define-what-as-which" target="_blank" rel="noopener">Microtasks vs Events and how to define what as which?</a></li>
@@ -532,6 +532,7 @@ will be executed at the bottom of the next Event Loop</li>
       </categories>
       <tags>
         <tag>Promise</tag>
+        <tag>TODO</tag>
       </tags>
   </entry>
   <entry>
@@ -581,7 +582,7 @@ will be executed at the bottom of the next Event Loop</li>
 <li><a href="https://www.w3.org/TR/IndexedDB/#dom-idbfactory-deletedatabase" target="_blank" rel="noopener">dom-idbfactory-deletedatabase W3C</a></li>
 <li><a href="https://www.w3.org/TR/IndexedDB/#delete-a-database" target="_blank" rel="noopener">5.3. Deleting a database W3C</a></li>
 </ul>
-<h2 id="pouchdb">PouchDB</h2>
+<h2 id="pouch">Pouch</h2>
 <ul>
 <li><a href="https://github.com/pouchdb/pouchdb" target="_blank" rel="noopener">pouchdb/pouchdb</a></li>
 <li><a href="http://webfuse.cn/2016/09/24/PouchDB%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/" target="_blank" rel="noopener">PouchDB简单入门</a></li>
@@ -3081,6 +3082,9 @@ commit：t<a href="https://github.com/CatherineLiyuankun/Hexo-theme-zilan/commit
 </li>
 <li>
 <p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT 主题使用</a></p>
+</li>
+<li>
+<p><a href="http://www.ehcoo.com/seo.html" target="_blank" rel="noopener">【搜索优化】Hexo-next百度和谷歌搜索优化</a></p>
 </li>
 </ul>
 ]]></content>
