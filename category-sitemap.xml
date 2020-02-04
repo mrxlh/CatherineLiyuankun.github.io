@@ -8,6 +8,34 @@
     </url>
 
     <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/CSS/</loc>
+        <lastmod>2020-02-04T22:48:26.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/</loc>
+        <lastmod>2020-02-04T22:48:26.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2020-02-04T22:48:26.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/JS/</loc>
+        <lastmod>2020-02-04T20:23:03.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/Browser-Caching/IndexedDB/</loc>
         <lastmod>2019-11-17T19:07:09.346Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,27 +45,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/Browser-Caching/</loc>
         <lastmod>2019-11-17T19:07:09.346Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/</loc>
-        <lastmod>2019-11-17T19:07:09.346Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
-        <lastmod>2019-11-17T19:07:09.346Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/JS/</loc>
-        <lastmod>2019-11-05T09:13:00.584Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -94,13 +101,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/ES6/</loc>
         <lastmod>2019-10-29T12:45:12.657Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/CSS/</loc>
-        <lastmod>2019-10-29T12:24:43.149Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
