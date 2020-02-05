@@ -8,6 +8,34 @@
     </url>
 
     <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/network-tools/</loc>
+        <lastmod>2020-02-05T20:17:40.166Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/</loc>
+        <lastmod>2020-02-05T20:17:40.166Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
+        <lastmod>2020-02-05T20:17:40.166Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/IDE/</loc>
+        <lastmod>2020-02-05T19:14:04.890Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/CSS/</loc>
         <lastmod>2020-02-04T22:48:26.105Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +44,6 @@
 
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/</loc>
-        <lastmod>2020-02-04T22:48:26.105Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/</loc>
         <lastmod>2020-02-04T22:48:26.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -59,13 +80,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/categories/TECH/FrontEnd/React/</loc>
         <lastmod>2019-11-04T17:06:57.538Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/categories/TECH/Tools/</loc>
-        <lastmod>2019-11-04T17:05:56.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
