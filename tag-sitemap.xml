@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://catherineliyuankun.github.io/tags/Flexbox/</loc>
+        <lastmod>2020-02-05T21:04:50.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://catherineliyuankun.github.io/tags/Promise/</loc>
         <lastmod>2020-02-05T20:33:00.505Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,13 +26,6 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/IntelliJ/</loc>
         <lastmod>2020-02-05T19:13:43.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://catherineliyuankun.github.io/tags/Flexbox/</loc>
-        <lastmod>2020-02-04T22:48:26.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
