@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>text-overflow: ellipsis多行文本溢出...css/js方法全总结</title>
+    <url>/text-overflow-ellipsis%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA-css-js%E6%96%B9%E6%B3%95%E5%85%A8%E6%80%BB%E7%BB%93.html</url>
+    <content><![CDATA[<h1 id="多行显示并在最后一行截断文字？">多行显示并在最后一行截断文字？</h1>
+<hr>
+<p>text-overflow基本知识请看上篇文章：<br>
+<a href="../text-overflow-ellipsis-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F">text-overflow: ellipsis;什么时候可能不生效？</a></p>
+<p>单行文字我们为了能够截断文字，使用了</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">white-space: nowrap; // 强制文本在一行显示</span><br></pre></td></tr></table></figure>
+<p>如果我确实有多行显示的需求呢？怎么实现？<br>
+<img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/text-overflow-ellipsis-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F/multiline%20ellipsis.png" alt="multiline例子图片"></p>
+<h1 id="方法1-webkit-line-clamp-property">方法1 -Webkit-line-clamp property</h1>
+<p><strong>优点</strong>: 最简单的方法<br>
+<strong>缺点</strong>: 但是很遗憾，它不支持跨浏览器（在Firefox和Internet Explorer中不起作用）。</p>
+<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp" target="_blank" rel="noopener">-webkit-line-clamp</a> CSS 属性 可以把 块容器 中的内容限制为指定的行数.</p>
+</blockquote>
+<blockquote>
+<p>它只有在 display 属性设置成 -webkit-box 或者 -webkit-inline-box 并且 -webkit-box-orient 属性设置成 vertical时才有效果</p>
+</blockquote>
+<blockquote>
+<p>在大部分情况下,也需要设置 overflow 属性为 hidden, 否则,里面的内容不会被裁减,并且在内容显示为指定行数后还会显示省略号(ellipsis ).</p>
+</blockquote>
+<blockquote>
+<p>当他应用于锚(anchor)元素时,截取动作可以发生在文本中间,而不必在末尾.</p>
+</blockquote>
+<p>使用方法：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">3</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="方法2-text-overflow-o-ellipsis-lastline">方法2 Text-overflow: -o-ellipsis-lastline</h1>
+<p>从10.60版开始，Opera增加了在多行块上剪切文本的功能。 老实说，我从未尝试过，理论上只在Opera 10.6以后可以使用，不建议使用。</p>
+<h1 id="方法3-javascript">方法3 JavaScript</h1>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#block-with-text</span> &#123; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">3.6em</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ellipsizeMultiLineText</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">    <span class="keyword">var</span> words = element.innerHTML.split(<span class="string">' '</span>);</span><br><span class="line">    <span class="keyword">while</span>(element.scrollHeight &gt; element.offsetHeight) &#123;</span><br><span class="line">        words.pop();</span><br><span class="line">        element.innerHTML = words.join(<span class="string">' '</span>) + <span class="string">'...'</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">ellipsizeMultiLineText(<span class="string">'block-with-text'</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="方法4-纯css解决-跨浏览器">方法4 纯CSS解决 &amp; 跨浏览器</h1>
+<h2 id="优点">优点</h2>
+<ol>
+<li>纯CSS</li>
+<li>自适应 Responsive</li>
+<li>改变大小后或者 字体加载事件后 不需要重新计算</li>
+<li>跨浏览器</li>
+</ol>
+<h2 id="缺点">缺点</h2>
+<ol>
+<li>文字小于指定行数的时候，我们需要一个背景色来掩盖‘…’</li>
+<li>我们需要空间来放‘…’, 而且如果父节点<code>overflow: hidden</code> 或者 <code>overflow: auto</code> 我们需要去掉style <code>margin-right: -1em;</code>.</li>
+</ol>
+<h2 id="实现方法">实现方法</h2>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* styles for '...' */</span> </span><br><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">  <span class="comment">/* hide text if it more than N lines  */</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="comment">/* for set '...' in absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: relative; </span><br><span class="line">  <span class="comment">/* use this value to count block height */</span></span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</span><br><span class="line">  <span class="comment">/* max-height = line-height (1.2) * lines max number (3) */</span></span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">3.6em</span>; </span><br><span class="line">  <span class="comment">/* fix problem when last visible word doesn't adjoin right side  */</span></span><br><span class="line">  <span class="attribute">text-align</span>: justify;  </span><br><span class="line">  <span class="comment">/* place for '...' */</span></span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* create the ... */</span></span><br><span class="line"><span class="selector-class">.block-with-text</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="comment">/* points in the end */</span></span><br><span class="line">  <span class="attribute">content</span>: <span class="string">'...'</span>;</span><br><span class="line">  <span class="comment">/* absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/* set position to right bottom corner of block */</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* hide ... if we have text, which is less than or equal to max lines */</span></span><br><span class="line"><span class="selector-class">.block-with-text</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="comment">/* points in the end */</span></span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="comment">/* absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/* set position to right bottom corner of text */</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="comment">/* set width and height */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0.2em</span>;</span><br><span class="line">  <span class="comment">/* bg color = bg color under block */</span></span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实现原理">实现原理</h2>
+<ol>
+<li>大于3行时<br>
+:before 的内容&quot;…&quot; 在右下角</li>
+</ol>
+<p><img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="大于3行时1"></p>
+<p>文字被justify （text-align: justify;）不会看到文字与&quot;…&quot;之间有空隙。<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines-nonjustified.jpg" alt="大于3行时2"></p>
+<ol start="2">
+<li>
+<p>小于3行时<br>
+看不到&quot;…&quot;<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="小于3行时"></p>
+</li>
+<li>
+<p>等于3行时<br>
+看不到&quot;…&quot;<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="等于3行时"></p>
+</li>
+</ol>
+<h1 id="方法5-纯scss解决-跨浏览器">方法5 纯SCSS解决 &amp; 跨浏览器</h1>
+<p>因为方法4中的缺点，所以写了个SCSS mixin。这样的话使用起来也更方便，也有复用性。</p>
+<p><strong>CodePen</strong> <a href="https://codepen.io/catherineliyuankun/pen/poJzLKx" target="_blank" rel="noopener">multiline例子链接</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span>&gt;</span>The Hitch Hiker's Guide to the Galaxy has a few things to say on the subject of towels. A towel, it says, is about the most massivelyuseful thing an interstellar hitch hiker can have. Partly it has great practical value - you can wrap it around you for warmth as you bound across the cold moons of  Jaglan Beta.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span>&gt;</span>Small text, less then one row. Without dottes.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span> <span class="attr">style</span>=<span class="string">"width: 250px;"</span>&gt;</span>2.5 lines example: A towel is about the most massively useful thing an interstellar hitch hiker can have<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">400</span> <span class="number">14px</span>/<span class="number">1.2em</span> sans-serif; </span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* mixin for multiline */</span></span><br><span class="line">@<span class="keyword">mixin</span> multiLineEllipsis($lineHeight: <span class="number">1.2em</span>, $lineCount: <span class="number">1</span>, $bgColor: white)&#123;</span><br><span class="line">  <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line">  <span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line">  line-height: $lineHeight;</span><br><span class="line">  max-height: $lineHeight * $lineCount; </span><br><span class="line">  <span class="selector-tag">text-align</span>: <span class="selector-tag">justify</span>;</span><br><span class="line">  <span class="selector-tag">margin-right</span>: <span class="selector-tag">-1em</span>;</span><br><span class="line">  <span class="selector-tag">padding-right</span>: 1<span class="selector-tag">em</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'...'</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">0.2em</span>;</span><br><span class="line">    <span class="attribute">background</span>: $bgColor;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 2, $bgColor: white);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="the-reference-link">The reference link</h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow" target="_blank" rel="noopener">MDN text-overflow</a></p>
+]]></content>
+      <categories>
+        <category>TECH</category>
+        <category>FrontEnd</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>text-overflow</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fiddler Everywhere for MAC OS without Mono</title>
     <url>/Fiddler-Everywhere-for-MAC-OS-without-Mono.html</url>
     <content><![CDATA[<h1 id="fiddler-版本历史">Fiddler 版本历史</h1>
@@ -214,7 +300,7 @@ string用来表示被截断的文本。字符串内容将被添加在内容区�
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>Flexbox</tag>
+        <tag>text-overflow</tag>
       </tags>
   </entry>
   <entry>

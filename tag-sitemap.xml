@@ -3,8 +3,8 @@
 
 
     <url>
-        <loc>https://catherineliyuankun.github.io/tags/Flexbox/</loc>
-        <lastmod>2020-02-05T21:04:50.499Z</lastmod>
+        <loc>https://catherineliyuankun.github.io/tags/text-overflow/</loc>
+        <lastmod>2020-02-05T22:13:44.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -103,6 +103,13 @@
     <url>
         <loc>https://catherineliyuankun.github.io/tags/git/</loc>
         <lastmod>2019-10-15T14:55:53.523Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://catherineliyuankun.github.io/tags/Flexbox/</loc>
+        <lastmod>2019-10-15T14:55:36.385Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

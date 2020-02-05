@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Yuankun | Zilan
+          text-overflow: ellipsis多行文本溢出...css/js方法全总结 - Yuankun | Zilan
         
     </title>
 
-    <link rel="canonical" href="https://catherineliyuankun.github.io/">
+    <link rel="canonical" href="https://catherineliyuankun.github.io/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -77,8 +77,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/home-bg.png'); 
-            /*config*/
+            background-image: url('');
+            /*post*/
         
     }
     
@@ -102,10 +102,45 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
-                        <div class="site-heading">
-                            <h1>岚</h1>
-                            <!--<hr class="small">-->
-                            <span class="subheading">Talk to myself.</span>
+                        <div class="post-heading">
+                            <div class="tags">
+                                
+                                <a class="tag" href="/tags/#text-overflow" title="text-overflow">text-overflow</a>
+                                
+                            </div>
+                            <!-- category post header -->
+                            
+                                <div class="page-header-category">
+                                    <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
+                                </div>
+                            
+                            
+                                <span class="post-comments-count">
+                                    <span class="post-meta-divider">|</span>
+                                    <a href="/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html#git_comment" itemprop="discussionUrl">
+                                        <span class="post-meta-item-icon">
+                                            <i class="fa fa-comment-o"></i>
+                                        </span>
+                                        <span class="post-comments-count gitment-comments-count" data-xid="/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html" itemprop="commentsCount"></span>
+                                    </a>
+                                </span>
+                            
+                            <h1>
+                                text-overflow: ellipsis多行文本溢出...css/js方法全总结
+                                <!-- Share -->
+                                
+                                    <span id="needsharebutton-postbottom" class="header-share">
+                                        <span class="btn">
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        </span>
+                                    </span>
+                                
+                            </h1>
+                            <h2 class="subheading"></h2>
+                            <span class="meta">
+                                Posted by Yuankun Li on
+                                2020-02-05
+                            </span>
                         </div>
                     
                     </div>
@@ -227,851 +262,190 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-<!-- USE SIDEBAR Aside-->
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-
-<div class="post-preview">
-
-    <a href="/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html">
-        <h2 class="post-title">
-            text-overflow: ellipsis多行文本溢出...css/js方法全总结
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            多行显示并在最后一行截断文字？
-
-text-overflow基本知识请看上篇文章：
-text-overflow: ellipsis;什么时候可能不生效？
-单行文字我们为了能够截断文字，使用了
-1white-space: nowrap; // 强制文本在一行显示
-如果我确实有多行显示的需求呢？怎么实现？
-
-方法1 -Webkit-line-clamp property
-优点: 最简单的方法
-缺......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2020-02-05
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#text-overflow" title="text-overflow">text-overflow</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
+                <h1 id="多行显示并在最后一行截断文字？">多行显示并在最后一行截断文字？</h1>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/Fiddler-Everywhere-for-MAC-OS-without-Mono.html">
-        <h2 class="post-title">
-            Fiddler Everywhere for MAC OS without Mono
-        </h2>
-        <h3 class="post-subtitle">
-            Fiddler可不用Mono直接在Mac上安装了！
-        </h3>
-        <div class="post-content-preview">
-            Fiddler 版本历史
-Fiddler著名的抓包工具，就不多说了。
-在Mac上使用Fiddler也是血泪史，2016年出过Fiddler for OS X Beta 1, 必须通过Mono才可以在Mac上使用。但是在mac上使用是非常不稳定, 有非常多的问题.
-现在终于有”Fiddler Everywhere“ 版本，可以直接在Mac上安装了！
-因为之前他的mac版本非常不好用，后来就使用......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2020-02-05
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#Promise" title="Promise">Promise</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Tools/">Tools</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
+<p>text-overflow基本知识请看上篇文章：<br>
+<a href="../text-overflow-ellipsis-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F">text-overflow: ellipsis;什么时候可能不生效？</a></p>
+<p>单行文字我们为了能够截断文字，使用了</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">white-space: nowrap; // 强制文本在一行显示</span><br></pre></td></tr></table></figure>
+<p>如果我确实有多行显示的需求呢？怎么实现？<br>
+<img src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/post/text-overflow-ellipsis-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F/multiline%20ellipsis.png" alt="multiline例子图片"></p>
+<h1 id="方法1-webkit-line-clamp-property">方法1 -Webkit-line-clamp property</h1>
+<p><strong>优点</strong>: 最简单的方法<br>
+<strong>缺点</strong>: 但是很遗憾，它不支持跨浏览器（在Firefox和Internet Explorer中不起作用）。</p>
+<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp" target="_blank" rel="noopener">-webkit-line-clamp</a> CSS 属性 可以把 块容器 中的内容限制为指定的行数.</p>
+</blockquote>
+<blockquote>
+<p>它只有在 display 属性设置成 -webkit-box 或者 -webkit-inline-box 并且 -webkit-box-orient 属性设置成 vertical时才有效果</p>
+</blockquote>
+<blockquote>
+<p>在大部分情况下,也需要设置 overflow 属性为 hidden, 否则,里面的内容不会被裁减,并且在内容显示为指定行数后还会显示省略号(ellipsis ).</p>
+</blockquote>
+<blockquote>
+<p>当他应用于锚(anchor)元素时,截取动作可以发生在文本中间,而不必在末尾.</p>
+</blockquote>
+<p>使用方法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">3</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="方法2-text-overflow-o-ellipsis-lastline">方法2 Text-overflow: -o-ellipsis-lastline</h1>
+<p>从10.60版开始，Opera增加了在多行块上剪切文本的功能。 老实说，我从未尝试过，理论上只在Opera 10.6以后可以使用，不建议使用。</p>
+<h1 id="方法3-javascript">方法3 JavaScript</h1>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#block-with-text</span> &#123; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">3.6em</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ellipsizeMultiLineText</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">    <span class="keyword">var</span> words = element.innerHTML.split(<span class="string">' '</span>);</span><br><span class="line">    <span class="keyword">while</span>(element.scrollHeight &gt; element.offsetHeight) &#123;</span><br><span class="line">        words.pop();</span><br><span class="line">        element.innerHTML = words.join(<span class="string">' '</span>) + <span class="string">'...'</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line">ellipsizeMultiLineText(<span class="string">'block-with-text'</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="方法4-纯css解决-跨浏览器">方法4 纯CSS解决 &amp; 跨浏览器</h1>
+<h2 id="优点">优点</h2>
+<ol>
+<li>纯CSS</li>
+<li>自适应 Responsive</li>
+<li>改变大小后或者 字体加载事件后 不需要重新计算</li>
+<li>跨浏览器</li>
+</ol>
+<h2 id="缺点">缺点</h2>
+<ol>
+<li>文字小于指定行数的时候，我们需要一个背景色来掩盖‘…’</li>
+<li>我们需要空间来放‘…’, 而且如果父节点<code>overflow: hidden</code> 或者 <code>overflow: auto</code> 我们需要去掉style <code>margin-right: -1em;</code>.</li>
+</ol>
+<h2 id="实现方法">实现方法</h2>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* styles for '...' */</span> </span><br><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">  <span class="comment">/* hide text if it more than N lines  */</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="comment">/* for set '...' in absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: relative; </span><br><span class="line">  <span class="comment">/* use this value to count block height */</span></span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</span><br><span class="line">  <span class="comment">/* max-height = line-height (1.2) * lines max number (3) */</span></span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">3.6em</span>; </span><br><span class="line">  <span class="comment">/* fix problem when last visible word doesn't adjoin right side  */</span></span><br><span class="line">  <span class="attribute">text-align</span>: justify;  </span><br><span class="line">  <span class="comment">/* place for '...' */</span></span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* create the ... */</span></span><br><span class="line"><span class="selector-class">.block-with-text</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="comment">/* points in the end */</span></span><br><span class="line">  <span class="attribute">content</span>: <span class="string">'...'</span>;</span><br><span class="line">  <span class="comment">/* absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/* set position to right bottom corner of block */</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* hide ... if we have text, which is less than or equal to max lines */</span></span><br><span class="line"><span class="selector-class">.block-with-text</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="comment">/* points in the end */</span></span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="comment">/* absolute position */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="comment">/* set position to right bottom corner of text */</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="comment">/* set width and height */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0.2em</span>;</span><br><span class="line">  <span class="comment">/* bg color = bg color under block */</span></span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实现原理">实现原理</h2>
+<ol>
+<li>大于3行时<br>
+:before 的内容&quot;…&quot; 在右下角</li>
+</ol>
+<p><img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="大于3行时1"></p>
+<p>文字被justify （text-align: justify;）不会看到文字与&quot;…&quot;之间有空隙。<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines-nonjustified.jpg" alt="大于3行时2"></p>
+<ol start="2">
+<li>
+<p>小于3行时<br>
+看不到&quot;…&quot;<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="小于3行时"></p>
+</li>
+<li>
+<p>等于3行时<br>
+看不到&quot;…&quot;<br>
+<img src="http://static.hackingui.com.s3.amazonaws.com/2015/08/more-3-lines.jpg" alt="等于3行时"></p>
+</li>
+</ol>
+<h1 id="方法5-纯scss解决-跨浏览器">方法5 纯SCSS解决 &amp; 跨浏览器</h1>
+<p>因为方法4中的缺点，所以写了个SCSS mixin。这样的话使用起来也更方便，也有复用性。</p>
+<p><strong>CodePen</strong> <a href="https://codepen.io/catherineliyuankun/pen/poJzLKx" target="_blank" rel="noopener">multiline例子链接</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span>&gt;</span>The Hitch Hiker's Guide to the Galaxy has a few things to say on the subject of towels. A towel, it says, is about the most massivelyuseful thing an interstellar hitch hiker can have. Partly it has great practical value - you can wrap it around you for warmth as you bound across the cold moons of  Jaglan Beta.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span>&gt;</span>Small text, less then one row. Without dottes.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"block-with-text"</span> <span class="attr">style</span>=<span class="string">"width: 250px;"</span>&gt;</span>2.5 lines example: A towel is about the most massively useful thing an interstellar hitch hiker can have<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">400</span> <span class="number">14px</span>/<span class="number">1.2em</span> sans-serif; </span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* mixin for multiline */</span></span><br><span class="line">@<span class="keyword">mixin</span> multiLineEllipsis($lineHeight: <span class="number">1.2em</span>, $lineCount: <span class="number">1</span>, $bgColor: white)&#123;</span><br><span class="line">  <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line">  <span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line">  line-height: $lineHeight;</span><br><span class="line">  max-height: $lineHeight * $lineCount; </span><br><span class="line">  <span class="selector-tag">text-align</span>: <span class="selector-tag">justify</span>;</span><br><span class="line">  <span class="selector-tag">margin-right</span>: <span class="selector-tag">-1em</span>;</span><br><span class="line">  <span class="selector-tag">padding-right</span>: 1<span class="selector-tag">em</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'...'</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">0.2em</span>;</span><br><span class="line">    <span class="attribute">background</span>: $bgColor;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.block-with-text</span> &#123;</span><br><span class="line">  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 2, $bgColor: white);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-
-<div class="post-preview">
-
-    <a href="/text-overflow-ellipsis-什么时候可能不生效？.html">
-        <h2 class="post-title">
-            text-overflow: ellipsis;什么时候可能不生效？
-        </h2>
-        <h3 class="post-subtitle">
-            实现...文首截取&多行文本截取
-        </h3>
-        <div class="post-content-preview">
-            Ⅰ text-overflow: ellipsis;什么时候可能不生效？
-
-
-
-设置在width有效的元素上，并且设置必要的width。
-
-块级元素（block level element） width、height 属性默认有效.[example 1]
-内联元素（inline element 有的人也叫它行内元素）width、height 属性无效。[example 2]
-可以通过改变di......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2020-02-04
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#text-overflow" title="text-overflow">text-overflow</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/JavaScript比较两个Array数组的内容是否相同.html">
-        <h2 class="post-title">
-            JavaScript比较两个Array数组/Object的内容是否相同
-        </h2>
-        <h3 class="post-subtitle">
-            Compare Array or Object
-        </h3>
-        <div class="post-content-preview">
-            Why can not use === to compare Array?
-复习下javascript包括两个不同类型的值， 最新的 ECMAScript 标准定义了 8 种数据类型:
-
-基本数据类型(7种原始类型): 是按值访问的, 保存在栈内存（Stack）里, 基本类型的值是不可变的, 基本类型的比较是它们的值的比较。
-
-Boolean
-Null
-Undefined
-Number
-Bi......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2020-02-04
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#Array" title="Array">Array</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/英文标点符号-运算符号.html">
-        <h2 class="post-title">
-            英文标点符号+运算符号
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-
-
-符号
-英文含义
-读音
-中文含义
-
-
-
-
-．
-period or full stop
-英  [ˌsemiˈkəʊlən; ˌsemiˈkəʊlɒn]  美  [ˈsemikoʊlən]
-句号
-
-
-，
-comma
-
-逗号
-
-
-：
-colon
-
-冒号
-
-
-；
-semicolon
-
-分号
-
-
-！
-exclamation mark
-
-惊叹号
-
-
-？
-question mark
-
-问号
-
-
--
-h......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-30
-        </p>
-    
-
-    
-        <div class="tags">
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/English-Learning/">English Learning</a>►<a class="category-list-link" href="/categories/English-Learning/日常英语/">日常英语</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/Promise-Vs-setTimeout.html">
-        <h2 class="post-title">
-            Promise Vs setTimeout
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            了解这个，就得了解JavaScript异步编程，了解任务队列才能知其根本。
-一个事件循环（event loop）+多个任务队列（task queue）
-事件循环（event loop）
-Task Queue
-Macrotask Queue 宏任务队列:
-
-setTimeout
-setInterval
-setImmediate
-requestAnimationFrame
-UI rendeing......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-29
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#Promise" title="Promise">Promise</a>
-            
-              <a href="/tags/#TODO" title="TODO">TODO</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/Browser-Caching.html">
-        <h2 class="post-title">
-            Browser Caching
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Reference Links:
-
-缓存（一）——缓存总览：从性能优化的角度看缓存 #43
-九种浏览器端缓存机制知多少
-H5 缓存机制浅析 - 移动端 Web 加载性能优化
-
-IndexedDB
-
-《PWA 应用实战》- IndexedDB
-利用 indexedDB 保持应用状态的最佳实践
-Progressive Web Apps Training - Working with Indexe......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-28
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#cache" title="cache">cache</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/IndexedDB-delete-whole-database-by-javaScript.html">
-        <h2 class="post-title">
-            IndexedDB-delete whole database by javaScript
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            使用indexedDB.deleteDatabase：
-12345678910111213141516var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");DBDeleteRequest.onerror = function(event) &#123;  console.log("Error deleting da......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-28
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#IndexedDB" title="IndexedDB">IndexedDB</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/Z-index.html">
-        <h2 class="post-title">
-            Z-index
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Reference Links
-
-关于z-index 那些你不知道的事
-
-...
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-24
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#TODO" title="TODO">TODO</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/HTTP-CORS-disable.html">
-        <h2 class="post-title">
-            HTTP CORS disable for chrome
-        </h2>
-        <h3 class="post-subtitle">
-            chrome
-        </h3>
-        <div class="post-content-preview">
-            CORS的基本原理请看上一篇：
-
-CORS的基本原理
-简单关闭Chrome的CORS方法:
-MacOS
-命令行里, 会另外打开一个Chrome窗口：
-1➜   ✗ open -n -a "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --user-data-dir="/tmp/chrome_dev_t......
-        </div>
-    </a>
-
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Yuankun Li on
-            2019-10-21
-        </p>
-    
-
-    
-        <div class="tags">
-            
-              <a href="/tags/#CORS" title="CORS">CORS</a>
-            
-        </div>
-    
-
-    <!-- added by Yuankun Li -->
-    
-        <div class="post-category">
-            <a class="category-list-link" href="/categories/TECH/">TECH</a>►<a class="category-list-link" href="/categories/TECH/Network/">Network</a>
-        </div>
-    
-
-    <!-- Share -->
-    
-        <span id="needsharebutton-postbottom" class="post-share">
-            <span class="btn">
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-        </span>
-    
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-        <li class="next">
-            <a href="/archives/2/">Older Posts &rarr;</a>
-        </li>
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
-                
+<h1 id="the-reference-link">The reference link</h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow" target="_blank" rel="noopener">MDN text-overflow</a></p>
+
+
+                <!-- Donate -->
+
+<div>
+    <div class="donate-container" style="padding: 10px 0; margin: auto auto; width: 90%; text-align: center;">
+        <div></div>
+        <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <span>Donate</span>
+        </button>
+        <div id="QR" style="display: none;">
+            <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/base/wechatpay.png" alt="WeChat Pay" style="width: 200px; height: 200px; text-align: center;">
+            <!-- <p>Wechat</p> -->
             </div>
+            <div id="alipay" style="display: inline-block">
+                <img id="alipay_qr" src="https://github.com/CatherineLiyuankun/PictureBed/raw/master/blog/base/alipay.png" alt="Alipay" style="width: 200px; height: 200px; text-align: center;">
+            <!-- <p>Alipay</p> -->
+            </div>
+        </div>
+    </div>
+</div>
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
+                <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+  <div><b>本文标题: </b><a href="/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html" target="_blank" title="text-overflow: ellipsis多行文本溢出...css/js方法全总结">text-overflow: ellipsis多行文本溢出...css/js方法全总结</a></div>
+  <div><b>本文链接: </b><a href="/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html" target="_blank" title="text-overflow: ellipsis多行文本溢出...css/js方法全总结">https://catherineliyuankun.github.io/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html</a>.</div>
+  <div>本文由<a href="/index.html" target="_blank" title="Yuankun Li">Yuankun Li</a>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可,转载请注明作者及出处。</div>
+</div>
+
+                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/Fiddler-Everywhere-for-MAC-OS-without-Mono.html" data-toggle="tooltip" data-placement="top" title="Fiddler Everywhere for MAC OS without Mono">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- Duoshuo Comment Share -->
+                
+
+                <!-- Duoshuo Comment -->
+                
+
+                <!-- Disqus Comment -->
+                <!-- disqus comment -->
+
+    <div class="disqus_comment">
+        <div id="disqus_thread" class="disqus-thread"></div>
+    </div>
+
+
+                <!-- Git Comment -->
+                <!-- gitment -->
+
+    <hr>
+    <div class="git_comment" id="git_comment">
         
-            
-            <a href="/tags/#eclipse" title="eclipse" rel="2">eclipse</a>
-            
-        
-            
-            <a href="/tags/#cache" title="cache" rel="1">cache</a>
-            
-        
-            
-            <a href="/tags/#Tomcat" title="Tomcat" rel="3">Tomcat</a>
-            
-        
-            
-            <a href="/tags/#life cycle" title="life cycle" rel="1">life cycle</a>
-            
-        
-            
-            <a href="/tags/#Promise" title="Promise" rel="3">Promise</a>
-            
-        
-            
-            <a href="/tags/#IE" title="IE" rel="1">IE</a>
-            
-        
-            
-            <a href="/tags/#git" title="git" rel="2">git</a>
-            
-        
-            
-            <a href="/tags/#CORS" title="CORS" rel="2">CORS</a>
-            
-        
-            
-            <a href="/tags/#IndexedDB" title="IndexedDB" rel="1">IndexedDB</a>
-            
-        
-            
-            <a href="/tags/#Hexo" title="Hexo" rel="4">Hexo</a>
-            
-        
-            
-            <a href="/tags/#Blog" title="Blog" rel="4">Blog</a>
-            
-        
-            
-            <a href="/tags/#IntelliJ" title="IntelliJ" rel="2">IntelliJ</a>
-            
-        
-            
-            <a href="/tags/#Array" title="Array" rel="1">Array</a>
-            
-        
-            
-            <a href="/tags/#Mac" title="Mac" rel="1">Mac</a>
-            
-        
-            
-            <a href="/tags/#Servlet" title="Servlet" rel="1">Servlet</a>
-            
-        
-            
-            <a href="/tags/#maxPostSize" title="maxPostSize" rel="1">maxPostSize</a>
-            
-        
-            
-            <a href="/tags/#React 16" title="React 16" rel="5">React 16</a>
-            
-        
-            
-            <a href="/tags/#Links" title="Links" rel="1">Links</a>
-            
-        
-            
-            <a href="/tags/#Flexbox" title="Flexbox" rel="1">Flexbox</a>
-            
-        
-            
-            <a href="/tags/#VirtualBox" title="VirtualBox" rel="1">VirtualBox</a>
-            
-        
-            
-            <a href="/tags/#Voice over" title="Voice over" rel="1">Voice over</a>
-            
-        
-            
-            <a href="/tags/#TODO" title="TODO" rel="2">TODO</a>
-            
-        
-            
-            <a href="/tags/#abbr" title="abbr" rel="1">abbr</a>
-            
-        
-            
-            <a href="/tags/#text-overflow" title="text-overflow" rel="2">text-overflow</a>
-            
-        
-            
-            <a href="/tags/#Weixin" title="Weixin" rel="2">Weixin</a>
-            
-        
-            
-            <a href="/tags/#&lt;mpvoice&gt;" title="&lt;mpvoice&gt;" rel="1">&lt;mpvoice&gt;</a>
-            
-        
-            
-            <a href="/tags/#MySQL" title="MySQL" rel="1">MySQL</a>
-            
-        
-            
-            <a href="/tags/#Learning Notes" title="Learning Notes" rel="1">Learning Notes</a>
-            
+            <div onclick="showGitment()" id="gitment-display-button">show git comment</div>
+            <div id="gitment-container" style="display:none"></div>
         
     </div>
-</section>
+    <hr>
 
-        <hr>
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
     
-        <!-- Categories -->
-
-    <section>
-        <!-- no hr -->
-        <h5><a href="/categories/">CATEGORORY</a></h5>
-            
-                <div class="article-category" id="categories">
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English-Learning/">English Learning</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English-Learning/日常英语/">日常英语</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/">TECH</a><span class="category-list-count">40</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Accessibility/">Accessibility</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/">FrontEnd</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/Browser-Caching/">Browser Caching</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/Browser-Caching/IndexedDB/">IndexedDB</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/CSS/">CSS</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/CSS/Flexbox/">Flexbox</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/ES6/">ES6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/IE-issues/">IE issues</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/JS/">JS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/FrontEnd/React/">React</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Hexo/">Hexo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Network/">Network</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Network/Servlet-HTTP/">Servlet/HTTP</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/SE-life/">SE life</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Tools/">Tools</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Tools/IDE/">IDE</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/Tools/network-tools/">network tools</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
-                </div>
-            
-    </section>
-
-        <hr>
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#多行显示并在最后一行截断文字？"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">多行显示并在最后一行截断文字？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#方法1-webkit-line-clamp-property"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">方法1 -Webkit-line-clamp property</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#方法2-text-overflow-o-ellipsis-lastline"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">方法2 Text-overflow: -o-ellipsis-lastline</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#方法3-javascript"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">方法3 JavaScript</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#方法4-纯css解决-跨浏览器"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">方法4 纯CSS解决 &amp; 跨浏览器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#优点"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">优点</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#缺点"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">缺点</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#实现方法"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">实现方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#实现原理"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">实现原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#方法5-纯scss解决-跨浏览器"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">方法5 纯SCSS解决 &amp; 跨浏览器</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#the-reference-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">The reference link</span></a></li></ol>
+        
+        </div>
+      </aside>
     
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/chatHead.jpg" />
-        
-
-        
-            <p>Li,Yuankun a lazy soft engineer</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-                <li>
-                    <a href="/atom.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/catherineliyuankun">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-                <li>
-                    <a target="_blank"  href="https://www.linkedin.com/in/liyuankun">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-         
-            
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/muzilan">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-        </ul>
-    </div>
-</section>
-        <hr>
+                
+            <!-- Sidebar Container Below-->
+            <div class="
+    col-lg-8 col-lg-offset-2
+    col-md-10 col-md-offset-1
+    sidebar-container">
     
         
+    
+        
+    
+        
+    
+        
+            
   <h5>RECENT POSTS</h5>
   <div class="widget">
     <ul>
@@ -1099,9 +473,11 @@ MacOS
     </ul>
   </div>
 
-        <hr>
+            <hr>
+        
     
-        <!-- Friends Blog -->
+        
+            <!-- Friends Blog -->
 
 <h5>FRIENDS</h5>
 <ul class="list-inline">
@@ -1111,13 +487,49 @@ MacOS
     
 </ul>
 
-        <hr>
+            <hr>
+        
     
 </div>
-
-        
+        </div>
     </div>
-</div>
+</article>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℒ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -1780,6 +1192,48 @@ MacOS
         
 
         
+        <script type="text/javascript">
+            var option = {
+                id: window.location.pathname,
+                owner: 'CatherineLiyuankun',
+                repo: 'gitment-comments',
+                oauth: {
+                    client_id: 'f3a0c1c7153576e1ab6c'
+                }
+            };
+            if(true) {
+                option.lang = "" || navigator.language || navigator.systemLanguage || navigator.userLanguage;
+            }
+            if (true && ) {
+                option.oauth.redirect_protocol = '';
+            }
+            if (true && ) {
+                option.oauth.proxy_gateway = '';
+            } else {
+                option.oauth.client_secret = 'bedf5010df925fa0e02e8be9399a64caac3d2b4e';
+            }
+
+            function renderGitment(){
+                var gitment;
+                if (true) {
+                    gitment = new Gitmint(option);
+                } else {
+                    gitment = new Gitment(option);
+                }
+                gitment.render('gitment-container');
+            }
+
+            if(!true) {
+                renderGitment();
+            } else {
+                function showGitment(){
+                    document.getElementById("gitment-display-button").style.display = "none";
+                    document.getElementById("gitment-container").style.display = "block";
+                    renderGitment();
+                }
+            }
+        </script>
+        
     
 
 
@@ -1790,8 +1244,8 @@ MacOS
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
         var disqus_shortname = "lyk-1";
-        var disqus_identifier = "";
-        var disqus_url = "";
+        var disqus_identifier = "https://catherineliyuankun.github.io/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html";
+        var disqus_url = "https://catherineliyuankun.github.io/text-overflow-ellipsis多行文本溢出-css-js方法全总结.html";
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
